@@ -61,7 +61,7 @@ tensor_len = torch.tensor(all_sequence_len, device=device)
 dataset = TensorDataset(tensor_input, tensor_output, tensor_len)
 
 #
-latent_dim = 100 # N states
+latent_dim = 15 # N states
 categorical_dim = 1  # one-of-K vector
 
 def sample_gumbel(shape, eps=1e-20):
@@ -100,11 +100,11 @@ class Autoencoder(nn.Module):
         self.embedding = nn.Embedding(embedding_dim=100, num_embeddings=len(vocab), padding_idx=pad_idx)
         self.lstm_encoder = nn.GRU(batch_first=True, hidden_size=100, input_size=100, bidirectional=True)
         # VAE
-        self.lstm_decoder = nn.GRU(batch_first=True, hidden_size=100, input_size=100)
         self.gumbel_input = nn.Linear(200, latent_dim*categorical_dim)
+        # -- decoder --
         # converte o z em um vetor para ser usado como h_t no decoder lstm
-        self.z_embedding = nn.Linear(latent_dim * categorical_dim, 100)
-
+        self.z_embedding = nn.Linear(latent_dim * categorical_dim, 100) # z_t -> h_t
+        self.lstm_decoder = nn.GRU(batch_first=True, hidden_size=100, input_size=100)
         self.output_layer = nn.Linear(in_features=100, out_features=len(vocab)) #
 
     def encode(self, x, seq_len):
@@ -143,7 +143,7 @@ def loss_function(y, y_hat, qy, eps=1e-20):
     # https://discuss.pytorch.org/t/proper-input-to-loss-function-crossentropy-nll/26663/3
     # [batch_size, seq_len, C] -> [batch_size * seq_len, C]
     batch_size = y.size(0)
-    recon_loss = F.cross_entropy(y_hat.view(-1, len(vocab)), y.view(-1), size_average=False) / batch_size
+    recon_loss = F.cross_entropy(y_hat.view(-1, len(vocab)), y.view(-1), reduction='sum') / batch_size
     # KLD
     qy_softmax = F.softmax(qy, dim=-1).reshape(*qy.size())
     log_ratio = torch.log(qy_softmax * categorical_dim - 1e-20) # qy * (log_qy - log (1/N))
@@ -154,7 +154,7 @@ def loss_function(y, y_hat, qy, eps=1e-20):
     # ELBO = cross_entropy(y, y_hay) + KLD
 
 model = Autoencoder()
-train_dataloader = DataLoader(dataset, batch_size=32)
+train_dataloader = DataLoader(dataset, batch_size=64)
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
 temp = 1.
@@ -162,10 +162,11 @@ temp_min = 0.5
 ANNEAL_RATE = 0.00003
 
 start = time.time()
-EPOCH = 10
-train_loss = 10
+EPOCH = 20
 for epoch in range(EPOCH):
     tqdm_batches = tqdm.tqdm(enumerate(train_dataloader), total=len(train_dataloader))
+
+    train_loss = 0
     for batch_idx, batch in tqdm_batches:
         x, y, seq_lens = batch
         optimizer.zero_grad()
@@ -173,10 +174,12 @@ for epoch in range(EPOCH):
         loss = loss_function(y=y, y_hat=y_hat, qy=qy)
         loss.backward()
         optimizer.step()
-        train_loss = loss.item()
-        tqdm_batches.set_description(f"Train loss {train_loss:.4f}")
+        train_loss += loss.item()
         if batch_idx % 100 == 1:
             temp = np.maximum(temp * np.exp(-ANNEAL_RATE * batch_idx), temp_min)
+
+        #tqdm_batches.set_description(f"Current train loss {loss.item():.4f}")
+    print(f"Epoch {epoch} - Train loss {train_loss / len(train_dataloader):.4f} - Temp {temp:.4f}")
 
     #break
 
