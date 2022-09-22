@@ -17,7 +17,7 @@ dataset_df = pd.read_csv("data/dataset_sentence_level.csv")
 print(len(dataset_df))
 dataset_df.head()
 all_sentences = dataset_df['sentence'].values.tolist()
-all_words = ['<PAD>', '<SOS>', '<EOS>'] #including special tokens
+all_words = ['<PAD>', '<SOS>', '<EOS>']  # including special tokens
 
 all_splitted_sentences = []
 max_len = 0
@@ -34,7 +34,6 @@ pad_idx = vocab['<PAD>']
 sos_idx = vocab['<SOS>']
 eos_idx = vocab['<EOS>']
 f"Num words: {len(words)} - max sentence length {max_len}"
-
 
 #
 all_input_idx = []
@@ -61,16 +60,19 @@ tensor_len = torch.tensor(all_sequence_len, device=device)
 dataset = TensorDataset(tensor_input, tensor_output, tensor_len)
 
 #
-latent_dim = 15 # N states
-categorical_dim = 1  # one-of-K vector
+latent_dim = 15  # N states
+categorical_dim = 2  # one-of-K vector
+
 
 def sample_gumbel(shape, eps=1e-20):
-    U = torch.rand(shape)
-    return -Variable(torch.log(-torch.log(U + eps) + eps))
+    U = torch.rand(shape, device=device)
+    return torch.log(-torch.log(U + eps) + eps)
+
 
 def gumbel_softmax_sample(logits, temperature):
     y = logits + sample_gumbel(logits.size())
     return F.softmax(y / temperature, dim=-1)
+
 
 def gumbel_softmax(logits, temperature, hard=False):
     """
@@ -92,6 +94,7 @@ def gumbel_softmax(logits, temperature, hard=False):
 
     return y_hard.view(-1, latent_dim * categorical_dim)
 
+
 class Autoencoder(nn.Module):
 
     def __init__(self):
@@ -100,23 +103,23 @@ class Autoencoder(nn.Module):
         self.embedding = nn.Embedding(embedding_dim=100, num_embeddings=len(vocab), padding_idx=pad_idx)
         self.lstm_encoder = nn.GRU(batch_first=True, hidden_size=100, input_size=100, bidirectional=True)
         # VAE
-        self.gumbel_input = nn.Linear(200, latent_dim*categorical_dim)
+        self.gumbel_input = nn.Linear(200, latent_dim * categorical_dim)
         # -- decoder --
         # converte o z em um vetor para ser usado como h_t no decoder lstm
-        self.z_embedding = nn.Linear(latent_dim * categorical_dim, 100) # z_t -> h_t
+        self.z_embedding = nn.Linear(latent_dim * categorical_dim, 100)  # z_t -> h_t
         self.lstm_decoder = nn.GRU(batch_first=True, hidden_size=100, input_size=100)
-        self.output_layer = nn.Linear(in_features=100, out_features=len(vocab)) #
+        self.output_layer = nn.Linear(in_features=100, out_features=len(vocab))  #
 
     def encode(self, x, seq_len):
         x_emb = self.embedding(x)
         x_pack = pack_padded_sequence(x_emb, seq_len.data.tolist(), batch_first=True)
         x, ht = self.lstm_encoder(x_pack)
-        encoded_sequence = ht.view(ht.size(1), ht.size(2) * 2) # bidirectional -> + <-
+        encoded_sequence = ht.view(ht.size(1), ht.size(2) * 2)  # bidirectional -> + <-
         return x, encoded_sequence, x_pack
 
     def decoder(self, input, z, max_seq_len):
-        z_emb = self.z_embedding(z).unsqueeze(0) # z_emb será usado como h inicial do LSTM decoder
-        hidden = z_emb # h_t
+        z_emb = self.z_embedding(z).unsqueeze(0)  # z_emb será usado como h inicial do LSTM decoder
+        hidden = z_emb  # h_t
         x, _ = self.lstm_decoder(input, hidden)
         # TODO: incluir tamanho max da sequencia original para calcular o loss
         x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
@@ -128,10 +131,13 @@ class Autoencoder(nn.Module):
         sorted_lengths, sorted_idx = torch.sort(seq_len, descending=True)
         x = x[sorted_idx]
 
-        batch_size, max_seq_len = x.size() # [batch_size, maximum seq_len from current batch, dim]
+        batch_size, max_seq_len = x.size()  # [batch_size, maximum seq_len from current batch, dim]
 
-        x, encoded_sequence, x_pack = self.encode(x, sorted_lengths)
-        q_y = self.gumbel_input(encoded_sequence)
+        x, h_t, x_pack = self.encode(x, sorted_lengths)
+        q_y = self.gumbel_input(h_t)
+
+        q_y = q_y.view(q_y.size(0), latent_dim, categorical_dim)
+
         z = gumbel_softmax(q_y, temperature=temperature)
         x = self.decoder(x_pack, z, max_seq_len)
         return x, q_y
@@ -139,21 +145,22 @@ class Autoencoder(nn.Module):
 
 #
 def loss_function(y, y_hat, qy, eps=1e-20):
-
     # https://discuss.pytorch.org/t/proper-input-to-loss-function-crossentropy-nll/26663/3
     # [batch_size, seq_len, C] -> [batch_size * seq_len, C]
     batch_size = y.size(0)
     recon_loss = F.cross_entropy(y_hat.view(-1, len(vocab)), y.view(-1), reduction='sum') / batch_size
     # KLD
     qy_softmax = F.softmax(qy, dim=-1).reshape(*qy.size())
-    log_ratio = torch.log(qy_softmax * categorical_dim - 1e-20) # qy * (log_qy - log (1/N))
+    log_ratio = torch.log(qy_softmax * categorical_dim - 1e-20)  # qy * (log_qy - log (1/N))
     KLD = torch.sum(qy_softmax * log_ratio, dim=-1).mean()
     return recon_loss + KLD
     # ELBO = -(sum(y * log(y_hat)) - KL)
     # ELBO = -sum(y * log(y_hat)) + KLD # removing negative
     # ELBO = cross_entropy(y, y_hay) + KLD
 
+
 model = Autoencoder()
+model.to(device)
 train_dataloader = DataLoader(dataset, batch_size=64)
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
@@ -178,10 +185,10 @@ for epoch in range(EPOCH):
         if batch_idx % 100 == 1:
             temp = np.maximum(temp * np.exp(-ANNEAL_RATE * batch_idx), temp_min)
 
-        #tqdm_batches.set_description(f"Current train loss {loss.item():.4f}")
+        # tqdm_batches.set_description(f"Current train loss {loss.item():.4f}")
     print(f"Epoch {epoch} - Train loss {train_loss / len(train_dataloader):.4f} - Temp {temp:.4f}")
 
-    #break
+    # break
 
 end = time.time()
 duration = end - start
