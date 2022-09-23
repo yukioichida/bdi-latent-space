@@ -12,61 +12,19 @@ from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 import tqdm
 
 from sources.model import BeliefAutoencoder
+from sources.preprocessing import preprocessing
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-dataset_df = pd.read_csv("data/dataset_sentence_level.csv")
-print(len(dataset_df))
-dataset_df.head()
-all_sentences = dataset_df['sentence'].values.tolist()
-all_words = ['<PAD>', '<SOS>', '<EOS>']  # including special tokens
-
-all_splitted_sentences = []
-max_len = 0
-for sentences in all_sentences:
-    words = sentences.split()
-    if len(words) > max_len:
-        max_len = len(words)
-    all_splitted_sentences.append(words)
-    [all_words.append(w) for w in words if w not in all_words]
-
-vocab = {w: idx for idx, w in enumerate(all_words)}
-
-pad_idx = vocab['<PAD>']
-sos_idx = vocab['<SOS>']
-eos_idx = vocab['<EOS>']
-f"Num words: {len(words)} - max sentence length {max_len}"
-
-#
-all_input_idx = []
-all_target_idx = []
-all_sequence_len = []
-for i, sentence in enumerate(all_splitted_sentences):
-    word_idx = [vocab[w] for w in sentence]
-    # including <eos> and <sos> tokens
-    input_idx = [sos_idx] + word_idx
-    target_idx = word_idx + [eos_idx]
-    # padding both sequences
-    pad_len = (max_len + 1) - len(word_idx)
-    pad_input_idx = input_idx + ([pad_idx] * pad_len)
-    pad_target_idx = target_idx + ([pad_idx] * pad_len)
-
-    all_input_idx.append(pad_input_idx)
-    all_target_idx.append(pad_target_idx)
-
-    all_sequence_len.append(len(input_idx))
-
-tensor_input = torch.tensor(all_input_idx, device=device)
-tensor_output = torch.tensor(all_target_idx, device=device)
-tensor_len = torch.tensor(all_sequence_len, device=device)
-dataset = TensorDataset(tensor_input, tensor_output, tensor_len)
+preprocessed_data = preprocessing("data/dataset_sentence_level.csv", device)
+dataset = preprocessed_data.dataset
+vocab_size = len(preprocessed_data.vocab)
+pad_idx = preprocessed_data.pad_idx
 
 #
 def loss_function(y, y_hat, qy, categorical_dim, eps=1e-20):
-    # https://discuss.pytorch.org/t/proper-input-to-loss-function-crossentropy-nll/26663/3
-    # [batch_size, seq_len, C] -> [batch_size * seq_len, C]
     batch_size = y.size(0)
-    recon_loss = F.cross_entropy(y_hat.view(-1, len(vocab)), y.view(-1), reduction='sum') / batch_size
+    recon_loss = F.cross_entropy(y_hat.view(-1, vocab_size), y.view(-1), reduction='sum') / batch_size
     # KLD
     qy_softmax = F.softmax(qy, dim=-1).reshape(*qy.size())
     log_ratio = torch.log(qy_softmax * categorical_dim - 1e-20)  # qy * (log_qy - log (1/N))
@@ -77,14 +35,15 @@ def loss_function(y, y_hat, qy, categorical_dim, eps=1e-20):
     # ELBO = cross_entropy(y, y_hay) + KLD
 
 
+emb_dim = 100
 h_dim = 50
 latent_dim = 15
 categorical_dim = 2
 
-model = BeliefAutoencoder(emb_dim=100,
+model = BeliefAutoencoder(emb_dim=emb_dim,
                           h_dim=h_dim,
                           device=device,
-                          vocab_size=len(vocab),
+                          vocab_size=vocab_size,
                           pad_idx=pad_idx,
                           latent_dim=latent_dim,
                           categorical_dim=categorical_dim)
@@ -94,7 +53,8 @@ optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
 temp = 1.
 temp_min = 0.5
-ANNEAL_RATE = 0.00003
+#ANNEAL_RATE = 0.00003
+ANNEAL_RATE = 0.0003
 
 start = time.time()
 EPOCH = 20
