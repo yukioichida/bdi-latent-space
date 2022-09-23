@@ -11,6 +11,8 @@ from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 import tqdm
 
+from sources.model import BeliefAutoencoder
+
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 dataset_df = pd.read_csv("data/dataset_sentence_level.csv")
@@ -60,91 +62,7 @@ tensor_len = torch.tensor(all_sequence_len, device=device)
 dataset = TensorDataset(tensor_input, tensor_output, tensor_len)
 
 #
-latent_dim = 15  # N states
-categorical_dim = 2  # one-of-K vector
-
-
-def sample_gumbel(shape, eps=1e-20):
-    U = torch.rand(shape, device=device)
-    return torch.log(-torch.log(U + eps) + eps)
-
-
-def gumbel_softmax_sample(logits, temperature):
-    y = logits + sample_gumbel(logits.size())
-    return F.softmax(y / temperature, dim=-1)
-
-
-def gumbel_softmax(logits, temperature, hard=False):
-    """
-    ST-gumple-softmax
-    input: [*, n_class]
-    return: flatten --> [*, n_class] an one-hot vector
-    """
-    y = gumbel_softmax_sample(logits, temperature)
-    if not hard:
-        return y.view(-1, latent_dim * categorical_dim)
-
-    shape = y.size()
-    _, ind = y.max(dim=-1)
-    y_hard = torch.zeros_like(y).view(-1, shape[-1])
-    y_hard.scatter_(1, ind.view(-1, 1), 1)
-    y_hard = y_hard.view(*shape)
-    # Set gradients w.r.t. y_hard gradients w.r.t. y
-    y_hard = (y_hard - y).detach() + y
-
-    return y_hard.view(-1, latent_dim * categorical_dim)
-
-
-class Autoencoder(nn.Module):
-
-    def __init__(self):
-        super(Autoencoder, self).__init__()
-        # encoder
-        self.embedding = nn.Embedding(embedding_dim=100, num_embeddings=len(vocab), padding_idx=pad_idx)
-        self.lstm_encoder = nn.GRU(batch_first=True, hidden_size=100, input_size=100, bidirectional=True)
-        # VAE
-        self.gumbel_input = nn.Linear(200, latent_dim * categorical_dim)
-        # -- decoder --
-        # converte o z em um vetor para ser usado como h_t no decoder lstm
-        self.z_embedding = nn.Linear(latent_dim * categorical_dim, 100)  # z_t -> h_t
-        self.lstm_decoder = nn.GRU(batch_first=True, hidden_size=100, input_size=100)
-        self.output_layer = nn.Linear(in_features=100, out_features=len(vocab))  #
-
-    def encode(self, x, seq_len):
-        x_emb = self.embedding(x)
-        x_pack = pack_padded_sequence(x_emb, seq_len.data.tolist(), batch_first=True)
-        x, ht = self.lstm_encoder(x_pack)
-        encoded_sequence = ht.view(ht.size(1), ht.size(2) * 2)  # bidirectional -> + <-
-        return x, encoded_sequence, x_pack
-
-    def decoder(self, input, z, max_seq_len):
-        z_emb = self.z_embedding(z).unsqueeze(0)  # z_emb será usado como h inicial do LSTM decoder
-        hidden = z_emb  # h_t
-        x, _ = self.lstm_decoder(input, hidden)
-        # TODO: incluir tamanho max da sequencia original para calcular o loss
-        x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
-        x = self.output_layer(x)
-        return x
-
-    def forward(self, x, seq_len, temperature):
-        # ordering by sequence length
-        sorted_lengths, sorted_idx = torch.sort(seq_len, descending=True)
-        x = x[sorted_idx]
-
-        batch_size, max_seq_len = x.size()  # [batch_size, maximum seq_len from current batch, dim]
-
-        x, h_t, x_pack = self.encode(x, sorted_lengths)
-        q_y = self.gumbel_input(h_t)
-
-        q_y = q_y.view(q_y.size(0), latent_dim, categorical_dim)
-
-        z = gumbel_softmax(q_y, temperature=temperature)
-        x = self.decoder(x_pack, z, max_seq_len)
-        return x, q_y
-
-
-#
-def loss_function(y, y_hat, qy, eps=1e-20):
+def loss_function(y, y_hat, qy, categorical_dim, eps=1e-20):
     # https://discuss.pytorch.org/t/proper-input-to-loss-function-crossentropy-nll/26663/3
     # [batch_size, seq_len, C] -> [batch_size * seq_len, C]
     batch_size = y.size(0)
@@ -159,7 +77,17 @@ def loss_function(y, y_hat, qy, eps=1e-20):
     # ELBO = cross_entropy(y, y_hay) + KLD
 
 
-model = Autoencoder()
+h_dim = 50
+latent_dim = 15
+categorical_dim = 2
+
+model = BeliefAutoencoder(emb_dim=100,
+                          h_dim=h_dim,
+                          device=device,
+                          vocab_size=len(vocab),
+                          pad_idx=pad_idx,
+                          latent_dim=latent_dim,
+                          categorical_dim=categorical_dim)
 model.to(device)
 train_dataloader = DataLoader(dataset, batch_size=64)
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
@@ -178,7 +106,7 @@ for epoch in range(EPOCH):
         x, y, seq_lens = batch
         optimizer.zero_grad()
         y_hat, qy = model(x, seq_lens, temperature=temp)
-        loss = loss_function(y=y, y_hat=y_hat, qy=qy)
+        loss = loss_function(y=y, y_hat=y_hat, qy=qy, categorical_dim=categorical_dim)
         loss.backward()
         optimizer.step()
         train_loss += loss.item()
