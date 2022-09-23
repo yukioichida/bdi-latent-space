@@ -5,8 +5,8 @@ from torch.utils.data import DataLoader, TensorDataset
 from collections import namedtuple
 PreprocessedData = namedtuple('PreprocessedData', ['dataset', 'sos_idx', 'pad_idx', 'eos_idx', 'vocab'])
 
-def preprocessing(self, filename: str, device: str) -> PreprocessedData:
-    dataset_df = pd.read_csv(self.filename)
+def preprocessing(filename: str, device: str) -> PreprocessedData:
+    dataset_df = pd.read_csv(filename)
     print(len(dataset_df))
     dataset_df.head()
     all_sentences = dataset_df['sentence'].values.tolist()
