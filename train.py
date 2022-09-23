@@ -24,7 +24,7 @@ pad_idx = preprocessed_data.pad_idx
 #
 def loss_function(y, y_hat, qy, categorical_dim, eps=1e-20):
     batch_size = y.size(0)
-    recon_loss = F.cross_entropy(y_hat.view(-1, vocab_size), y.view(-1), reduction='mean') #/ batch_size
+    recon_loss = F.cross_entropy(y_hat.view(-1, vocab_size), y.view(-1), reduction='sum') / batch_size
     # KLD
     qy_softmax = F.softmax(qy, dim=-1).reshape(*qy.size())
     log_ratio = torch.log(qy_softmax * categorical_dim - 1e-20)  # qy * (log_qy - log (1/N))
