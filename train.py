@@ -1,6 +1,7 @@
 import time
 import argparse
 import numpy as np
+import random
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
@@ -10,7 +11,10 @@ from torch.utils.data import DataLoader
 from sources.model import BeliefAutoencoder
 from sources.preprocessing import preprocessing
 
-
+def set_seed(seed=20190827):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
 #
 def loss_function(y, y_hat, qy, categorical_dim, vocab_size, eps=1e-20):
     batch_size = y.size(0)
@@ -89,4 +93,5 @@ if __name__ == '__main__':
     parser.add_argument("--categorical_dim", type=int, default=2, help="Number of categories")
 
     args = parser.parse_args()
+    set_seed()
     train(args)
