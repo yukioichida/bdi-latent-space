@@ -40,10 +40,11 @@ def gumbel_softmax(logits, temperature, latent_dim, categorical_dim, hard=False,
 
 class BeliefAutoencoder(nn.Module):
 
-    def __init__(self, emb_dim, h_dim, vocab_size, pad_idx, latent_dim, categorical_dim, device):
+    def __init__(self, emb_dim, h_dim, vocab, latent_dim, categorical_dim, device='cpu', pad_token='<PAD>'):
         super(BeliefAutoencoder, self).__init__()
+        vocab_size = len(vocab)
         # encoder
-        self.embedding = nn.Embedding(embedding_dim=emb_dim, num_embeddings=vocab_size, padding_idx=pad_idx)
+        self.embedding = nn.Embedding(embedding_dim=emb_dim, num_embeddings=vocab_size, padding_idx=vocab[pad_token])
         self.lstm_encoder = nn.GRU(batch_first=True, hidden_size=h_dim, input_size=emb_dim, bidirectional=True)
         # VAE
         self.gumbel_input = nn.Linear(h_dim * 2, latent_dim * categorical_dim)
