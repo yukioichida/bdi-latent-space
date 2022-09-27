@@ -20,20 +20,6 @@ def set_seed(seed=20190827):
     torch.manual_seed(seed)
 
 
-#
-def loss_function(y, y_hat, qy, categorical_dim, vocab_size, eps=1e-20):
-    batch_size = y.size(0)
-    recon_loss = F.cross_entropy(y_hat.view(-1, vocab_size), y.view(-1), reduction='sum') / batch_size
-    # KLD
-    qy_softmax = F.softmax(qy, dim=-1).reshape(*qy.size())
-    log_ratio = torch.log(qy_softmax * categorical_dim - eps)  # qy * (log_qy - log (1/N))
-    KLD = torch.sum(qy_softmax * log_ratio, dim=-1).mean()
-    return recon_loss + KLD, recon_loss, KLD
-    # ELBO = -(sum(y * log(y_hat)) - KLD)
-    # ELBO = -sum(y * log(y_hat)) + KLD # removing negative
-    # ELBO = cross_entropy(y, y_hay) + KLD
-
-
 def get_all_results(hyperparameters: dict, current_epoch: int, train_loss: float, kld_loss: float, recon_loss: float):
     result = {}
     for name, values in hyperparameters.items():
@@ -70,8 +56,7 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch
             x, y, seq_lens = batch
             optimizer.zero_grad()
             y_hat, qy = model(x, seq_lens, temperature=temp)
-            loss, recon, kld = loss_function(y=y, y_hat=y_hat, qy=qy, categorical_dim=categorical_dim,
-                                             vocab_size=len(vocab))
+            loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
             loss.backward()
             optimizer.step()
             train_loss += loss.item()
@@ -80,8 +65,9 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch
 
             if batch_idx % 100 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
+
         print(f"Epoch {epoch} - Train loss {train_loss / len(train_dataloader):.4f} - Temp {temp:.4f}")
-        # results.append({'h_dim': h_dim, 'emb_dim':emb_dim, 'epoch':epoch, ''})
+
         epoch_result = get_all_results(hyperparameters=hyperparameters,
                                        current_epoch=epoch,
                                        train_loss=train_loss / len(train_dataloader),
