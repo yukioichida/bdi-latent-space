@@ -93,7 +93,7 @@ if __name__ == '__main__':
     parser.add_argument("--min_temp", type=float, default=0.5, help="Gumbel min temperature")
     parser.add_argument("--latent_dim", type=int, default=15, help="Dimension of latent vector")
     parser.add_argument("--categorical_dim", type=int, default=2, help="Number of categories")
-    parser.add_argument("--save_model", type=bool, action='store_true', default=False)
+    parser.add_argument("--save_model", action='store_true', default=False)
 
     args = parser.parse_args()
     set_seed()
