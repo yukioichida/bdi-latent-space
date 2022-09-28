@@ -31,8 +31,8 @@ def get_all_results(hyperparameters: dict, current_epoch: int, train_loss: float
     return result
 
 
-def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch_size: int,
-          initial_temp: float, min_temp: float, epochs: int, anneal_rate: float):
+def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch_size: int, save_model: bool,
+          initial_temp: float = 0.1, min_temp: float = 0.5, epochs: int = 100, anneal_rate: float = 0.00003):
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -63,7 +63,7 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch
             recon_loss += recon.item()
             kld_loss += kld.item()
 
-            if batch_idx % 50 == 1:
+            if batch_idx % 10 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
 
         print(f"Epoch {epoch} - Train loss {train_loss / len(train_dataloader):.4f} - Temp {temp:.4f}")
@@ -75,8 +75,9 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch
                                        recon_loss=recon_loss / len(train_dataloader))
         results.append(epoch_result)
 
-    model_name = f"models/belief-autoencoder-{train_loss / len(train_dataloader): .4f}.pth"
-    torch.save(model.state_dict(), model_name)
+    if save_model:
+        model_name = f"models/belief-autoencoder-{train_loss / len(train_dataloader): .4f}.pth"
+        torch.save(model.state_dict(), model_name)
 
     return pd.DataFrame(results)
 
@@ -92,6 +93,7 @@ if __name__ == '__main__':
     parser.add_argument("--min_temp", type=float, default=0.5, help="Gumbel min temperature")
     parser.add_argument("--latent_dim", type=int, default=15, help="Dimension of latent vector")
     parser.add_argument("--categorical_dim", type=int, default=2, help="Number of categories")
+    parser.add_argument("--save_model", type=bool, action='store_true', default=False)
 
     args = parser.parse_args()
     set_seed()
@@ -99,6 +101,7 @@ if __name__ == '__main__':
                        h_dim=args.h_dim,
                        batch_size=args.batch_size,
                        epochs=args.epochs,
+                       save_model=args.save_model,
                        initial_temp=args.initial_temp,
                        min_temp=args.min_temp,
                        latent_dim=args.latent_dim,
