@@ -63,7 +63,7 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch
             recon_loss += recon.item()
             kld_loss += kld.item()
 
-            if batch_idx % 10 == 1:
+            if batch_idx % 20 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
 
         print(f"Epoch {epoch} - Train loss {train_loss / len(train_dataloader):.4f} - Temp {temp:.4f}")
