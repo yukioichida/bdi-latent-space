@@ -31,8 +31,9 @@ def get_all_results(hyperparameters: dict, current_epoch: int, train_loss: float
     return result
 
 
-def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch_size: int, save_model: bool,
-          initial_temp: float = 0.1, min_temp: float = 0.5, epochs: int = 100, anneal_rate: float = 0.00003):
+def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, batch_size: int = 128,
+          save_model: bool = False, initial_temp: float = 0.1, min_temp: float = 0.5, epochs: int = 100,
+          anneal_rate: float = 0.00003):
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
