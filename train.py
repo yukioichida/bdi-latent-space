@@ -63,7 +63,7 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch
             recon_loss += recon.item()
             kld_loss += kld.item()
 
-            if batch_idx % 100 == 1:
+            if batch_idx % 50 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
 
         print(f"Epoch {epoch} - Train loss {train_loss / len(train_dataloader):.4f} - Temp {temp:.4f}")
@@ -74,6 +74,9 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int, batch
                                        kld_loss=kld_loss / len(train_dataloader),
                                        recon_loss=recon_loss / len(train_dataloader))
         results.append(epoch_result)
+
+    model_name = f"models/belief-autoencoder-{train_loss / len(train_dataloader): .4f}.pth"
+    torch.save(model.state_dict(), model_name)
 
     return pd.DataFrame(results)
 

@@ -73,7 +73,6 @@ class BeliefAutoencoder(nn.Module):
         _, batch_size, hidden_len = z_emb.size()
         hidden = z_emb.view(2, batch_size, int(hidden_len / 2))  # h_t
         x, _ = self.lstm_decoder(input, hidden)
-        # TODO: incluir tamanho max da sequencia original para calcular o loss
         x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
         x = self.output_layer(x)
         return x
@@ -83,6 +82,8 @@ class BeliefAutoencoder(nn.Module):
         sorted_lengths, sorted_idx = torch.sort(seq_len, descending=True)
         x = x[sorted_idx]
         batch_size, max_seq_len = x.size()  # [batch_size, maximum seq_len from current batch, dim]
+
+        # encoder
         x, h_t, word_emb = self.encode(x, sorted_lengths)
 
         # sampling
@@ -94,7 +95,7 @@ class BeliefAutoencoder(nn.Module):
                            latent_dim=self.latent_dim,
                            categorical_dim=self.categorical_dim,
                            device=self.device)
-
+        # decoder
         x = self.decoder(word_emb, z, max_seq_len)
         return x, q_y
 
