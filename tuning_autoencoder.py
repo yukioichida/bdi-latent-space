@@ -8,9 +8,12 @@ if __name__ == '__main__':
     all_latent_dims = [15, 30]
 
     all_results = []
+    i = 0
     for emb_dim, h_dim, latent_dim in itertools.product(all_emb_dims, all_h_dims, all_latent_dims):
-        result_df = train(emb_dim=emb_dim, h_dim=h_dim, latent_dim=latent_dim, epochs=50)
+        train_id = f'tunning_{i}'
+        result_df = train(train_id=train_id, emb_dim=emb_dim, h_dim=h_dim, latent_dim=latent_dim, epochs=50)
         all_results.append(result_df)
+        i += 1
 
     tunning_df = pd.concat(all_results)
     tunning_df.to_csv("train_results/tunning_results.csv", index=False)

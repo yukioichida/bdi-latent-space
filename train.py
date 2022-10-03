@@ -2,6 +2,7 @@ import time
 import argparse
 import numpy as np
 import random
+import shortuuid
 
 import pandas as pd
 import torch
@@ -31,7 +32,7 @@ def get_all_results(hyperparameters: dict, current_epoch: int, train_loss: float
     return result
 
 
-def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, batch_size: int = 128,
+def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, batch_size: int = 128,
           save_model: bool = False, initial_temp: float = 1., min_temp: float = 0.5, epochs: int = 100,
           anneal_rate: float = 0.00003, activation: str = 'gumbel'):
     hyperparameters = locals()
@@ -77,7 +78,7 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, b
         results.append(epoch_result)
 
     if save_model:
-        model_name = f"models/belief-autoencoder-{activation}-{train_loss / len(train_dataloader): .4f}.pth"
+        model_name = f"models/belief-autoencoder-{activation}-{train_id}.pth"
         torch.save(model.state_dict(), model_name)
 
     return pd.DataFrame(results)
@@ -98,8 +99,12 @@ if __name__ == '__main__':
     parser.add_argument("--activation", type=str, default='gumbel')
 
     args = parser.parse_args()
+
+    train_id = shortuuid.ShortUUID().random(length=8)
     set_seed()
-    df_results = train(emb_dim=args.emb_dim,
+
+    df_results = train(train_id=train_id,
+                       emb_dim=args.emb_dim,
                        h_dim=args.h_dim,
                        batch_size=args.batch_size,
                        epochs=args.epochs,
@@ -111,4 +116,4 @@ if __name__ == '__main__':
                        anneal_rate=args.anneal_rate,
                        activation=args.activation)
 
-    df_results.to_csv('train_results/results.csv', index=False)
+    df_results.to_csv(f'train_results/results_{train_id}.csv', index=False)
