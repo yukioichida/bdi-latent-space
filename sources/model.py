@@ -37,7 +37,7 @@ def gumbel_softmax(logits, temperature, latent_dim, categorical_dim, hard=False,
     _, ind = y.max(dim=-1)
     y_hard = torch.zeros_like(y).view(-1, shape[-1])
     y_hard.scatter_(1, ind.view(-1, 1), 1)
-    # y_hard = y_hard.view(*shape)
+    y_hard = y_hard.view(*shape)
     # Set gradients w.r.t. y_hard gradients w.r.t. y
     y_hard = (y_hard - y).detach() + y
 
@@ -73,7 +73,7 @@ class BeliefAutoencoder(nn.Module):
         x_emb = self.embedding(x)
         x_pack = pack_padded_sequence(x_emb, seq_len.data.tolist(), batch_first=True)
         x, ht = self.lstm_encoder(x_pack)
-        encoded_sequence = ht.view(ht.size(1), ht.size(2) * 2)  # bidirectional -> + <-
+        encoded_sequence = torch.cat([ht[0,:,:],ht[1,:,:]], dim=-1)# bidirectional -> + <-
         return x, encoded_sequence, x_pack
 
     def decoder(self, input, z, max_seq_len):
@@ -87,7 +87,6 @@ class BeliefAutoencoder(nn.Module):
 
     def sampling(self, qy, temperature):
         if self.activation == 'gumbel':
-            qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
             return gumbel_softmax(qy, temperature, self.latent_dim, self.categorical_dim, device=self.device)
         elif self.activation == 'bc':
             return binary_concrete_sample(qy, temperature, self.device)
@@ -105,6 +104,7 @@ class BeliefAutoencoder(nn.Module):
 
         # sampling
         qy = self.sampling_input(h_t)
+        qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
         z = self.sampling(qy, temperature)
         # decoder
         x = self.decoder(word_emb, z, max_seq_len)
