@@ -77,7 +77,7 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, b
         results.append(epoch_result)
 
     if save_model:
-        model_name = f"models/belief-autoencoder-{train_loss / len(train_dataloader): .4f}.pth"
+        model_name = f"models/belief-autoencoder-{activation}-{train_loss / len(train_dataloader): .4f}.pth"
         torch.save(model.state_dict(), model_name)
 
     return pd.DataFrame(results)
