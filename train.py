@@ -101,6 +101,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     train_id = shortuuid.ShortUUID().random(length=8)
+
+    print(f"Start training {train_id} - Args {args}")
+
     set_seed()
 
     df_results = train(train_id=train_id,
