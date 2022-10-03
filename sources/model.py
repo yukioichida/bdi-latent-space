@@ -130,7 +130,7 @@ class BeliefAutoencoder(nn.Module):
         loss = qy_sigmoid * (log_q0 - log_p0) + (1 - qy_sigmoid) * (log_q1 - log_p1)
         KLD = torch.sum(loss)
         # recon loss
-        recon_loss = F.binary_cross_entropy(y_hat.view(-1, self.vocab_size), y.view(-1), reduction='sum') / y.size(0)
+        recon_loss = F.cross_entropy(y_hat.view(-1, self.vocab_size), y.view(-1), reduction='sum') / y.size(0)
 
         # ELBO
         loss = KLD + recon_loss
