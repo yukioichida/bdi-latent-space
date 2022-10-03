@@ -46,7 +46,7 @@ def gumbel_softmax(logits, temperature, latent_dim, categorical_dim, hard=False,
 
 class BeliefAutoencoder(nn.Module):
     
-    def __init__(self, emb_dim, h_dim, vocab, latent_dim, categorical_dim, device='cpu', pad_token='<PAD>'):
+    def __init__(self, emb_dim, h_dim, vocab, latent_dim, categorical_dim=1, device='cpu', pad_token='<PAD>', activation='gumbel'):
         super(BeliefAutoencoder, self).__init__()
         self.vocab_size = len(vocab)
         # encoder
@@ -55,7 +55,7 @@ class BeliefAutoencoder(nn.Module):
         self.lstm_encoder = nn.GRU(batch_first=True, hidden_size=h_dim, input_size=emb_dim, bidirectional=True)
         
         # VAE
-        self.gumbel_input = nn.Linear(h_dim * 2, latent_dim * categorical_dim)
+        self.sampling_input = nn.Linear(h_dim * 2, latent_dim * categorical_dim)
         
         # -- decoder --
         # converte o z em um vetor para ser usado como h_t no decoder lstm
@@ -66,6 +66,7 @@ class BeliefAutoencoder(nn.Module):
         self.latent_dim = latent_dim
         self.categorical_dim = categorical_dim
         self.device = device
+        self.activation = activation
     
     def encode(self, x, seq_len):
         x_emb = self.embedding(x)
@@ -82,7 +83,17 @@ class BeliefAutoencoder(nn.Module):
         x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
         x = self.output_layer(x)
         return x
-    
+
+    def sampling(self, qy, temperature):
+        if self.activation == 'gumbel':
+            qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
+            return gumbel_softmax(qy, temperature, self.latent_dim, self.categorical_dim, self.device)
+        elif self.activation == 'bc':
+            return binary_concrete_sample(qy, temperature, self.device)
+        else:
+            raise Exception("Invalid sampling activation. Values available: gumbel, bc")
+
+
     def forward(self, x, seq_len, temperature):
         # ordering by sequence length
         sorted_lengths, sorted_idx = torch.sort(seq_len, descending=True)
@@ -93,17 +104,11 @@ class BeliefAutoencoder(nn.Module):
         x, h_t, word_emb = self.encode(x, sorted_lengths)
         
         # sampling
-        q_y = self.gumbel_input(h_t)
-        q_y = q_y.view(q_y.size(0), self.latent_dim, self.categorical_dim)
-        
-        z = gumbel_softmax(q_y,
-                           temperature=temperature,
-                           latent_dim=self.latent_dim,
-                           categorical_dim=self.categorical_dim,
-                           device=self.device)
+        qy = self.sampling_input(h_t)
+        z = self.sampling(qy, temperature)
         # decoder
         x = self.decoder(word_emb, z, max_seq_len)
-        return x, q_y
+        return x, qy
     
     def loss_function(self, y, y_hat, qy):
         return self._gumbel_loss_function(y, y_hat, qy)

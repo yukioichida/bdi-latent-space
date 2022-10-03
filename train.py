@@ -33,7 +33,7 @@ def get_all_results(hyperparameters: dict, current_epoch: int, train_loss: float
 
 def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, batch_size: int = 128,
           save_model: bool = False, initial_temp: float = 1., min_temp: float = 0.5, epochs: int = 100,
-          anneal_rate: float = 0.00003):
+          anneal_rate: float = 0.00003, activation: str = 'gumbel'):
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -41,7 +41,7 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, b
     vocab = preprocessed_data.vocab
     dataset = preprocessed_data.dataset
     model = BeliefAutoencoder(emb_dim=emb_dim, h_dim=h_dim, vocab=vocab, latent_dim=latent_dim,
-                              categorical_dim=categorical_dim, device=device)
+                              categorical_dim=categorical_dim, device=device, activation=activation)
     model.to(device)
     train_dataloader = DataLoader(dataset, batch_size=batch_size)
     optimizer = optim.Adam(model.parameters(), lr=1e-3)
@@ -85,16 +85,17 @@ def train(emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, b
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--emb_dim", type=int, default=50, help="Dimension of embedding layer")
+    parser.add_argument("--emb_dim", type=int, default=300, help="Dimension of embedding layer")
     parser.add_argument("--batch_size", type=int, default=128, help="Batch Size")
-    parser.add_argument("--h_dim", type=int, default=50, help="RNN hidden dim")
+    parser.add_argument("--h_dim", type=int, default=300, help="RNN hidden dim")
     parser.add_argument("--epochs", type=int, default=100, help="number of epochs to train")
     parser.add_argument("--anneal_rate", type=float, default=0.00003, help="Gumbel anneal rate")
     parser.add_argument("--initial_temp", type=int, default=1, help="Gumbel initial temperature")
     parser.add_argument("--min_temp", type=float, default=0.5, help="Gumbel min temperature")
-    parser.add_argument("--latent_dim", type=int, default=15, help="Dimension of latent vector")
+    parser.add_argument("--latent_dim", type=int, default=30, help="Dimension of latent vector")
     parser.add_argument("--categorical_dim", type=int, default=2, help="Number of categories")
     parser.add_argument("--save_model", action='store_true', default=False)
+    parser.add_argument("--activation", type=str, default='gumbel')
 
     args = parser.parse_args()
     set_seed()
