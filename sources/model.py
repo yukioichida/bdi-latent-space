@@ -88,7 +88,7 @@ class BeliefAutoencoder(nn.Module):
     def sampling(self, qy, temperature):
         if self.activation == 'gumbel':
             qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
-            return gumbel_softmax(qy, temperature, self.latent_dim, self.categorical_dim, self.device)
+            return gumbel_softmax(qy, temperature, self.latent_dim, self.categorical_dim, device=self.device)
         elif self.activation == 'bc':
             return binary_concrete_sample(qy, temperature, self.device)
         else:
