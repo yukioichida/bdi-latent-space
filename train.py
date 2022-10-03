@@ -108,6 +108,7 @@ if __name__ == '__main__':
                        min_temp=args.min_temp,
                        latent_dim=args.latent_dim,
                        categorical_dim=args.categorical_dim,
-                       anneal_rate=args.anneal_rate)
+                       anneal_rate=args.anneal_rate,
+                       activation=args.activation)
 
     df_results.to_csv('train_results/results.csv', index=False)
