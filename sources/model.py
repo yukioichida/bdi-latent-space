@@ -12,7 +12,7 @@ def binary_concrete_sample(qy, temperature, device, eps=1e-20):
     logistic = torch.log(U + eps) - torch.log(1 - U + eps)
     logits = (qy + logistic) / temperature
     binary_concrete = torch.sigmoid(logits)
-    return binary_concrete
+    return binary_concrete.view(-1, qy.size(1) * qy.size(2))
 
 
 def gumbel_softmax_sample(qy, temperature, device, eps=1e-20):
