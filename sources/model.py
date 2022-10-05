@@ -7,12 +7,23 @@ import torch.optim as optim
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 
-def binary_concrete_sample(qy, temperature, device, eps=1e-20):
+def binary_concrete_sample(qy, temperature, device, eps=1e-20, hard=False):
     U = torch.rand(qy.size(), device=device)
     logistic = torch.log(U + eps) - torch.log(1 - U + eps)
     logits = (qy + logistic) / temperature
     binary_concrete = torch.sigmoid(logits)
-    return binary_concrete.view(-1, qy.size(1) * qy.size(2))
+    if not hard:
+        return binary_concrete.view(-1, qy.size(1) * qy.size(2))
+    else:
+        shape = y.size()
+        _, ind = binary_concrete.max(dim=-1)
+        y_hard = torch.zeros_like(binary_concrete).view(-1, shape[-1])
+        y_hard.scatter_(1, ind.view(-1, 1), 1)
+        y_hard = y_hard.view(*shape)
+        # Set gradients w.r.t. y_hard gradients w.r.t. y
+        y_hard = (y_hard - binary_concrete).detach() + binary_concrete
+
+        return y_hard.view(-1, qy.size(1) * qy.size(2))
 
 
 def gumbel_softmax_sample(qy, temperature, device, eps=1e-20):
@@ -50,6 +61,7 @@ class BeliefAutoencoder(nn.Module):
                  activation='gumbel'):
         super(BeliefAutoencoder, self).__init__()
         self.vocab_size = len(vocab)
+        self.vocab = vocab
         # encoder
         self.embedding = nn.Embedding(embedding_dim=emb_dim, num_embeddings=self.vocab_size,
                                       padding_idx=vocab[pad_token])
@@ -69,11 +81,15 @@ class BeliefAutoencoder(nn.Module):
         self.device = device
         self.activation = activation
 
+        self.embedding.weight.data.uniform_(-0.1, 0.1)
+        self.output_layer.bias.data.zero_()
+        self.output_layer.weight.data.uniform_(-0.1, 0.1)
+
     def encode(self, x, seq_len):
         x_emb = self.embedding(x)
         x_pack = pack_padded_sequence(x_emb, seq_len.data.tolist(), batch_first=True)
         x, ht = self.lstm_encoder(x_pack)
-        encoded_sequence = torch.cat([ht[0,:,:],ht[1,:,:]], dim=-1)# bidirectional -> + <-
+        encoded_sequence = torch.cat([ht[0, :, :], ht[1, :, :]], dim=-1)  # bidirectional -> + <-
         return x, encoded_sequence, x_pack
 
     def decoder(self, input, z, max_seq_len):
@@ -84,6 +100,16 @@ class BeliefAutoencoder(nn.Module):
         x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
         x = self.output_layer(x)
         return x
+
+    def inference(self, qy, max_len):
+        next_word = torch.zeros(1, len(qy), dtype=torch.long, device=qy.device).fill_(self.vocab['<SOS>'])
+        sentence = []
+        hidden = None
+        for i in range(max_len):
+            sentence.append(next_word)
+            logits, hidden = self.decoder(next_word, hidden, max_seq_len=max_len)
+            next_word = logits.argmax(dim=-1)
+        return torch.cat(sentence)
 
     def sampling(self, qy, temperature):
         if self.activation == 'gumbel':
