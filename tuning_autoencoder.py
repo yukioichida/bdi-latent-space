@@ -4,8 +4,10 @@ import itertools
 import shortuuid
 
 if __name__ == '__main__':
-    all_emb_dims = [100, 200, 300]
-    all_h_dims = [100, 200, 300]
+    #all_emb_dims = [100, 200, 300]
+    all_emb_dims = [512, 256]
+    #all_h_dims = [100, 200, 300]
+    all_h_dims = [512, 1024]
     all_latent_dims = [15, 30]
     all_activations = ['gumbel', 'bc']
 
