@@ -31,6 +31,21 @@ def get_all_results(hyperparameters: dict, current_epoch: int, train_loss: float
     result['recon_loss'] = recon_loss
     return result
 
+def validate(dataloader, model):
+    train_loss = 0.
+    recon_loss = 0.
+    kld_loss = 0.
+    with torch.no_grad():
+        model.eval()
+        for batch in dataloader:
+            x, y, seq_lens = batch
+            y_hat, qy = model(x, seq_lens, temperature=0.5)
+            loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
+            train_loss += loss.item()
+            recon_loss += recon.item()
+            kld_loss += kld.item()
+    return train_loss / len(dataloader), recon_loss / len(dataloader), kld_loss / len(dataloader)
+
 
 def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, batch_size: int = 128,
           save_model: bool = False, initial_temp: float = 1., min_temp: float = 0.5, epochs: int = 100,
@@ -50,10 +65,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     temp = initial_temp
     results = []
     for epoch in range(epochs):
-
-        train_loss = 0.
-        recon_loss = 0.
-        kld_loss = 0.
+        model.train()
         for batch_idx, batch in tqdm.tqdm(enumerate(train_dataloader), total=len(train_dataloader)):
             x, y, seq_lens = batch
             optimizer.zero_grad()
@@ -61,20 +73,17 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
             loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
             loss.backward()
             optimizer.step()
-            train_loss += loss.item()
-            recon_loss += recon.item()
-            kld_loss += kld.item()
-
             if batch_idx % 20 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
 
-        print(f"Epoch {epoch} - Train loss {train_loss / len(train_dataloader):.4f} - Temp {temp:.4f}")
+        train_loss, recon_loss, kld_loss = validate(train_dataloader,model)
+        print(f"Epoch {epoch} - Train loss {train_loss:.4f} - Temp {temp:.4f}")
 
         epoch_result = get_all_results(hyperparameters=hyperparameters,
                                        current_epoch=epoch,
-                                       train_loss=train_loss / len(train_dataloader),
-                                       kld_loss=kld_loss / len(train_dataloader),
-                                       recon_loss=recon_loss / len(train_dataloader))
+                                       train_loss=train_loss,
+                                       kld_loss=kld_loss,
+                                       recon_loss=recon_loss)
         results.append(epoch_result)
 
     if save_model:
