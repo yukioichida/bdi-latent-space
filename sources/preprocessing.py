@@ -56,3 +56,5 @@ def preprocessing(filename: str, device: str) -> PreprocessedData:
     tensor_len = torch.tensor(all_sequence_len, device=device)
     dataset = TensorDataset(tensor_input, tensor_output, tensor_len)
     return PreprocessedData(dataset=dataset, pad_idx=pad_idx, sos_idx=sos_idx, eos_idx=eos_idx, vocab=vocab)
+
+

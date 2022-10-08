@@ -50,7 +50,7 @@ def validate(dataloader, model):
 
 def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, batch_size: int = 128,
           save_model: bool = False, initial_temp: float = 1., min_temp: float = 0.5, epochs: int = 100,
-          anneal_rate: float = 0.00003, activation: str = 'gumbel'):
+          anneal_rate: float = 0.00003, activation: str = 'gumbel', model_name: str = None):
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -97,8 +97,11 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     print(f"Best train_loss = {train_loss:.4f}")
 
     if save_model:
-        model_name = f"models/belief-autoencoder-{activation}-{train_id}.pth"
-        torch.save(best_model.state_dict(), model_name)
+        if model_name is not None:
+            model_path = f"models/{model_name}/belief-autoencoder-{activation}-{train_id}.pth"
+        else:
+            model_path = f"models/belief-autoencoder-{activation}-{train_id}.pth"
+        torch.save(best_model.state_dict(), model_path)
 
     return pd.DataFrame(results)
 
@@ -116,6 +119,7 @@ if __name__ == '__main__':
     parser.add_argument("--categorical_dim", type=int, default=2, help="Number of categories")
     parser.add_argument("--save_model", action='store_true', default=False)
     parser.add_argument("--activation", type=str, default='gumbel')
+    parser.add_argument("--model_name", type=str)
 
     args = parser.parse_args()
 
@@ -136,6 +140,7 @@ if __name__ == '__main__':
                        latent_dim=args.latent_dim,
                        categorical_dim=args.categorical_dim,
                        anneal_rate=args.anneal_rate,
-                       activation=args.activation)
+                       activation=args.activation,
+                       model_name=args.model_name)
 
     df_results.to_csv(f'train_results/results_{train_id}.csv', index=False)
