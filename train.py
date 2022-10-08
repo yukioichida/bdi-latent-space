@@ -97,10 +97,12 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
 
     if save_model:
         if model_name is not None:
-            model_path = f"models/{model_name}/belief-autoencoder-{activation}-{train_id}.pth"
+            import os
+            model_path = f"models/{model_name}"
+            os.makedirs(model_path, exist_ok=True)
         else:
-            model_path = f"models/belief-autoencoder-{activation}-{train_id}.pth"
-        torch.save(best_state, model_path)
+            model_path = f"models/"
+        torch.save(best_state, f"{model_path}/belief-autoencoder-{train_id}.pth")
 
     return pd.DataFrame(results)
 
