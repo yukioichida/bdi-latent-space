@@ -3,6 +3,7 @@ import argparse
 import numpy as np
 import random
 import shortuuid
+import copy
 
 import pandas as pd
 import torch
@@ -64,6 +65,8 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
 
     temp = initial_temp
     results = []
+    best_loss = 999
+    best_state = None
     for epoch in range(epochs):
         model.train()
         for batch_idx, batch in tqdm.tqdm(enumerate(train_dataloader), total=len(train_dataloader)):
@@ -77,8 +80,9 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
 
         train_loss, recon_loss, kld_loss = validate(train_dataloader,model)
+        if best_loss > train_loss:
+            best_state = copy.deepcopy(model.state_dict())
         print(f"Epoch {epoch} - Train loss {train_loss:.4f} - Temp {temp:.4f}")
-
         epoch_result = get_all_results(hyperparameters=hyperparameters,
                                        current_epoch=epoch,
                                        train_loss=train_loss,
@@ -86,9 +90,15 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
                                        recon_loss=recon_loss)
         results.append(epoch_result)
 
+    best_model = BeliefAutoencoder(emb_dim=emb_dim, h_dim=h_dim, vocab=vocab, latent_dim=latent_dim,
+                              categorical_dim=categorical_dim, device=device, activation=activation)
+    best_model.load_state_dict(best_state)
+    train_loss, recon_loss, kld_loss = validate(train_dataloader, best_model)
+    print(f"Best train_loss = {train_loss:.4f}")
+
     if save_model:
         model_name = f"models/belief-autoencoder-{activation}-{train_id}.pth"
-        torch.save(model.state_dict(), model_name)
+        torch.save(best_model.state_dict(), model_name)
 
     return pd.DataFrame(results)
 
