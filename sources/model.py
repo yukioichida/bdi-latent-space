@@ -102,7 +102,7 @@ class BeliefAutoencoder(nn.Module):
         x = x.view(batch_size, seq_len, dim)
         #x = pack_padded_sequence(x, seq_len.data.tolist(), batch_first=True)
         x, _ = self.lstm_decoder(x)
-        x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
+        #x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
         x = self.output_layer(x)
         return x
 
