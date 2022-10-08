@@ -90,10 +90,9 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
                                        recon_loss=recon_loss)
         results.append(epoch_result)
 
-    best_model = BeliefAutoencoder(emb_dim=emb_dim, h_dim=h_dim, vocab=vocab, latent_dim=latent_dim,
-                              categorical_dim=categorical_dim, device=device, activation=activation)
-    best_model.load_state_dict(best_state)
-    train_loss, recon_loss, kld_loss = validate(train_dataloader, best_model)
+    model.load_state_dict(best_state)
+    model.eval()
+    train_loss, recon_loss, kld_loss = validate(train_dataloader, model)
     print(f"Best train_loss = {train_loss:.4f}")
 
     if save_model:
