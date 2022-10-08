@@ -100,7 +100,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
             model_path = f"models/{model_name}/belief-autoencoder-{activation}-{train_id}.pth"
         else:
             model_path = f"models/belief-autoencoder-{activation}-{train_id}.pth"
-        torch.save(best_model.state_dict(), model_path)
+        torch.save(best_state, model_path)
 
     return pd.DataFrame(results)
 
