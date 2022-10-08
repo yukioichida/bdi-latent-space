@@ -72,7 +72,7 @@ class BeliefAutoencoder(nn.Module):
 
         # -- decoder --
         # converte o z em um vetor para ser usado como h_t no decoder lstm
-        self.z_embedding = nn.Linear(latent_dim * categorical_dim, h_dim * 2)  # z_t -> h_t
+        self.z_embedding = nn.Linear(latent_dim * categorical_dim, h_dim )  # z_t -> h_t
         self.lstm_decoder = nn.GRU(batch_first=True, hidden_size=h_dim, input_size=emb_dim, bidirectional=True)
         self.output_layer = nn.Linear(in_features=h_dim * 2, out_features=self.vocab_size)  #
 
@@ -90,16 +90,38 @@ class BeliefAutoencoder(nn.Module):
         x_pack = pack_padded_sequence(x_emb, seq_len.data.tolist(), batch_first=True)
         x, ht = self.lstm_encoder(x_pack)
         encoded_sequence = torch.cat([ht[0, :, :], ht[1, :, :]], dim=-1)  # bidirectional -> + <-
-        return x, encoded_sequence, x_pack
+        return x, encoded_sequence, x_emb
 
     def decoder(self, input, z, max_seq_len):
-        z_emb = self.z_embedding(z).unsqueeze(0)  # z_emb será usado como h inicial do LSTM decoder
-        _, batch_size, hidden_len = z_emb.size()
-        hidden = z_emb.view(2, batch_size, int(hidden_len / 2))  # h_t
-        x, _ = self.lstm_decoder(input, hidden)
+        # z_emb = self.z_embedding(z).unsqueeze(0)  # z_emb será usado como h inicial do LSTM decoder
+        # _, batch_size, hidden_len = z_emb.size()
+        # hidden = z_emb.view(2, batch_size, int(hidden_len / 2))  # h_t
+        batch_size, seq_len, dim = input.size()
+        z_emb = self.z_embedding(z)
+        x = input.view(seq_len, batch_size, dim) + z_emb
+        x = x.view(batch_size, seq_len, dim)
+        #x = pack_padded_sequence(x, seq_len.data.tolist(), batch_first=True)
+        x, _ = self.lstm_decoder(x)
         x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
         x = self.output_layer(x)
         return x
+
+    def forward(self, x, seq_len, temperature):
+        # ordering by sequence length
+        sorted_lengths, sorted_idx = torch.sort(seq_len, descending=True)
+        x = x[sorted_idx]
+        batch_size, max_seq_len = x.size()  # [batch_size, maximum seq_len from current batch, dim]
+
+        # encoder
+        x, h_t, word_emb = self.encode(x, sorted_lengths)
+
+        # sampling
+        qy = self.sampling_input(h_t)
+        qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
+        z = self.sampling(qy, temperature)
+        # decoder
+        x = self.decoder(word_emb, z, max_seq_len)
+        return x, qy
 
     def inference(self, qy, max_len):
         next_word = torch.zeros(1, len(qy), dtype=torch.long, device=qy.device).fill_(self.vocab['<SOS>'])
@@ -118,23 +140,6 @@ class BeliefAutoencoder(nn.Module):
             return binary_concrete_sample(qy, temperature, self.device)
         else:
             raise Exception("Invalid sampling activation. Values available: gumbel, bc")
-
-    def forward(self, x, seq_len, temperature):
-        # ordering by sequence length
-        sorted_lengths, sorted_idx = torch.sort(seq_len, descending=True)
-        x = x[sorted_idx]
-        batch_size, max_seq_len = x.size()  # [batch_size, maximum seq_len from current batch, dim]
-
-        # encoder
-        x, h_t, word_emb = self.encode(x, sorted_lengths)
-
-        # sampling
-        qy = self.sampling_input(h_t)
-        qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
-        z = self.sampling(qy, temperature)
-        # decoder
-        x = self.decoder(word_emb, z, max_seq_len)
-        return x, qy
 
     def loss_function(self, y, y_hat, qy):
         if self.activation == 'gumbel':
