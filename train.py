@@ -66,6 +66,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     temp = initial_temp
     results = []
     best_loss = 999
+    best_epoch = -1
     best_state = None
     for epoch in range(epochs):
         model.train()
@@ -82,6 +83,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
         train_loss, recon_loss, kld_loss = validate(train_dataloader,model)
         if best_loss > train_loss:
             best_state = copy.deepcopy(model.state_dict())
+            best_epoch = epoch
         print(f"Epoch {epoch} - Train loss {train_loss:.4f} - Temp {temp:.4f}")
         epoch_result = get_all_results(hyperparameters=hyperparameters,
                                        current_epoch=epoch,
@@ -93,7 +95,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     model.load_state_dict(best_state)
     model.eval()
     train_loss, recon_loss, kld_loss = validate(train_dataloader, model)
-    print(f"Best train_loss = {train_loss:.4f}")
+    print(f"Best train_loss = {train_loss:.4f} - best epoch {best_epoch}")
 
     if save_model:
         if model_name is not None:

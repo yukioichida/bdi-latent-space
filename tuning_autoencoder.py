@@ -5,10 +5,10 @@ import shortuuid
 
 if __name__ == '__main__':
     #all_emb_dims = [100, 200, 300]
-    all_emb_dims = [512, 256]
+    all_emb_dims = [128, 512, 256]
     #all_h_dims = [100, 200, 300]
-    all_h_dims = [512, 1024]
-    all_latent_dims = [15, 30]
+    all_h_dims = [256, 512, 1024]
+    all_latent_dims = [16, 32]
     all_activations = ['gumbel', 'bc']
 
     tunning_id = shortuuid.ShortUUID().random(length=8)
@@ -19,7 +19,7 @@ if __name__ == '__main__':
                                                                     all_activations):
         train_id = f'tunning_{i}'
         result_df = train(train_id=train_id, emb_dim=emb_dim, h_dim=h_dim, latent_dim=latent_dim, epochs=50,
-                          activation=activation)
+                          activation=activation, model_name="tunning_autoencoder")
         all_results.append(result_df)
         i += 1
 
