@@ -84,6 +84,8 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
         if best_loss > train_loss:
             best_state = copy.deepcopy(model.state_dict())
             best_epoch = epoch
+            best_loss = train_loss
+
         print(f"Epoch {epoch} - Train loss {train_loss:.4f} - Temp {temp:.4f}")
         epoch_result = get_all_results(hyperparameters=hyperparameters,
                                        current_epoch=epoch,
