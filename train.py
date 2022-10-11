@@ -50,7 +50,7 @@ def validate(dataloader, model):
 
 def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_dim: int = 2, batch_size: int = 128,
           save_model: bool = False, initial_temp: float = 1., min_temp: float = 0.5, epochs: int = 100,
-          anneal_rate: float = 0.00003, activation: str = 'gumbel', model_name: str = None):
+          anneal_rate: float = 0.00003, activation: str = 'gumbel', model_name: str = None, lr: float = 1e-3):
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -125,6 +125,7 @@ if __name__ == '__main__':
     parser.add_argument("--save_model", action='store_true', default=False)
     parser.add_argument("--activation", type=str, default='gumbel')
     parser.add_argument("--model_name", type=str)
+    parser.add_argument("--lr", type=float, default=1e-3)
 
     args = parser.parse_args()
 
@@ -146,6 +147,7 @@ if __name__ == '__main__':
                        categorical_dim=args.categorical_dim,
                        anneal_rate=args.anneal_rate,
                        activation=args.activation,
-                       model_name=args.model_name)
+                       model_name=args.model_name,
+                       lr=args.lr)
 
     df_results.to_csv(f'train_results/results_{train_id}.csv', index=False)
