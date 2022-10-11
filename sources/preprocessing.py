@@ -17,7 +17,7 @@ def preprocess_sentence(sentence: str, vocab: dict, max_len: int):
     pad_len = (max_len + 1) - len(word_idx)
     pad_input_idx = input_idx + ([pad_idx] * pad_len)
     pad_target_idx = target_idx + ([pad_idx] * pad_len)
-    return pad_input_idx, pad_target_idx, len(pad_input_idx)
+    return pad_input_idx, pad_target_idx, len(input_idx)
 
 
 def preprocessing(filename: str, device: str) -> PreprocessedData:

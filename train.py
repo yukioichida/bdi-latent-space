@@ -32,7 +32,8 @@ def get_all_results(hyperparameters: dict, current_epoch: int, train_loss: float
     result['recon_loss'] = recon_loss
     return result
 
-def validate(dataloader, model):
+
+def validate(dataloader, model, temp):
     train_loss = 0.
     recon_loss = 0.
     kld_loss = 0.
@@ -40,8 +41,8 @@ def validate(dataloader, model):
         model.eval()
         for batch in dataloader:
             x, y, seq_lens = batch
-            y_hat, qy = model(x, seq_lens, temperature=0.5)
-            loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
+            y_hat, qy, sorted_idx = model(x, seq_lens, temperature=temp)
+            loss, recon, kld = model.loss_function(y=y[sorted_idx], y_hat=y_hat, qy=qy)
             train_loss += loss.item()
             recon_loss += recon.item()
             kld_loss += kld.item()
@@ -53,7 +54,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
           anneal_rate: float = 0.00003, activation: str = 'gumbel', model_name: str = None, lr: float = 1e-3):
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
+    
     preprocessed_data = preprocessing("data/dataset_sentence_level.csv", device)
     vocab = preprocessed_data.vocab
     dataset = preprocessed_data.dataset
@@ -61,8 +62,8 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
                               categorical_dim=categorical_dim, device=device, activation=activation)
     model.to(device)
     train_dataloader = DataLoader(dataset, batch_size=batch_size)
-    optimizer = optim.Adam(model.parameters(), lr=1e-3)
-
+    optimizer = optim.Adam(model.parameters(), lr=1e-3, betas=(0.5, 0.999))
+    
     temp = initial_temp
     results = []
     best_loss = 999
@@ -73,32 +74,33 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
         for batch_idx, batch in tqdm.tqdm(enumerate(train_dataloader), total=len(train_dataloader)):
             x, y, seq_lens = batch
             optimizer.zero_grad()
-            y_hat, qy = model(x, seq_lens, temperature=temp)
-            loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
+            y_hat, qy, sorted_idx = model(x, seq_lens, temperature=temp)
+            loss, recon, kld = model.loss_function(y=y[sorted_idx], y_hat=y_hat, qy=qy)
             loss.backward()
             optimizer.step()
             if batch_idx % 20 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
-
-        train_loss, recon_loss, kld_loss = validate(train_dataloader,model)
+        
+        train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp)
         if best_loss > train_loss:
             best_state = copy.deepcopy(model.state_dict())
             best_epoch = epoch
             best_loss = train_loss
-
-        print(f"Epoch {epoch} - Train loss {train_loss:.4f} - Temp {temp:.4f}")
+        
+        print(
+            f"Epoch {epoch} - Train loss {train_loss:.4f} - Temp {temp:.4f} - recon_loss {recon_loss:.4f} - kld {kld_loss:.4f}")
         epoch_result = get_all_results(hyperparameters=hyperparameters,
                                        current_epoch=epoch,
                                        train_loss=train_loss,
                                        kld_loss=kld_loss,
                                        recon_loss=recon_loss)
         results.append(epoch_result)
-
+    
     model.load_state_dict(best_state)
     model.eval()
     train_loss, recon_loss, kld_loss = validate(train_dataloader, model)
     print(f"Best train_loss = {train_loss:.4f} - best epoch {best_epoch}")
-
+    
     if save_model:
         if model_name is not None:
             import os
@@ -107,7 +109,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
         else:
             model_path = f"models/"
         torch.save(best_state, f"{model_path}/belief-autoencoder-{train_id}.pth")
-
+    
     return pd.DataFrame(results)
 
 
@@ -123,18 +125,18 @@ if __name__ == '__main__':
     parser.add_argument("--latent_dim", type=int, default=30, help="Dimension of latent vector")
     parser.add_argument("--categorical_dim", type=int, default=2, help="Number of categories")
     parser.add_argument("--save_model", action='store_true', default=False)
-    parser.add_argument("--activation", type=str, default='gumbel')
+    parser.add_argument("--activation", type=str, default='bc')
     parser.add_argument("--model_name", type=str)
     parser.add_argument("--lr", type=float, default=1e-3)
-
+    
     args = parser.parse_args()
-
+    
     train_id = shortuuid.ShortUUID().random(length=8)
-
+    
     print(f"Start training {train_id} - Args {args}")
-
+    
     set_seed()
-
+    
     df_results = train(train_id=train_id,
                        emb_dim=args.emb_dim,
                        h_dim=args.h_dim,
@@ -149,5 +151,5 @@ if __name__ == '__main__':
                        activation=args.activation,
                        model_name=args.model_name,
                        lr=args.lr)
-
+    
     df_results.to_csv(f'train_results/results_{train_id}.csv', index=False)
