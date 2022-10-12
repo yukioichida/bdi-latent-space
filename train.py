@@ -98,8 +98,9 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     
     model.load_state_dict(best_state)
     model.eval()
-    train_loss, recon_loss, kld_loss = validate(train_dataloader, model)
-    print(f"Best train_loss = {train_loss:.4f} - best epoch {best_epoch}")
+    
+    #train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp)
+    #print(f"Best train_loss = {train_loss:.4f} - best epoch {best_epoch}")
     
     if save_model:
         if model_name is not None:
