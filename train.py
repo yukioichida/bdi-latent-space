@@ -110,7 +110,9 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
             os.makedirs(model_path, exist_ok=True)
         else:
             model_path = f"models/"
-        torch.save(best_state, f"{model_path}/belief-autoencoder-{train_id}.pth")
+
+        rep_dim = latent_dim * categorical_dim
+        torch.save(best_state, f"{model_path}/belief-autoencoder-{emb_dim}-{h_dim}-{rep_dim}-{train_id}.pth")
     
     return pd.DataFrame(results)
 
