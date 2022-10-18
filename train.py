@@ -130,7 +130,7 @@ if __name__ == '__main__':
     parser.add_argument("--latent_dim", type=int, default=30, help="Dimension of latent vector")
     parser.add_argument("--categorical_dim", type=int, default=2, help="Number of categories")
     parser.add_argument("--save_model", action='store_true', default=False)
-    parser.add_argument("--activation", type=str, default='bc')
+    parser.add_argument("--activation", type=str, default='gumbel')
     parser.add_argument("--model_name", type=str)
     parser.add_argument("--lr", type=float, default=1e-3)
 

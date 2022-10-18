@@ -171,12 +171,11 @@ class BeliefAutoencoder(nn.Module):
         return loss, recon_loss, KLD
     
     def _gumbel_loss_function(self, y, y_hat, qy, eps=1e-20):
-        batch_size = y.size(0)
-        #recon_loss = F.cross_entropy(y_hat.view(-1, self.vocab_size), y.view(-1), reduction='sum') / batch_size
         recon_loss = F.cross_entropy(y_hat.view(-1, self.vocab_size), y.view(-1), reduction='none',
                                      ignore_index=self.vocab['<PAD>']).view(y.size()).sum(dim=1).mean()
         # KLD
-        qy_softmax = F.softmax(qy, dim=-1).reshape(*qy.size())
+
+        qy_softmax = F.softmax(qy, dim=-1).view(qy.size(0), self.latent_dim * self.categorical_dim)
         log_ratio = torch.log(qy_softmax * self.categorical_dim + eps)  # plus epsilon for avoiding log(0)
         KLD = torch.sum(qy_softmax * log_ratio, dim=-1).mean()
         loss = recon_loss + KLD
