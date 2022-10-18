@@ -97,7 +97,7 @@ class BeliefAutoencoder(nn.Module):
         encoded_sequence = torch.cat([ht[0, :, :], ht[1, :, :]], dim=-1)  # bidirectional -> + <-
         return x, encoded_sequence, x_emb
     
-    def decoder(self, input, z):
+    def decode(self, input, z):
         x = self.embedding(input)
         batch_size, max_seq_len, dim = x.size()
         
@@ -116,7 +116,7 @@ class BeliefAutoencoder(nn.Module):
         qy = self.sampling_input(h_t)
         z = self.sampling(qy, temperature)
         # decoder
-        x = self.decoder(x, z)
+        x = self.decode(x, z)
         return x, qy
     
     def inference(self, qy, max_len):
