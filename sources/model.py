@@ -13,7 +13,7 @@ def binary_concrete_sample(qy, temperature, device, eps=1e-20, hard=False):
     logits = (qy + logistic) / temperature
     binary_concrete = torch.sigmoid(logits)
     if not hard:
-        return binary_concrete.view(-1, qy.size(1) * qy.size(2))
+        return binary_concrete#.view(-1, qy.size(1) * qy.size(2))
     else:
         shape = y.size()
         _, ind = binary_concrete.max(dim=-1)
@@ -23,7 +23,7 @@ def binary_concrete_sample(qy, temperature, device, eps=1e-20, hard=False):
         # Set gradients w.r.t. y_hard gradients w.r.t. y
         y_hard = (y_hard - binary_concrete).detach() + binary_concrete
         
-        return y_hard.view(-1, qy.size(1) * qy.size(2))
+        return y_hard#.view(-1, qy.size(1) * qy.size(2))
 
 
 def gumbel_softmax_sample(qy, temperature, device, eps=1e-20):
@@ -90,48 +90,34 @@ class BeliefAutoencoder(nn.Module):
         self.output_layer.bias.data.zero_()
         self.output_layer.weight.data.uniform_(-0.1, 0.1)
     
-    def encode(self, x, seq_len):
+    def encode(self, x):
         x_emb = self.drop(self.embedding(x))
-        x_pack = pack_padded_sequence(x_emb, seq_len.data.tolist(), batch_first=True)
-        x, ht = self.lstm_encoder(x_pack)
+        #x_pack = pack_padded_sequence(x_emb, seq_len.data.tolist(), batch_first=True)
+        x, ht = self.lstm_encoder(x_emb)
         encoded_sequence = torch.cat([ht[0, :, :], ht[1, :, :]], dim=-1)  # bidirectional -> + <-
         return x, encoded_sequence, x_emb
     
-    def decoder(self, input, z, seq_lens):
-        # z_emb = self.z_embedding(z).unsqueeze(0)  # z_emb será usado como h inicial do LSTM decoder
-        # _, batch_size, hidden_len = z_emb.size()
-        # hidden = z_emb.view(2, batch_size, int(hidden_len / 2))  # h_t
-        
-        
+    def decoder(self, input, z):
         x = self.embedding(input)
         batch_size, max_seq_len, dim = x.size()
         
         z_emb = self.z_embedding(z)
         x = self.drop(x.view(max_seq_len, batch_size, dim)) + z_emb
         x = x.view(batch_size, max_seq_len, dim)
-        #x = pack_padded_sequence(x, seq_lens.data.tolist(), batch_first=True)
         x, _ = self.lstm_decoder(x)
-        #x, _ = pad_packed_sequence(x, batch_first=True, total_length=max_seq_len)
         x = self.drop(x)
         x = self.output_layer(x)
         return x
     
-    def forward(self, x, seq_len, temperature):
-        # ordering by sequence length
-        sorted_lengths, sorted_idx = torch.sort(seq_len, descending=True)
-        x = x[sorted_idx]
-        batch_size, max_seq_len = x.size()  # [batch_size, maximum seq_len from current batch, dim]
-        
+    def forward(self, x, temperature):
         # encoder
-        _, h_t, word_emb = self.encode(x, sorted_lengths)
-        
+        _, h_t, word_emb = self.encode(x)
         # sampling
         qy = self.sampling_input(h_t)
-        qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
         z = self.sampling(qy, temperature)
         # decoder
-        x = self.decoder(x, z, seq_len)
-        return x, qy, sorted_idx
+        x = self.decoder(x, z)
+        return x, qy
     
     def inference(self, qy, max_len):
         next_word = torch.zeros(1, len(qy), dtype=torch.long, device=qy.device).fill_(self.vocab['<SOS>'])
@@ -139,12 +125,13 @@ class BeliefAutoencoder(nn.Module):
         hidden = None
         for i in range(max_len):
             sentence.append(next_word)
-            logits, hidden = self.decoder(next_word, hidden, max_seq_len=max_len)
+            logits, hidden = self.decoder(next_word, hidden)
             next_word = logits.argmax(dim=-1)
         return torch.cat(sentence)
     
     def sampling(self, qy, temperature):
         if self.activation == 'gumbel':
+            qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
             return gumbel_softmax(qy, temperature, self.latent_dim, self.categorical_dim, device=self.device)
         elif self.activation == 'bc':
             return binary_concrete_sample(qy, temperature, self.device)
@@ -153,6 +140,7 @@ class BeliefAutoencoder(nn.Module):
     
     def loss_function(self, y, y_hat, qy):
         if self.activation == 'gumbel':
+            qy = qy.view(qy.size(0), self.latent_dim, self.categorical_dim)
             return self._gumbel_loss_function(y, y_hat, qy)
         elif self.activation == 'bc':
             return self._binary_concrete_loss_function(y, y_hat, qy)

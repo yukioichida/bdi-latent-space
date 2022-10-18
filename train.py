@@ -74,8 +74,8 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
         for batch_idx, batch in tqdm.tqdm(enumerate(train_dataloader), total=len(train_dataloader)):
             x, y, seq_lens = batch
             optimizer.zero_grad()
-            y_hat, qy, sorted_idx = model(x, seq_lens, temperature=temp)
-            loss, recon, kld = model.loss_function(y=y[sorted_idx], y_hat=y_hat, qy=qy)
+            y_hat, qy = model(x, seq_lens, temperature=temp)
+            loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
             loss.backward()
             optimizer.step()
             if batch_idx % 20 == 1:
