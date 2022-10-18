@@ -58,12 +58,11 @@ def gumbel_softmax(logits, temperature, latent_dim, categorical_dim, hard=False,
 class BeliefAutoencoder(nn.Module):
     
     def __init__(self, emb_dim, h_dim, vocab, latent_dim, categorical_dim=1, device='cpu', pad_token='<PAD>',
-                 activation='gumbel'):
+                 activation='gumbel', dropout_rate=0.3):
         super(BeliefAutoencoder, self).__init__()
         self.vocab_size = len(vocab)
         self.vocab = vocab
 
-        dropout_rate = 0.5
         self.drop = nn.Dropout(dropout_rate)
         
         # encoder
