@@ -186,7 +186,7 @@ class BeliefAutoencoder(nn.Module):
         batch_size = y.size(0)
         #recon_loss = F.cross_entropy(y_hat.view(-1, self.vocab_size), y.view(-1), reduction='sum') / batch_size
         recon_loss = F.cross_entropy(y_hat.view(-1, self.vocab_size), y.view(-1), reduction='none',
-                                     ignore_index=self.vocab['<PAD>']).view(y.size()).sum(dim=0).mean()
+                                     ignore_index=self.vocab['<PAD>']).view(y.size()).sum(dim=1).mean()
         # KLD
         qy_softmax = F.softmax(qy, dim=-1).reshape(*qy.size())
         log_ratio = torch.log(qy_softmax * self.categorical_dim + eps)  # plus epsilon for avoiding log(0)
