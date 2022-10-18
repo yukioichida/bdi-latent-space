@@ -41,8 +41,8 @@ def validate(dataloader, model, temp):
         model.eval()
         for batch in dataloader:
             x, y, seq_lens = batch
-            y_hat, qy, sorted_idx = model(x, temperature=temp)
-            loss, recon, kld = model.loss_function(y=y[sorted_idx], y_hat=y_hat, qy=qy)
+            y_hat, qy = model(x, temperature=temp)
+            loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
             train_loss += loss.item()
             recon_loss += recon.item()
             kld_loss += kld.item()
