@@ -41,7 +41,7 @@ def validate(dataloader, model, temp):
         model.eval()
         for batch in dataloader:
             x, y, seq_lens = batch
-            y_hat, qy, sorted_idx = model(x, seq_lens, temperature=temp)
+            y_hat, qy, sorted_idx = model(x, temperature=temp)
             loss, recon, kld = model.loss_function(y=y[sorted_idx], y_hat=y_hat, qy=qy)
             train_loss += loss.item()
             recon_loss += recon.item()
@@ -74,7 +74,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
         for batch_idx, batch in tqdm.tqdm(enumerate(train_dataloader), total=len(train_dataloader)):
             x, y, seq_lens = batch
             optimizer.zero_grad()
-            y_hat, qy = model(x, seq_lens, temperature=temp)
+            y_hat, qy = model(x, temperature=temp)
             loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
             loss.backward()
             optimizer.step()
