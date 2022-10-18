@@ -101,6 +101,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     
     #train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp)
     #print(f"Best train_loss = {train_loss:.4f} - best epoch {best_epoch}")
+    print(f"Best epoch {best_epoch}")
     
     if save_model:
         if model_name is not None:
