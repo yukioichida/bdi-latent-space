@@ -54,7 +54,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
           anneal_rate: float = 0.00003, activation: str = 'gumbel', model_name: str = None, lr: float = 1e-3):
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    
+
     preprocessed_data = preprocessing("data/dataset_sentence_level.csv", device)
     vocab = preprocessed_data.vocab
     dataset = preprocessed_data.dataset
@@ -63,7 +63,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     model.to(device)
     train_dataloader = DataLoader(dataset, batch_size=batch_size)
     optimizer = optim.Adam(model.parameters(), lr=1e-3, betas=(0.5, 0.999))
-    
+
     temp = initial_temp
     results = []
     best_loss = 999
@@ -80,13 +80,13 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
             optimizer.step()
             if batch_idx % 20 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
-        
+
         train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp)
         if best_loss > train_loss:
             best_state = copy.deepcopy(model.state_dict())
             best_epoch = epoch
             best_loss = train_loss
-        
+
         print(
             f"Epoch {epoch} - Train loss {train_loss:.4f} - Temp {temp:.4f} - recon_loss {recon_loss:.4f} - kld {kld_loss:.4f}")
         epoch_result = get_all_results(hyperparameters=hyperparameters,
@@ -95,14 +95,14 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
                                        kld_loss=kld_loss,
                                        recon_loss=recon_loss)
         results.append(epoch_result)
-    
+
     model.load_state_dict(best_state)
     model.eval()
-    
-    #train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp)
-    #print(f"Best train_loss = {train_loss:.4f} - best epoch {best_epoch}")
+
+    # train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp)
+    # print(f"Best train_loss = {train_loss:.4f} - best epoch {best_epoch}")
     print(f"Best epoch {best_epoch}")
-    
+
     if save_model:
         if model_name is not None:
             import os
@@ -112,8 +112,9 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
             model_path = f"models/"
 
         rep_dim = latent_dim * categorical_dim
-        torch.save(best_state, f"{model_path}/belief-autoencoder-{emb_dim}-{h_dim}-{rep_dim}-{train_id}.pth")
-    
+        torch.save(best_state,
+                   f"{model_path}/belief-autoencoder-{activation}-{emb_dim}-{h_dim}-{rep_dim}-{train_id}.pth")
+
     return pd.DataFrame(results)
 
 
@@ -132,15 +133,15 @@ if __name__ == '__main__':
     parser.add_argument("--activation", type=str, default='bc')
     parser.add_argument("--model_name", type=str)
     parser.add_argument("--lr", type=float, default=1e-3)
-    
+
     args = parser.parse_args()
-    
+
     train_id = shortuuid.ShortUUID().random(length=8)
-    
+
     print(f"Start training {train_id} - Args {args}")
-    
+
     set_seed()
-    
+
     df_results = train(train_id=train_id,
                        emb_dim=args.emb_dim,
                        h_dim=args.h_dim,
@@ -155,5 +156,5 @@ if __name__ == '__main__':
                        activation=args.activation,
                        model_name=args.model_name,
                        lr=args.lr)
-    
+
     df_results.to_csv(f'train_results/results_{train_id}.csv', index=False)
