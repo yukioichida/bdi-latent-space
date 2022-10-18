@@ -63,7 +63,7 @@ class BeliefAutoencoder(nn.Module):
         self.vocab_size = len(vocab)
         self.vocab = vocab
 
-        dropout_rate = 0.
+        dropout_rate = 0.5
         self.drop = nn.Dropout(dropout_rate)
         
         # encoder
