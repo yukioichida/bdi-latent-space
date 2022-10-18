@@ -85,10 +85,15 @@ class BeliefAutoencoder(nn.Module):
         self.categorical_dim = categorical_dim
         self.device = device
         self.activation = activation
-        
+
+
         self.embedding.weight.data.uniform_(-0.1, 0.1)
         self.output_layer.bias.data.zero_()
         self.output_layer.weight.data.uniform_(-0.1, 0.1)
+        self.z_embedding.bias.data.zero_()
+        self.z_embedding.weight.data.uniform_(-0.1, 0.1)
+        self.sampling_input.bias.data.zero_()
+        self.sampling_input.weight.data.uniform_(-0.1, 0.1)
     
     def encode(self, x):
         x_emb = self.drop(self.embedding(x))
