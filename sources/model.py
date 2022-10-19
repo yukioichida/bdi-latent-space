@@ -76,9 +76,9 @@ class BeliefAutoencoder(nn.Module):
         # -- decoder --
         # converte o z em um vetor para ser usado como h_t no decoder lstm
         # self.z_embedding = nn.Linear(latent_dim * categorical_dim, h_dim )  # z_t -> h_t
-        self.z_embedding = nn.Linear(latent_dim * categorical_dim, emb_dim*2)
-        self.decoder = nn.GRU(batch_first=True, hidden_size=h_dim, input_size=emb_dim, dropout=dropout_rate)  # , bidirectional=True)
-        self.output_layer = nn.Linear(in_features=h_dim, out_features=self.vocab_size)  #
+        self.z_embedding = nn.Linear(latent_dim * categorical_dim, h_dim*2)
+        self.decoder = nn.GRU(batch_first=True, hidden_size=h_dim, input_size=emb_dim, dropout=dropout_rate, bidirectional=True)  # , bidirectional=True)
+        self.output_layer = nn.Linear(in_features=h_dim*2, out_features=self.vocab_size)  #
         
         self.latent_dim = latent_dim
         self.categorical_dim = categorical_dim
@@ -106,7 +106,8 @@ class BeliefAutoencoder(nn.Module):
         batch_size, max_seq_len, dim = x.size()
         
         z_emb = self.z_embedding(z)
-        hidden = z_emb.view(2, batch_size, dim)
+        batch_size, z_size = z_emb.size()
+        hidden = z_emb.view(2, batch_size, int(z_size/2))
         #x = self.drop(x.view(max_seq_len, batch_size, dim)) + z_emb
         #x = x.view(batch_size, max_seq_len, dim)
         x, hidden = self.decoder(x, hidden)
