@@ -97,7 +97,7 @@ class BeliefAutoencoder(nn.Module):
     def encode(self, x):
         x_emb = self.drop(self.embedding(x))
         #x_pack = pack_padded_sequence(x_emb, seq_len.data.tolist(), batch_first=True)
-        x, (ht, _) = self.encoder(x_emb)
+        x, ht = self.encoder(x_emb)
         encoded_sequence = torch.cat([ht[0, :, :], ht[1, :, :]], dim=-1)  # bidirectional -> + <-
         return x, encoded_sequence, x_emb
     
