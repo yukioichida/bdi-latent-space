@@ -68,7 +68,7 @@ class BeliefAutoencoder(nn.Module):
         # encoder
         self.embedding = nn.Embedding(embedding_dim=emb_dim, num_embeddings=self.vocab_size,
                                       padding_idx=vocab[pad_token])
-        self.encoder = nn.LSTM(batch_first=True, hidden_size=h_dim, input_size=emb_dim, bidirectional=True, dropout=dropout_rate)
+        self.encoder = nn.GRU(batch_first=True, hidden_size=h_dim, input_size=emb_dim, bidirectional=True, dropout=dropout_rate)
         
         # VAE
         self.sampling_input = nn.Linear(h_dim * 2, latent_dim * categorical_dim)
@@ -77,7 +77,7 @@ class BeliefAutoencoder(nn.Module):
         # converte o z em um vetor para ser usado como h_t no decoder lstm
         # self.z_embedding = nn.Linear(latent_dim * categorical_dim, h_dim )  # z_t -> h_t
         self.z_embedding = nn.Linear(latent_dim * categorical_dim, emb_dim*2)
-        self.decoder = nn.LSTM(batch_first=True, hidden_size=h_dim, input_size=emb_dim, dropout=dropout_rate)  # , bidirectional=True)
+        self.decoder = nn.GRU(batch_first=True, hidden_size=h_dim, input_size=emb_dim, dropout=dropout_rate)  # , bidirectional=True)
         self.output_layer = nn.Linear(in_features=h_dim, out_features=self.vocab_size)  #
         
         self.latent_dim = latent_dim
