@@ -64,7 +64,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
                               dropout_rate=dropout_rate)
     model.to(device)
     train_dataloader = DataLoader(dataset, batch_size=batch_size)
-    optimizer = optim.Adam(model.parameters(), lr=1e-3)  # , betas=(0.5, 0.999))
+    optimizer = optim.Adam(model.parameters(), lr=lr)  # , betas=(0.5, 0.999))
 
     temp = initial_temp
     results = []
