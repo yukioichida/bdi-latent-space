@@ -101,7 +101,7 @@ class BeliefAutoencoder(nn.Module):
         encoded_sequence = torch.cat([ht[0, :, :], ht[1, :, :]], dim=-1)  # bidirectional -> + <-
         return x, encoded_sequence, x_emb
     
-    def decode(self, input, z):
+    def decode(self, input, z, hidden=None):
         x = self.embedding(input)
         batch_size, max_seq_len, dim = x.size()
         
@@ -126,12 +126,15 @@ class BeliefAutoencoder(nn.Module):
         return x, qy
     
     def inference(self, qy, max_len):
-        next_word = torch.zeros(1, len(qy), dtype=torch.long, device=qy.device).fill_(self.vocab['<SOS>'])
+        
+        next_word = torch.tensor([self.vocab['<SOS>']], dtype=torch.long, device=qy.device)
         sentence = []
-        hidden = None
+        hidden = self.z_embedding(qy)
         for i in range(max_len):
+            next_word_emb = self.embedding(next_word)
+            logits, hidden = self.decoder(next_word_emb, hidden)
+
             sentence.append(next_word)
-            logits, hidden = self.decoder(next_word, hidden)
             next_word = logits.argmax(dim=-1)
         return torch.cat(sentence)
     

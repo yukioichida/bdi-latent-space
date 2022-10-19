@@ -56,7 +56,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-    preprocessed_data = preprocessing("data/dataset_sentence_level_mini.csv", device)
+    preprocessed_data = preprocessing("data/dataset_sentence_level.csv", device)
     vocab = preprocessed_data.vocab
     dataset = preprocessed_data.dataset
     model = BeliefAutoencoder(emb_dim=emb_dim, h_dim=h_dim, vocab=vocab, latent_dim=latent_dim,
@@ -80,7 +80,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
             loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
             loss.backward()
             optimizer.step()
-            if batch_idx % 20 == 1:
+            if batch_idx % 100 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
 
         train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp)
@@ -123,7 +123,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--emb_dim", type=int, default=64, help="Dimension of embedding layer")
-    parser.add_argument("--batch_size", type=int, default=16, help="Batch Size")
+    parser.add_argument("--batch_size", type=int, default=100, help="Batch Size")
     parser.add_argument("--h_dim", type=int, default=128, help="RNN hidden dim")
     parser.add_argument("--epochs", type=int, default=100, help="number of epochs to train")
     parser.add_argument("--anneal_rate", type=float, default=0.00003, help="Gumbel anneal rate")
@@ -132,10 +132,10 @@ if __name__ == '__main__':
     parser.add_argument("--latent_dim", type=int, default=16, help="Dimension of latent vector")
     parser.add_argument("--categorical_dim", type=int, default=2, help="Number of categories")
     parser.add_argument("--save_model", action='store_true', default=False)
-    parser.add_argument("--activation", type=str, default='bc')
+    parser.add_argument("--activation", type=str, default='gumbel')
     parser.add_argument("--model_name", type=str)
     parser.add_argument("--lr", type=float, default=1e-3)
-    parser.add_argument("--dropout_rate", type=float, default=0.4)
+    parser.add_argument("--dropout_rate", type=float, default=0.2)
 
     args = parser.parse_args()
 
