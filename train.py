@@ -56,7 +56,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
     hyperparameters = locals()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-    preprocessed_data = preprocessing("data/dataset_sentence_level.csv", device)
+    preprocessed_data = preprocessing("data/all_sentences_join.csv", device)
     vocab = preprocessed_data.vocab
     dataset = preprocessed_data.dataset
     model = BeliefAutoencoder(emb_dim=emb_dim, h_dim=h_dim, vocab=vocab, latent_dim=latent_dim,
