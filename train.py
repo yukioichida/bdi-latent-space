@@ -33,7 +33,7 @@ def get_all_results(hyperparameters: dict, current_epoch: int, train_loss: float
     return result
 
 
-def validate(dataloader, model, temp):
+def validate(dataloader, model, temp, num_samples):
     train_loss = 0.
     recon_loss = 0.
     kld_loss = 0.
@@ -43,8 +43,8 @@ def validate(dataloader, model, temp):
             x, y, seq_lens = batch
             y_hat, qy = model(x, temperature=temp)
             loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
-            train_loss += loss.item()
-            recon_loss += recon.item()
+            train_loss += loss.item() * num_samples
+            recon_loss += recon.item() * num_samples
             kld_loss += kld.item()
     return train_loss / len(dataloader), recon_loss / len(dataloader), kld_loss / len(dataloader)
 
@@ -83,7 +83,7 @@ def train(train_id: str, emb_dim: int, h_dim: int, latent_dim: int, categorical_
             if batch_idx % 100 == 1:
                 temp = np.maximum(temp * np.exp(-anneal_rate * batch_idx), min_temp)
 
-        train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp)
+        train_loss, recon_loss, kld_loss = validate(train_dataloader, model, temp, num_samples=len(dataset))
         if best_loss > train_loss:
             best_state = copy.deepcopy(model.state_dict())
             best_epoch = epoch
