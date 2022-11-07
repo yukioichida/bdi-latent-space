@@ -45,7 +45,7 @@ def validate(dataloader, model, temp, num_samples):
             loss, recon, kld = model.loss_function(y=y, y_hat=y_hat, qy=qy)
             train_loss += loss.item() * num_samples
             recon_loss += recon.item() * num_samples
-            kld_loss += kld.item()
+            kld_loss += kld.item() * num_samples
     return train_loss / len(dataloader), recon_loss / len(dataloader), kld_loss / len(dataloader)
 
 
