@@ -11,7 +11,7 @@
       - break
     - else
       - continue
-# Diário
+# Notas
 - Talvez não usar representações discretas no primeiro momento
   - usar embeddings dos textos como snapshot de memória
   - esses snapshots devem ser usados no modelo de NLI e no RL
