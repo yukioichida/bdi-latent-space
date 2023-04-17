@@ -1,0 +1,5 @@
+{
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "python.dataScience.sendSelectionToInteractiveWindow": true
+
+}
