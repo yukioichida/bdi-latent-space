@@ -1,0 +1,889 @@
+{
+    "0": {
+        "episodeIdx": 0,
+        "history": {
+            "history": [
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                },
+                {
+                    "action": "look around",
+                    "freelook": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "This room is called the hallway. In it, you see: \n\tthe agent\n\ta substance called air\n\ta picture\nYou also see:\n\tA door to the art studio (that is closed)\n\tA door to the bedroom (that is closed)\n\tA door to the greenhouse (that is closed)\n\tA door to the kitchen (that is closed)\n\tA door to the living room (that is closed)\n\tA door to the workshop (that is closed)",
+                    "score": "0.0"
+                }
+            ],
+            "simplifications": "",
+            "taskDescription": "Your task is to boil water. For compounds without a boiling point, combusting the substance is also acceptable. First, focus on the substance. Then, take actions that will cause it to change its state of matter.",
+            "taskIdx": "0",
+            "taskName": "boil",
+            "variationIdx": "0"
+        },
+        "notes": {
+            "text": "my notes here"
+        }
+    }
+}

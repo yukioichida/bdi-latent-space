@@ -9,8 +9,6 @@ if __name__ == '__main__':
             go to the kitchen first, pick the metal pot, fill with water, heat the water
         """
 
-
-
     # plan go to the kitchen
     subplan_a = """
             IF your goal is to go to the kitchen first CONSIDERING you see a door to the kitchen THEN
