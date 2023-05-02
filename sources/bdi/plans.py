@@ -10,6 +10,9 @@ class Plan(NamedTuple):
     context: str
     body: list[str]
 
+    def plan_header(self):
+        return self.task + ' and ' + self.context
+
 
 class PlanParser:
 
@@ -83,7 +86,7 @@ class PlanLibrary:
 
         # TODO: plans can be processed on GPU in parallel by generating a single tensor containing all plans
         for trigger_condition, plan in self.plans.items():
-            entailment, confidence = self.nli_model.entails(p=belief_base, h=plan.context)
+            entailment, confidence = self.nli_model.entails(p=belief_base, h=plan.plan_header())
             if entailment:
                 candidate_plans.append((confidence, plan))
 

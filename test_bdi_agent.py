@@ -1,16 +1,11 @@
-import time
-import random
 import argparse
+import random
+import time
 
 from scienceworld import ScienceWorldEnv
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-from sources.bdi.models import NLIModel
-from sources.drrn.drrn_agent import DRRN_Agent
 from sources.bdi.bdi_agent import BDIAgent, DRRNDefaultPolicy
-from sources.drrn.util import sanitizeInfo, sanitizeObservation
-import sources.drrn.memory as memory
-from sources.drrn.memory import PrioritizedReplayMemory
+from sources.bdi.models import NLIModel
 
 
 def load_agent(path: str = "models/drrn-task0/") -> BDIAgent:
@@ -18,22 +13,21 @@ def load_agent(path: str = "models/drrn-task0/") -> BDIAgent:
                                        trained_model_path=path,
                                        trained_model_id="-steps80000-eps562")
     nli_model = NLIModel()
+
     bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="boil_water.plan")
+    #bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="boil_water-easy.plan")
     print("BDI agent initialized")
     return bdi_agent
 
 
-def randomModel(args):
-    """ Example random agent -- randomly picks an action at each step. """
-    exitCommands = ["quit", "exit"]
-
+def run_bdi_agent(args):
+    """ Example bdi agent """
     taskIdx = args['task_num']
     simplificationStr = args['simplification_str']
     numEpisodes = args['num_episodes']
 
     # Keep track of the agent's final scores
     finalScores = []
-
     # Initialize environment
     env = ScienceWorldEnv("", args['jar_path'], envStepLimit=args['env_step_limit'])
 
@@ -42,35 +36,31 @@ def randomModel(args):
 
     # Choose task
     taskName = taskNames[taskIdx]  # Just get first task
-    env.load(taskName, 0,
-             "")  # Load the task, so we have access to some extra accessors e.g. getRandomVariationTrain() )
+    env.load(taskName, 0, "")  # Load the task, so we have access to some extra accessors e.g. getRandomVariationTrain() )
     maxVariations = env.getMaxVariations(taskName)
-    print("Starting Task " + str(taskIdx) + ": " + taskName)
+    print(f"Simplification: {simplificationStr}")
     time.sleep(2)
 
+    agent = load_agent()
     # Start running episodes
     for episodeIdx in range(0, numEpisodes):
         # Pick a random task variation
-        # randVariationIdx = env.getRandomVariationTrain()
-        randVariationIdx = 0
+        randVariationIdx = env.getRandomVariationTest()
+        #randVariationIdx = 1
         env.load(taskName, randVariationIdx, simplificationStr)
-
-        agent = load_agent()
-
         # Reset the environment
         observation, info = env.reset()
 
-        print("Task Name: " + taskName)
+        print(f"Task Name: " + taskName + " variation " + str(randVariationIdx))
         print("Task Variation: " + str(randVariationIdx) + " / " + str(maxVariations))
         print("Task Description: " + str(env.getTaskDescription()))
 
         score = 0.0
-        isCompleted = False
         curIter = 0
-        reward = 0
 
         # Run one episode until we reach a stopping condition (including exceeding the maximum steps)
         action_str = "look around"  # First action
+        observation, reward, isCompleted, info = env.step(action_str)
         while not isCompleted and curIter < 100:
             print("----------------------------------------------------------------")
             print("Step: " + str(curIter))
@@ -88,7 +78,7 @@ def randomModel(args):
             for action in plan_actions:
                 print("Executing action: " + str(action))
                 observation, reward, isCompleted, info = env.step(action)
-                print(observation)
+                print(f"{observation} - {isCompleted}")
                 score = info['score']
                 # Keep track of the number of commands sent to the environment in this episode
                 curIter += 1
@@ -154,7 +144,7 @@ def build_simplification_str(args):
 #   Parse command line arguments
 #
 def parse_args():
-    desc = "Run a model that chooses random actions until successfully reaching the goal."
+    desc = "Run bdi agent."
     parser = argparse.ArgumentParser(desc)
     parser.add_argument("--jar_path", type=str,
                         help="Path to the ScienceWorld jar file. Default: use builtin.")
@@ -177,7 +167,7 @@ def parse_args():
     simplification_group.add_argument("--simplifications-preset", choices=['easy'],
                                       help="Choose a preset among: 'easy' (apply all possible simplifications).")
     simplification_group.add_argument("--teleport", action="store_true",
-                                      help="Lets agents instantly move to any location.")
+                                      help="Lets agents instantly move to any location.", default=True)
     simplification_group.add_argument("--self-watering-plants", action="store_true",
                                       help="Plants do not have to be frequently watered.")
     simplification_group.add_argument("--open-containers", action="store_true",
@@ -198,7 +188,7 @@ def main():
     args = parse_args()
     random.seed(args["seed"])
     args["simplification_str"] = build_simplification_str(args)
-    randomModel(args)
+    run_bdi_agent(args)
 
 
 if __name__ == "__main__":

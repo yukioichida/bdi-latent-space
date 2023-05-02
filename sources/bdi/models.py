@@ -16,6 +16,7 @@ class NLIModel:
         self.device = device
         self.model = AutoModelForSequenceClassification.from_pretrained(hg_model_hub_name).to(device)
         self.tokenizer = AutoTokenizer.from_pretrained(hg_model_hub_name)
+        
         self.max_length = max_length
 
     def entails(self, p: str, h: str) -> (bool, float):

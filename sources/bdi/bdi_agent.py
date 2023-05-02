@@ -18,10 +18,11 @@ class BeliefBase(NamedTuple):
     look_around: str
 
     def string_representation(self):
-        if self.look_around == self.observation:
-            return self.goal + self.observation + self.inventory
+        #TODO: workaround, look around termina com um \n no final da string
+        if self.look_around[:-1] == self.observation:
+            return self.goal + ' ' + self.observation + ' ' + self.inventory
         else:
-            return self.goal + self.observation + self.inventory + self.look_around
+            return self.goal + ' ' + self.observation + ' ' + self.inventory + ' ' + self.look_around
 
 
 class DefaultPolicy:

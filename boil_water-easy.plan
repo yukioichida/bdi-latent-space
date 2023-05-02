@@ -1,6 +1,6 @@
-IF your goal is to boil an water CONSIDERING your are seeing the kitchen door
+IF your goal is to boil an water CONSIDERING your are not in the kitchen
 THEN
-go to the kitchen first, pick the metal pot, fill metal pot with water, pick up thermometer, heat the water
+teleport to kitchen, pick the metal pot, fill metal pot with water, pick up thermometer, heat the water
 ;
 IF your goal is to go to the kitchen first CONSIDERING you see a door to the kitchen THEN
 open door to the kitchen,
@@ -23,22 +23,7 @@ THEN
 deactivate stove,
 move metal pot to stove,
 activate stove,
-examine substance in metal pot,
-use thermometer in inventory on substance in metal pot,
-examine substance in metal pot,
-use thermometer in inventory on substance in metal pot,
-examine substance in metal pot,
-use thermometer in inventory on substance in metal pot,
-examine substance in metal pot,
-use thermometer in inventory on substance in metal pot,
-examine substance in metal pot,
-use thermometer in inventory on substance in metal pot,
-examine substance in metal pot,
-use thermometer in inventory on substance in metal pot,
-examine substance in metal pot,
-use thermometer in inventory on substance in metal pot,
-examine substance in metal pot,
-use thermometer in inventory on substance in metal pot,
+wait,
 examine substance in metal pot,
 use thermometer in inventory on substance in metal pot,
 examine substance in metal pot,
