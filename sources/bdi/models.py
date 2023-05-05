@@ -41,5 +41,8 @@ class NLIModel:
         predicted_probability = torch.softmax(outputs[0], dim=1)
         probabilities = torch.softmax(outputs[0], dim=1)[0].tolist()  # batch_size only one
 
-        entails = predicted_probability.argmax() == 0
-        return entails, probabilities[0]
+        label2id = {label: idx for idx, label in self.model.config.id2label.items()}
+
+        entails_idx = label2id['entailment']
+        entails = predicted_probability.argmax() == entails_idx
+        return entails, probabilities[entails_idx]

@@ -3,22 +3,17 @@ import re
 from typing import NamedTuple, Dict
 
 from sources.bdi.models import NLIModel
+# TODO: botar em um pacote separado a classe abaixo para evitar dependências circulares
+from sources.bdi.entities import BeliefBase, Plan
 
-
-class Plan(NamedTuple):
-    task: str
-    context: str
-    body: list[str]
-
-    def plan_header(self):
-        return self.task + ' and ' + self.context
 
 
 class PlanParser:
 
-    def parse(self, plan_content: str) -> Plan:
+    def parse(self, plan_content: str, idx: int) -> Plan:
         """
         Extract plan task, plan context and plan body from natural language plan
+        :param idx: plan identifier
         :param plan_content: natural language plan
         :return Plan parsed
         """
@@ -28,7 +23,7 @@ class PlanParser:
             task = self.preprocess_text(groups[0])
             context = self.preprocess_text(groups[1])
             body = [self.preprocess_text(text) for text in groups[2].split(',')]
-            return Plan(task, context, body)
+            return Plan(task, context, body, idx)
         else:
             print(f"Parse error: Plan {plan_content} malformed")
             return None
@@ -54,7 +49,7 @@ def load_plans_from_file(file: str):
         plan_str = f.read()
 
     plans = plan_str.split("\n;\n")
-    return [parser.parse(plan) for plan in plans]
+    return [parser.parse(plan, idx) for idx, plan in enumerate(plans)]
 
 
 class PlanLibrary:
@@ -76,7 +71,7 @@ class PlanLibrary:
             self.plans[plan.task] = plan
             self.subtasks.append(plan.task)
 
-    def select_plan(self, belief_base: str) -> Plan:
+    def select_plan(self, belief_base: BeliefBase) -> Plan:
         """
         Find a plan
         :param belief_base:
@@ -86,8 +81,10 @@ class PlanLibrary:
 
         # TODO: plans can be processed on GPU in parallel by generating a single tensor containing all plans
         for trigger_condition, plan in self.plans.items():
-            entailment, confidence = self.nli_model.entails(p=belief_base, h=plan.plan_header())
-            if entailment:
+            # the selected plan should have the same goal
+            same_goal, _ = self.nli_model.entails(p=belief_base.goal, h=plan.task)
+            entailment, confidence = self.nli_model.entails(p=belief_base.observation, h=plan.context)
+            if entailment and same_goal:
                 candidate_plans.append((confidence, plan))
 
         # verify if there is a candidate plan before sort it

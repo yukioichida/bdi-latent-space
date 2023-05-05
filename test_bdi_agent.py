@@ -13,9 +13,10 @@ def load_agent(path: str = "models/drrn-task0/") -> BDIAgent:
                                        trained_model_path=path,
                                        trained_model_id="-steps80000-eps562")
     nli_model = NLIModel()
+    #nli_model = NLIModel(hg_model_hub_name='alisawuffles/roberta-large-wanli')
 
-    bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="boil_water.plan")
-    #bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="boil_water-easy.plan")
+    #bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="boil_water.plan")
+    bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="boil_water-easy.plan")
     print("BDI agent initialized")
     return bdi_agent
 
@@ -45,8 +46,8 @@ def run_bdi_agent(args):
     # Start running episodes
     for episodeIdx in range(0, numEpisodes):
         # Pick a random task variation
-        randVariationIdx = env.getRandomVariationTest()
-        #randVariationIdx = 1
+        #randVariationIdx = env.getRandomVariationTest()
+        randVariationIdx = 0
         env.load(taskName, randVariationIdx, simplificationStr)
         # Reset the environment
         observation, info = env.reset()
@@ -72,7 +73,7 @@ def run_bdi_agent(args):
             # The environment will make isCompleted `True` when a stop condition has happened, or the maximum number of steps is reached.
             if (isCompleted):
                 break
-            plan_actions = agent.act(goal=info['taskDesc'], observation=observation, inventory=info['inv'],
+            plan_actions = agent.act(goal=info['taskDesc'], observation=" ".join(observation.split()).lower(), inventory=info['inv'],
                                      look_around=info['look'], valid_actions=info['valid'])
 
             for action in plan_actions:
@@ -103,8 +104,7 @@ def run_bdi_agent(args):
     env.saveRunHistoriesBufferIfFull(filenameOutPrefix, maxPerFile=args['max_episode_per_file'], forceSave=True)
 
     # Show final episode scores to user:
-    avg = sum([x for x in finalScores if x >= 0]) / len(
-        finalScores)  # Clip negative scores to 0 for average calculation
+    avg = sum([x for x in finalScores if x >= 0]) / len(finalScores)  # Clip negative scores to 0 for average calculation
     print("")
     print("---------------------------------------------------------------------")
     print(" Summary (Random Agent)")
@@ -137,7 +137,7 @@ def build_simplification_str(args):
     if args["no_electrical"]:
         simplifications.append("noElectricalAction")
 
-    return args["simplifications_preset"] or ",".join(simplifications)
+    return "easy" #args["simplifications_preset"] or ",".join(simplifications)
 
 
 #
