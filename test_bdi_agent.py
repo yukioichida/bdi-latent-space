@@ -46,8 +46,8 @@ def run_bdi_agent(args):
     # Start running episodes
     for episodeIdx in range(0, numEpisodes):
         # Pick a random task variation
-        #randVariationIdx = env.getRandomVariationTest()
-        randVariationIdx = 0
+        randVariationIdx = env.getRandomVariationTest()
+        #randVariationIdx = 0
         env.load(taskName, randVariationIdx, simplificationStr)
         # Reset the environment
         observation, info = env.reset()
@@ -113,6 +113,8 @@ def run_bdi_agent(args):
     print("---------------------------------------------------------------------")
     print(" Episode scores: " + str(finalScores))
     print(" Average episode score: " + str(avg))
+    print(" Num plans selected: " + str(agent.num_selected_plans))
+    print(" Num default actions: " + str(agent.num_default_actions))
     print("---------------------------------------------------------------------")
     print("")
 
@@ -154,7 +156,7 @@ def parse_args():
                         help="Specify the task variation number to play. Default: %(default)s")
     parser.add_argument("--env-step-limit", type=int, default=100,
                         help="Maximum number of steps per episode. Default: %(default)s")
-    parser.add_argument("--num-episodes", type=int, default=1,
+    parser.add_argument("--num-episodes", type=int, default=5,
                         help="Number of episodes to play. Default: %(default)s")
     parser.add_argument("--seed", type=int,
                         help="Seed the random generator used for sampling random actions.")

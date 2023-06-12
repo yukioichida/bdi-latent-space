@@ -46,16 +46,20 @@ class BDIAgent:
     def __init__(self, nli_model: NLIModel, default_policy: DefaultPolicy, plan_file: str):
         self.plan_library = PlanLibrary(nli_model, plan_file)
         self.default_policy = default_policy
+        self.num_selected_plans = 0
+        self.num_default_actions = 0
 
     def act(self, goal: str, observation: str, inventory: str, look_around: str, valid_actions: list[str]) -> list[str]:
         belief_base = BeliefBase(goal=goal, observation=observation, inventory=inventory, look_around=look_around)
         self.belief_base = belief_base
         plan = self.plan_library.select_plan(belief_base)
         if plan is None:
+            self.num_default_actions += 1
             print("There is no candidate plan. Using a default policy")
             default_actions = self.default_policy.act(belief_base, valid_actions)
             return default_actions
         else:
+            self.num_selected_plans += 1
             print(f"plan selected {plan.idx} - belief base {belief_base.string_representation()} - plan header {plan.plan_header()}")
             plan_actions = self.plan_library.get_actions(plan, valid_actions)
             return plan_actions

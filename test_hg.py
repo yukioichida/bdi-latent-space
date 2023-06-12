@@ -8,6 +8,7 @@ if __name__ == '__main__':
 #if plan.task entails belief.task:
 	#if belief.look+inv entails plan.plan_context:
     premise = """
+    Your task is to boil gallium.
  This room is called the art studio. In it, you see: 
 	the agent
 	a substance called air
@@ -20,8 +21,11 @@ You also see:
 	A door to the hallway (that is closed)
 """#.replace('\t', '').replace('\n', ' ')
 
+
     premise = " ".join(premise.split()).lower()
-    hypothesis = 'you are not in the workshop'
+    premise = "your task is to boil water"
+    #hypothesis = 'your task is to boil galium AND you are not in the workshop'
+    hypothesis = 'your task is to boil galium'
 
     hg_model_hub_name = "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli"
     #hg_model_hub_name = "ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli"

@@ -22,6 +22,7 @@ activate sink,
 deactivate sink,
 pick up metal pot
 ;
+
 IF your goal is to heat the water CONSIDERING you have a metal pot and a thermometer in inventory with water and you see a stove
 THEN
 deactivate stove,
