@@ -5,7 +5,7 @@ import argparse
 from scienceworld import ScienceWorldEnv
 
 from sources.drrn.drrn_agent import DRRN_Agent
-from sources.bdi.bdi_agent import BDIAgent
+from sources.bdi_old.bdi_agent import BDIAgent
 from sources.drrn.util import sanitizeInfo, sanitizeObservation
 import sources.drrn.memory as memory
 from sources.drrn.memory import PrioritizedReplayMemory

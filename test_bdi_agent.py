@@ -4,8 +4,8 @@ import time
 
 from scienceworld import ScienceWorldEnv
 
-from sources.bdi.bdi_agent import BDIAgent, DRRNDefaultPolicy
-from sources.bdi.models import NLIModel
+from sources.bdi_old.bdi_agent import BDIAgent, DRRNDefaultPolicy
+from sources.bdi_old.models import NLIModel
 
 
 def load_agent(path: str = "models/drrn-task0/") -> BDIAgent:
@@ -22,7 +22,7 @@ def load_agent(path: str = "models/drrn-task0/") -> BDIAgent:
 
 
 def run_bdi_agent(args):
-    """ Example bdi agent """
+    """ Example bdi_old agent """
     taskIdx = args['task_num']
     simplificationStr = args['simplification_str']
     numEpisodes = args['num_episodes']
@@ -146,7 +146,7 @@ def build_simplification_str(args):
 #   Parse command line arguments
 #
 def parse_args():
-    desc = "Run bdi agent."
+    desc = "Run bdi_old agent."
     parser = argparse.ArgumentParser(desc)
     parser.add_argument("--jar_path", type=str,
                         help="Path to the ScienceWorld jar file. Default: use builtin.")

@@ -1,12 +1,16 @@
+from typing import NamedTuple
 import re
 
-from typing import NamedTuple, Dict
+from sources.agent.scienceworld import parse_observation
 
-from sources.bdi.models import NLIModel
-# TODO: botar em um pacote separado a classe abaixo para evitar dependências circulares
-from sources.bdi.entities import BeliefBase, Plan
+class Plan(NamedTuple):
+    task: str
+    context: list[str]
+    body: list[str]
+    idx: int
 
-
+    def plan_header(self):
+        return 'if your task is to ' + self.task + ' and ' + self.context
 
 class PlanParser:
 
@@ -22,8 +26,11 @@ class PlanParser:
         if len(groups) == 3:
             task = self.preprocess_text(groups[0])
             context = self.preprocess_text(groups[1])
+
+            all_context = context.split("and")
+
             body = [self.preprocess_text(text) for text in groups[2].split(',')]
-            return Plan(task, context, body, idx)
+            return Plan(task, all_context, body, idx)
         else:
             print(f"Parse error: Plan {plan_content} malformed")
             return None
@@ -38,6 +45,7 @@ class PlanParser:
         return txt.replace('\n', ' ').replace('\t', ' ').strip()
 
 
+
 def load_plans_from_file(file: str):
     """
     Load plans from a .plan file
@@ -50,7 +58,6 @@ def load_plans_from_file(file: str):
 
     plans = plan_str.split("\n;\n")
     return [parser.parse(plan, idx) for idx, plan in enumerate(plans)]
-
 
 class PlanLibrary:
 
@@ -117,3 +124,27 @@ class PlanLibrary:
         else:
             print(f"Term {term} is not an action or plan")
             return
+
+class BeliefBase:
+
+    def __init__(self):
+        self.memory = []
+
+    def add_beliefs(self, observations: list[str]):
+        self.memory.append(observations)
+
+    def get_current_belief_base(self) -> list[str]:
+        return self.memory[-1] if len(self.memory) > 0 else []
+
+
+class BDIAgent:
+
+    def __init__(self):
+        self.belief_base = BeliefBase()
+
+    def perceive(self, observation:str):
+        observation_list = parse_observation(observation) # TODO: refactor this to decouple scienceworld functions
+        self.belief_base.add_beliefs(observation_list)
+
+
+

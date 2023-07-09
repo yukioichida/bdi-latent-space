@@ -22,7 +22,35 @@ if __name__ == '__main__':
         A door to the hallway (that is closed)
     """
 
-    x = re.search(r"([\S\s]*?)(?<=In it, you see:)([\S\s]*?)(?:CONSIDERING)([\S\s]*)(?:You also see:)([\S\s]*)", observation)
+    x = re.search(r"([\S\s]*?)(?:In it, you see:)([\S\s]*?)(?:You also see:)([\S\s]*)", observation)
     groups = x.groups()
-    print(groups)
+
+
+    for i, g in enumerate(groups):
+        print(f"part {i}")
+        print(g)
+
+    location = groups[0]
+    objects = groups[1]
+    doors = groups[2]
+
+    # spatial map
+    # varrer as ações válidas começando com go to
+    # escolher uma aleatória
+
+    for obj in objects.split("\n"):
+        obj = obj.strip()
+        loc = location.strip()
+        if obj:
+            print(f"{loc} In it, you see {obj}")
+
+    beliefs = location + objects + doors
+
+    loc = [location.strip()]
+    obs = [f"you see {obs.strip()}" for obs in objects.split('\n')if len(obs.strip()) > 0]
+    d = [door.strip() for door in doors.split('\n') if len(door.strip()) > 0]
+
+    print(loc)
+    print(obs)
+    print(d)
 

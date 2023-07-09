@@ -1,5 +1,5 @@
-from sources.bdi.models import NLIModel
-from sources.bdi.plans import PlanLibrary
+from sources.bdi_old.models import NLIModel
+from sources.bdi_old.plans import PlanLibrary
 
 # TODO: watch out for cyclic dependencies
 from sources.drrn.drrn_agent import DRRN_Agent
@@ -7,7 +7,7 @@ from sources.drrn.util import sanitizeObservation
 
 from typing import NamedTuple, Dict
 
-from sources.bdi.entities import BeliefBase, Plan
+from sources.bdi_old.entities import BeliefBase, Plan
 
 
 class DefaultPolicy:

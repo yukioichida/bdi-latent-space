@@ -13,18 +13,15 @@ if __name__ == '__main__':
     start = time.time()
     print("Loading Model")
 
-    obs = ['This room is called the art studio.', 'you see the agent', 'you see a substance called air',
+    p = ['This room is called the art studio.', 'you see the agent', 'you see a substance called air',
            'you see a large cupboard. The large cupboard door is closed.',
            'you see a table. On the table is: a glass cup (containing nothing).']
 
-    context = ['You are in the art studio', 'you see the agent']
+    p = "you see a table. on the table is: a glass cup containing water. table is a furniture"
+    #p = "container"
+    h = "a dog containing water on a furniture"
+    #h = "glass cup"
 
-    import itertools
-
-    a = list(itertools.product(obs, context))
-    print(a)
-
-    print(f"Combinations = {len(a)}")
 
     from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig
     import torch
@@ -52,14 +49,14 @@ if __name__ == '__main__':
     print(f"Model loaded {end - start} - model {model.device}")
 
     start = time.time()
-    tokenized_input_seq_pair = tokenizer.batch_encode_plus(a,
+    tokenized_input_seq_pair = tokenizer.encode_plus(p,h,
                                                      max_length=max_length,
                                                      return_token_type_ids=True, truncation=True, padding=True)
 
-    input_ids = torch.tensor(tokenized_input_seq_pair['input_ids'], device=device).long()#.unsqueeze(0)
+    input_ids = torch.tensor(tokenized_input_seq_pair['input_ids'], device=device).long().unsqueeze(0)
     # remember bart doesn't have 'token_type_ids', remove the line below if you are using bart.
-    token_type_ids = torch.tensor(tokenized_input_seq_pair['token_type_ids'], device=device).long()#.unsqueeze(0)
-    attention_mask = torch.tensor(tokenized_input_seq_pair['attention_mask'], device=device).long()#.unsqueeze(0)
+    token_type_ids = torch.tensor(tokenized_input_seq_pair['token_type_ids'], device=device).long().unsqueeze(0)
+    attention_mask = torch.tensor(tokenized_input_seq_pair['attention_mask'], device=device).long().unsqueeze(0)
 
     #print(config)
 
@@ -77,11 +74,10 @@ if __name__ == '__main__':
 
     print(f"Inference time: {end - start}")
     logits = outputs[0]
-    for i, pair in enumerate(a):
-        predicted_probability = torch.softmax(logits, dim=1)[i].tolist()  # batch_size only one
-        print("Premise:", pair[0])
-        print("Hypothesis:", pair[1])
-        print("Entailment:", predicted_probability[int(config.label2id['entailment'])])
-        print("Neutral:", predicted_probability[int(config.label2id['neutral'])])
-        print("Contradiction:", predicted_probability[int(config.label2id['contradiction'])])
+    predicted_probability = torch.softmax(logits, dim=1)[0].tolist()  # batch_size only one
+    print("Premise:", p)
+    print("Hypothesis:", h)
+    print("Entailment:", predicted_probability[int(config.label2id['entailment'])])
+    print("Neutral:", predicted_probability[int(config.label2id['neutral'])])
+    print("Contradiction:", predicted_probability[int(config.label2id['contradiction'])])
 
