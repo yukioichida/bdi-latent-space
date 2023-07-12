@@ -4,22 +4,6 @@ import time
 
 from scienceworld import ScienceWorldEnv
 
-from sources.bdi_old.bdi_agent import BDIAgent, DRRNDefaultPolicy
-from sources.bdi_old.models import NLIModel
-
-
-def load_agent(path: str = "models/drrn-task0/") -> BDIAgent:
-    default_policy = DRRNDefaultPolicy(spm_path="models/spm_models/unigram_8k.model",
-                                       trained_model_path=path,
-                                       trained_model_id="-steps80000-eps562")
-    nli_model = NLIModel()
-    #nli_model = NLIModel(hg_model_hub_name='alisawuffles/roberta-large-wanli')
-
-    #bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="boil_water.plan")
-    bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="plans/boil_water-easy.plan")
-    print("BDI agent initialized")
-    return bdi_agent
-
 
 def run_bdi_agent(args):
     """ Example bdi_old agent """
@@ -42,7 +26,6 @@ def run_bdi_agent(args):
     print(f"Simplification: {simplificationStr}")
     time.sleep(2)
 
-    agent = load_agent()
     # Start running episodes
     for episodeIdx in range(0, numEpisodes):
         # Pick a random task variation
@@ -70,19 +53,9 @@ def run_bdi_agent(args):
             print("Score: " + str(score))
             print("isCompleted: " + str(isCompleted))
 
-            # The environment will make isCompleted `True` when a stop condition has happened, or the maximum number of steps is reached.
-            if (isCompleted):
-                break
-            plan_actions = agent.act(goal=info['taskDesc'], observation=" ".join(observation.split()).lower(), inventory=info['inv'],
-                                     look_around=info['look'], valid_actions=info['valid'])
+            print(info)
 
-            for action in plan_actions:
-                print("Executing action: " + str(action))
-                observation, reward, isCompleted, info = env.step(action)
-                print(f"{observation} - {isCompleted}")
-                score = info['score']
-                # Keep track of the number of commands sent to the environment in this episode
-                curIter += 1
+            break
 
         print("Goal Progress:")
         print(env.getGoalProgressStr())
@@ -113,8 +86,6 @@ def run_bdi_agent(args):
     print("---------------------------------------------------------------------")
     print(" Episode scores: " + str(finalScores))
     print(" Average episode score: " + str(avg))
-    print(" Num plans selected: " + str(agent.num_selected_plans))
-    print(" Num default actions: " + str(agent.num_default_actions))
     print("---------------------------------------------------------------------")
     print("")
 

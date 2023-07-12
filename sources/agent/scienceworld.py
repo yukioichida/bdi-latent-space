@@ -11,5 +11,5 @@ def parse_observation(observation: str, inventory: str) -> list[str]:
     loc_split = [location.strip()]
     obs_split = [obs.strip() for obs in objects.split('\n') if len(obs.strip()) > 0]
     doors_split = [door.strip() for door in doors.split('\n') if len(door.strip()) > 0]
-
-    return loc_split + obs_split + doors_split
+    inventory_items = inventory.replace('\n', ' ').replace('\t', '')
+    return loc_split + obs_split + doors_split + [inventory_items]

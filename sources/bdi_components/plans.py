@@ -1,7 +1,8 @@
-from typing import NamedTuple
 import re
+from typing import NamedTuple, Dict
 
-from sources.agent.scienceworld import parse_observation
+from sources.bdi_components.inference import NLIModel
+
 
 class Plan(NamedTuple):
     task: str
@@ -61,14 +62,8 @@ def load_plans_from_file(file: str):
 
 class PlanLibrary:
 
-    def __init__(self, nli_model: NLIModel, plans_file: str):
-        """
-
-        :param nli_model: natural language inference model to detect whether the belief base entails a plan context
-        :param plans_file: File containing the natural language plans
-        """
-        self.nli_model = nli_model
-        self.plans: Dict[str, Plan] = dict()  # dict key with goal -> plan
+    def __init__(self, plans_file: str):
+        self.plans: Dict[str, Plan] = dict()  # dict key with trigger event -> plan
         self.subtasks = []
         plans_from_file = load_plans_from_file(plans_file)
         self.load_plans(plans_from_file)
@@ -77,29 +72,6 @@ class PlanLibrary:
         for plan in input_plans:
             self.plans[plan.task] = plan
             self.subtasks.append(plan.task)
-
-    def select_plan(self, belief_base: BeliefBase) -> Plan:
-        """
-        Find a plan
-        :param belief_base:
-        :return: List of atomic actions to agent execute it
-        """
-        candidate_plans = []
-
-        # TODO: plans can be processed on GPU in parallel by generating a single tensor containing all plans
-        for trigger_condition, plan in self.plans.items():
-            # the selected plan should have the same goal
-            same_goal, _ = self.nli_model.entails(p=belief_base.goal, h=plan.task)
-            entailment, confidence = self.nli_model.entails(p=belief_base.observation, h=plan.context)
-            if entailment and same_goal:
-                candidate_plans.append((confidence, plan))
-
-        # verify if there is a candidate plan before sort it
-        if len(candidate_plans) > 0:
-            candidate_plans.sort(key=lambda x: x[0])
-            return candidate_plans[0][1]
-        else:
-            return None
 
     def get_actions(self, plan: Plan, valid_actions: list[str]):
         """
@@ -114,37 +86,13 @@ class PlanLibrary:
     def _dfs(self, term, actions, valid_actions: list[str]) -> str:
         # TODO: ver como lidar com goals e ações com nomes nomes iguais pois causa loop infinito
         if term not in self.subtasks or term in valid_actions:
-            actions.append(term)  # is an action
+            actions.append(term)  # is an action (primitive task)
             return
         elif term in self.plans:
-            # plan that satisfies the goa
+            # decompose operation
             subtask = self.plans[term]
             for term in subtask.body:
                 self._dfs(term, actions, valid_actions)
         else:
             print(f"Term {term} is not an action or plan")
             return
-
-class BeliefBase:
-
-    def __init__(self):
-        self.memory = []
-
-    def add_beliefs(self, observations: list[str]):
-        self.memory.append(observations)
-
-    def get_current_belief_base(self) -> list[str]:
-        return self.memory[-1] if len(self.memory) > 0 else []
-
-
-class BDIAgent:
-
-    def __init__(self):
-        self.belief_base = BeliefBase()
-
-    def perceive(self, observation:str):
-        observation_list = parse_observation(observation) # TODO: refactor this to decouple scienceworld functions
-        self.belief_base.add_beliefs(observation_list)
-
-
-
