@@ -4,19 +4,24 @@ import time
 
 from scienceworld import ScienceWorldEnv
 
-from sources.bdi_old.bdi_agent import BDIAgent, DRRNDefaultPolicy
-from sources.bdi_old.models import NLIModel
+from sources.agent.agent import BDIAgent
+from sources.agent.scienceworld import parse_observation
+from sources.bdi_components.belief import State
+from sources.bdi_components.inference import NLIModel
+from sources.bdi_components.policy import DRRNDefaultPolicy
 
 
-def load_agent(path: str = "models/drrn-task0/") -> BDIAgent:
-    default_policy = DRRNDefaultPolicy(spm_path="models/spm_models/unigram_8k.model",
-                                       trained_model_path=path,
-                                       trained_model_id="-steps80000-eps562")
-    nli_model = NLIModel()
-    #nli_model = NLIModel(hg_model_hub_name='alisawuffles/roberta-large-wanli')
+def load_rl_policy(path: str = "models/drrn-task0/") -> DRRNDefaultPolicy:
+    drrn_policy = DRRNDefaultPolicy(spm_path="models/spm_models/unigram_8k.model",
+                                    trained_model_path=path,
+                                    trained_model_id="-steps80000-eps562")
+    print("DRRN pretrained policy initialized")
+    return drrn_policy
 
-    #bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="boil_water.plan")
-    bdi_agent = BDIAgent(nli_model=nli_model, default_policy=default_policy, plan_file="plans/boil_water-easy.plan")
+
+def load_bdi_agent():
+    nli_model = NLIModel(hg_model_name='alisawuffles/roberta-large-wanli')
+    bdi_agent = BDIAgent(nli_model=nli_model, plan_file="plans/boil_water-easy.plan")
     print("BDI agent initialized")
     return bdi_agent
 
@@ -37,17 +42,19 @@ def run_bdi_agent(args):
 
     # Choose task
     taskName = taskNames[taskIdx]  # Just get first task
-    env.load(taskName, 0, "")  # Load the task, so we have access to some extra accessors e.g. getRandomVariationTrain() )
+    env.load(taskName, 0,
+             "")  # Load the task, so we have access to some extra accessors e.g. getRandomVariationTrain() )
     maxVariations = env.getMaxVariations(taskName)
     print(f"Simplification: {simplificationStr}")
     time.sleep(2)
 
-    agent = load_agent()
+    bdi_agent = load_bdi_agent()
+    drrn_policy = load_rl_policy()
     # Start running episodes
     for episodeIdx in range(0, numEpisodes):
         # Pick a random task variation
         randVariationIdx = env.getRandomVariationTest()
-        #randVariationIdx = 0
+        # randVariationIdx = 0
         env.load(taskName, randVariationIdx, simplificationStr)
         # Reset the environment
         observation, info = env.reset()
@@ -73,17 +80,25 @@ def run_bdi_agent(args):
             # The environment will make isCompleted `True` when a stop condition has happened, or the maximum number of steps is reached.
             if (isCompleted):
                 break
-            plan_actions = agent.act(goal=info['taskDesc'], observation=" ".join(observation.split()).lower(), inventory=info['inv'],
-                                     look_around=info['look'], valid_actions=info['valid'])
 
-            for action in plan_actions:
-                print("Executing action: " + str(action))
-                observation, reward, isCompleted, info = env.step(action)
-                print(f"{observation} - {isCompleted}")
-                score = info['score']
-                # Keep track of the number of commands sent to the environment in this episode
-                curIter += 1
+            obs_sentences = parse_observation(observation=info['look'], inventory=info['inv'])
+            current_state = State(goal=info['taskDesc'], observation=" ".join(observation.split()).lower(),
+                                  inventory=info['inv'], look=obs_sentences)
 
+            plan_actions = bdi_agent.act(current_state=current_state, available_actions=info['valid'])
+            if len(plan_actions) > 0:
+                for action in plan_actions:
+                    print("Executing action: " + str(action))
+                    observation, reward, isCompleted, info = env.step(action)
+                    print(f"{observation} - {isCompleted}")
+                    score = info['score']
+                    # Keep track of the number of commands sent to the environment in this episode
+                    curIter += 1
+            else:
+                # no plan has been found
+                rl_action = drrn_policy.act(observation, goal=info['taskDesc'], look=info['look'],
+                                            inventory=info['inv'])
+                observation, reward, isCompleted, info = env.step(rl_action)
         print("Goal Progress:")
         print(env.getGoalProgressStr())
         time.sleep(1)
@@ -104,7 +119,8 @@ def run_bdi_agent(args):
     env.saveRunHistoriesBufferIfFull(filenameOutPrefix, maxPerFile=args['max_episode_per_file'], forceSave=True)
 
     # Show final episode scores to user:
-    avg = sum([x for x in finalScores if x >= 0]) / len(finalScores)  # Clip negative scores to 0 for average calculation
+    avg = sum([x for x in finalScores if x >= 0]) / len(
+        finalScores)  # Clip negative scores to 0 for average calculation
     print("")
     print("---------------------------------------------------------------------")
     print(" Summary (Random Agent)")
@@ -139,7 +155,7 @@ def build_simplification_str(args):
     if args["no_electrical"]:
         simplifications.append("noElectricalAction")
 
-    return "easy" #args["simplifications_preset"] or ",".join(simplifications)
+    return "easy"  # args["simplifications_preset"] or ",".join(simplifications)
 
 
 #
