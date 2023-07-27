@@ -5,19 +5,179 @@
             "history": [
                 {
                     "action": "look around",
-                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)",
+                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)",
                     "score": "0.0"
                 },
                 {
                     "action": "look around",
-                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)",
+                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)",
                     "score": "0.0"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.0"
+                },
+                {
+                    "action": "activate blast furnace",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned off. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "The blast furnace is now activated.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
                 }
             ],
             "simplifications": "easy",
@@ -36,19 +196,179 @@
             "history": [
                 {
                     "action": "look around",
-                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)",
+                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)",
                     "score": "0.0"
                 },
                 {
                     "action": "look around",
-                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)",
+                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)",
                     "score": "0.0"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing yellow paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.0"
+                },
+                {
+                    "action": "activate blast furnace",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned off. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "The blast furnace is now activated.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
                 }
             ],
             "simplifications": "easy",
@@ -67,26 +387,186 @@
             "history": [
                 {
                     "action": "look around",
-                    "freelook": "This room is called the bathroom. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bathtub, which is turned off. In the bathtub is: nothing.\n\ta drawing\n\ta glass cup (containing nothing)\n\ta sink, which is turned off. In the sink is: nothing.\n\ta toilet. In the toilet is: A drain, which is open, a substance called water.\nYou also see:\n\tA door to the kitchen (that is open)\n",
+                    "freelook": "This room is called the greenhouse. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bee hive. The bee hive door is closed. \n\ta jug (containing nothing)\n\ta shovel\n\ta sink, which is turned off. In the sink is: nothing.\nYou also see:\n\tA door to the hallway (that is open)\n\tA door to the outside (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the bathroom. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bathtub, which is turned off. In the bathtub is: nothing.\n\ta drawing\n\ta glass cup (containing nothing)\n\ta sink, which is turned off. In the sink is: nothing.\n\ta toilet. In the toilet is: A drain, which is open, a substance called water.\nYou also see:\n\tA door to the kitchen (that is open)",
+                    "observation": "This room is called the greenhouse. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bee hive. The bee hive door is closed. \n\ta jug (containing nothing)\n\ta shovel\n\ta sink, which is turned off. In the sink is: nothing.\nYou also see:\n\tA door to the hallway (that is open)\n\tA door to the outside (that is open)",
                     "score": "0.0"
                 },
                 {
                     "action": "look around",
-                    "freelook": "This room is called the bathroom. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bathtub, which is turned off. In the bathtub is: nothing.\n\ta drawing\n\ta glass cup (containing nothing)\n\ta sink, which is turned off. In the sink is: nothing.\n\ta toilet. In the toilet is: A drain, which is open, a substance called water.\nYou also see:\n\tA door to the kitchen (that is open)\n",
+                    "freelook": "This room is called the greenhouse. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bee hive. The bee hive door is closed. \n\ta jug (containing nothing)\n\ta shovel\n\ta sink, which is turned off. In the sink is: nothing.\nYou also see:\n\tA door to the hallway (that is open)\n\tA door to the outside (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the bathroom. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bathtub, which is turned off. In the bathtub is: nothing.\n\ta drawing\n\ta glass cup (containing nothing)\n\ta sink, which is turned off. In the sink is: nothing.\n\ta toilet. In the toilet is: A drain, which is open, a substance called water.\nYou also see:\n\tA door to the kitchen (that is open)",
+                    "observation": "This room is called the greenhouse. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bee hive. The bee hive door is closed. \n\ta jug (containing nothing)\n\ta shovel\n\ta sink, which is turned off. In the sink is: nothing.\nYou also see:\n\tA door to the hallway (that is open)\n\tA door to the outside (that is open)",
                     "score": "0.0"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the greenhouse. In it, you see: \n\tthe agent\n\ta substance called air\n\ta bee hive. The bee hive door is closed. \n\ta jug (containing nothing)\n\ta shovel\n\ta sink, which is turned off. In the sink is: nothing.\nYou also see:\n\tA door to the hallway (that is open)\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.0"
+                },
+                {
+                    "action": "activate blast furnace",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned off. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "The blast furnace is now activated.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
                 }
             ],
             "simplifications": "easy",
             "taskDescription": "Your task is to boil mercury. For compounds without a boiling point, combusting the substance is also acceptable. First, focus on the substance. Then, take actions that will cause it to change its state of matter.",
             "taskIdx": "0",
             "taskName": "boil",
-            "variationIdx": "24"
+            "variationIdx": "25"
         },
         "notes": {
             "text": "my notes here"
@@ -98,26 +578,186 @@
             "history": [
                 {
                     "action": "look around",
-                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "freelook": "This room is called the living room. In it, you see: \n\tthe agent\n\ta substance called air\n\ta book shelf (containing A book (Frankenstein) titled Frankenstein by Mary Wollstonecraft Shelley)\n\ta chair. On the chair is: nothing.\n\ta couch. On the couch is: a white pillow.\n\ta desk. On the desk is: a drawer.\n\ta painting\nYou also see:\n\tA door to the hallway (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)",
+                    "observation": "This room is called the living room. In it, you see: \n\tthe agent\n\ta substance called air\n\ta book shelf (containing A book (Frankenstein) titled Frankenstein by Mary Wollstonecraft Shelley)\n\ta chair. On the chair is: nothing.\n\ta couch. On the couch is: a white pillow.\n\ta desk. On the desk is: a drawer.\n\ta painting\nYou also see:\n\tA door to the hallway (that is open)",
                     "score": "0.0"
                 },
                 {
                     "action": "look around",
-                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "freelook": "This room is called the living room. In it, you see: \n\tthe agent\n\ta substance called air\n\ta book shelf (containing A book (Frankenstein) titled Frankenstein by Mary Wollstonecraft Shelley)\n\ta chair. On the chair is: nothing.\n\ta couch. On the couch is: a white pillow.\n\ta desk. On the desk is: a drawer.\n\ta painting\nYou also see:\n\tA door to the hallway (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\n\ta wood cup (containing red paint)\nYou also see:\n\tA door to the hallway (that is open)",
+                    "observation": "This room is called the living room. In it, you see: \n\tthe agent\n\ta substance called air\n\ta book shelf (containing A book (Frankenstein) titled Frankenstein by Mary Wollstonecraft Shelley)\n\ta chair. On the chair is: nothing.\n\ta couch. On the couch is: a white pillow.\n\ta desk. On the desk is: a drawer.\n\ta painting\nYou also see:\n\tA door to the hallway (that is open)",
                     "score": "0.0"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the living room. In it, you see: \n\tthe agent\n\ta substance called air\n\ta book shelf (containing A book (Frankenstein) titled Frankenstein by Mary Wollstonecraft Shelley)\n\ta chair. On the chair is: nothing.\n\ta couch. On the couch is: a white pillow.\n\ta desk. On the desk is: a drawer.\n\ta painting\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.0"
+                },
+                {
+                    "action": "activate blast furnace",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned off. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "The blast furnace is now activated.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
                 }
             ],
             "simplifications": "easy",
-            "taskDescription": "Your task is to boil gallium. For compounds without a boiling point, combusting the substance is also acceptable. First, focus on the substance. Then, take actions that will cause it to change its state of matter.",
+            "taskDescription": "Your task is to boil tin. For compounds without a boiling point, combusting the substance is also acceptable. First, focus on the substance. Then, take actions that will cause it to change its state of matter.",
             "taskIdx": "0",
             "taskName": "boil",
-            "variationIdx": "27"
+            "variationIdx": "22"
         },
         "notes": {
             "text": "my notes here"
@@ -129,19 +769,179 @@
             "history": [
                 {
                     "action": "look around",
-                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)",
+                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)",
                     "score": "0.0"
                 },
                 {
                     "action": "look around",
-                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
                     "inventory": "In your inventory, you see:\n\tan orange\n",
                     "isCompleted": "false",
-                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing red paint)\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)",
+                    "observation": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)",
                     "score": "0.0"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the art studio. In it, you see: \n\tthe agent\n\ta substance called air\n\ta large cupboard. The large cupboard door is closed. \n\ta table. On the table is: a glass cup (containing nothing).\n\ta wood cup (containing yellow paint)\n\ta wood cup (containing red paint)\n\ta wood cup (containing blue paint)\nYou also see:\n\tA door to the hallway (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.0"
+                },
+                {
+                    "action": "activate blast furnace",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned off. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "The blast furnace is now activated.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
+                },
+                {
+                    "action": "teleport to foundry",
+                    "freelook": "This room is called the foundry. In it, you see: \n\tthe agent\n\ta substance called air\n\ta blast furnace, which is turned on. The blast furnace door is closed. \n\ta sink, which is turned off. In the sink is: nothing.\n\ta table. On the table is: nothing.\nYou also see:\n\tA door to the outside (that is open)\n",
+                    "inventory": "In your inventory, you see:\n\tan orange\n",
+                    "isCompleted": "false",
+                    "observation": "You teleport to the foundry.",
+                    "score": "0.016666666666666666"
                 }
             ],
             "simplifications": "easy",

@@ -48,12 +48,15 @@ def run_bdi_agent(args):
     print(f"Simplification: {simplificationStr}")
     time.sleep(2)
 
+    # loading agent
     bdi_agent = load_bdi_agent()
     drrn_policy = load_rl_policy()
+
     # Start running episodes
     for episodeIdx in range(0, numEpisodes):
         # Pick a random task variation
-        randVariationIdx = env.getRandomVariationTest()
+        #randVariationIdx = env.getRandomVariationTest()
+        randVariationIdx = 0
         # randVariationIdx = 0
         env.load(taskName, randVariationIdx, simplificationStr)
         # Reset the environment
@@ -66,10 +69,14 @@ def run_bdi_agent(args):
         score = 0.0
         curIter = 0
 
+        num_default_actions = 0
+        num_selected_plans = 0
+
+
         # Run one episode until we reach a stopping condition (including exceeding the maximum steps)
         action_str = "look around"  # First action
         observation, reward, isCompleted, info = env.step(action_str)
-        while not isCompleted and curIter < 100:
+        while not isCompleted and curIter < 20:
             print("----------------------------------------------------------------")
             print("Step: " + str(curIter))
             print("\n>>> " + observation)
@@ -87,6 +94,7 @@ def run_bdi_agent(args):
 
             plan_actions = bdi_agent.act(current_state=current_state, available_actions=info['valid'])
             if len(plan_actions) > 0:
+                num_selected_plans += 1
                 for action in plan_actions:
                     print("Executing action: " + str(action))
                     observation, reward, isCompleted, info = env.step(action)
@@ -95,10 +103,14 @@ def run_bdi_agent(args):
                     # Keep track of the number of commands sent to the environment in this episode
                     curIter += 1
             else:
+                num_default_actions += 1
                 # no plan has been found
                 rl_action = drrn_policy.act(observation, goal=info['taskDesc'], look=info['look'],
-                                            inventory=info['inv'])
-                observation, reward, isCompleted, info = env.step(rl_action)
+                                            inventory=info['inv'], available_actions=info['valid'])
+                for action in rl_action:
+                    print("Executing action: " + str(action))
+                    observation, reward, isCompleted, info = env.step(action)
+                    curIter += 1
         print("Goal Progress:")
         print(env.getGoalProgressStr())
         time.sleep(1)
@@ -129,8 +141,8 @@ def run_bdi_agent(args):
     print("---------------------------------------------------------------------")
     print(" Episode scores: " + str(finalScores))
     print(" Average episode score: " + str(avg))
-    print(" Num plans selected: " + str(agent.num_selected_plans))
-    print(" Num default actions: " + str(agent.num_default_actions))
+    print(" Num plans selected: " + str(num_selected_plans))
+    print(" Num default actions: " + str(num_default_actions))
     print("---------------------------------------------------------------------")
     print("")
 

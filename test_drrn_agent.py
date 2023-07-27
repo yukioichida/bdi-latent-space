@@ -1,16 +1,11 @@
-import time
-import random
 import argparse
+import random
+import time
 
 from scienceworld import ScienceWorldEnv
 
 from sources.drrn.drrn_agent import DRRN_Agent
-from sources.bdi_old.bdi_agent import BDIAgent
 from sources.drrn.util import sanitizeInfo, sanitizeObservation
-import sources.drrn.memory as memory
-from sources.drrn.memory import PrioritizedReplayMemory
-
-
 
 
 def load_drrn_agent(path: str = "models/drrn-task0/"):
@@ -47,8 +42,8 @@ def randomModel(args):
     # Start running episodes
     for episodeIdx in range(0, numEpisodes):
         # Pick a random task variation
-        #randVariationIdx = env.getRandomVariationTrain()
-        randVariationIdx = 0
+        randVariationIdx = env.getRandomVariationTrain()
+        #randVariationIdx = 0
         env.load(taskName, randVariationIdx, simplificationStr)
 
         agent = load_drrn_agent()
