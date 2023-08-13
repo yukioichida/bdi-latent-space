@@ -1,0 +1,26 @@
+action,landmark,plan_id,order,goal
+open door to kitchen,True,7,0,Your task is to boil orange juice
+go to kitchen,True,7,1,Your task is to boil orange juice
+pick up thermometer,True,7,2,Your task is to boil orange juice
+open cupboard,True,7,3,Your task is to boil orange juice
+pick up metal pot,True,7,4,Your task is to boil orange juice
+open glass jar,False,7,5,Your task is to boil orange juice
+open oven,True,7,6,Your task is to boil orange juice
+open freezer,True,7,7,Your task is to boil orange juice
+open fridge,True,7,8,Your task is to boil orange juice
+focus on orange juice,True,7,9,Your task is to boil orange juice
+pour cup containing orange juice into metal pot,True,7,10,Your task is to boil orange juice
+pick up metal pot,True,7,11,Your task is to boil orange juice
+move metal pot to stove,True,7,12,Your task is to boil orange juice
+activate stove,True,7,13,Your task is to boil orange juice
+pick up metal pot,True,7,14,Your task is to boil orange juice
+open door to outside,True,7,15,Your task is to boil orange juice
+go to outside,True,7,16,Your task is to boil orange juice
+open door to foundry,False,7,17,Your task is to boil orange juice
+go to foundry,False,7,18,Your task is to boil orange juice
+open blast furnace,False,7,19,Your task is to boil orange juice
+move metal pot to blast furnace,False,7,20,Your task is to boil orange juice
+activate blast furnace,False,7,21,Your task is to boil orange juice
+examine orange juice,True,7,22,Your task is to boil orange juice
+use thermometer in inventory on orange juice,True,7,23,Your task is to boil orange juice
+examine orange juice,True,7,24,Your task is to boil orange juice

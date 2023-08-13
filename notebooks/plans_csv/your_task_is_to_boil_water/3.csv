@@ -1,0 +1,38 @@
+action,landmark,plan_id,order,goal
+open door to kitchen,True,3,0,Your task is to boil water
+go to kitchen,True,3,1,Your task is to boil water
+pick up thermometer,True,3,2,Your task is to boil water
+open cupboard,True,3,3,Your task is to boil water
+pick up metal pot,True,3,4,Your task is to boil water
+move metal pot to sink,True,3,5,Your task is to boil water
+activate sink,True,3,6,Your task is to boil water
+deactivate sink,True,3,7,Your task is to boil water
+pick up metal pot,True,3,8,Your task is to boil water
+move metal pot to sink,True,3,9,Your task is to boil water
+activate sink,True,3,10,Your task is to boil water
+deactivate sink,True,3,11,Your task is to boil water
+pick up metal pot,True,3,12,Your task is to boil water
+open door to bathroom,False,3,13,Your task is to boil water
+go to bathroom,False,3,14,Your task is to boil water
+move metal pot to sink,True,3,15,Your task is to boil water
+activate sink,True,3,16,Your task is to boil water
+deactivate sink,True,3,17,Your task is to boil water
+pick up metal pot,True,3,18,Your task is to boil water
+focus on substance in metal pot,True,3,19,Your task is to boil water
+pour metal pot into metal pot,True,3,20,Your task is to boil water
+pick up metal pot,True,3,21,Your task is to boil water
+open door to kitchen,True,3,22,Your task is to boil water
+go to kitchen,True,3,23,Your task is to boil water
+move metal pot to stove,True,3,24,Your task is to boil water
+activate stove,True,3,25,Your task is to boil water
+pick up metal pot,True,3,26,Your task is to boil water
+open door to outside,False,3,27,Your task is to boil water
+go to outside,False,3,28,Your task is to boil water
+open door to foundry,False,3,29,Your task is to boil water
+go to foundry,False,3,30,Your task is to boil water
+open blast furnace,False,3,31,Your task is to boil water
+move metal pot to blast furnace,False,3,32,Your task is to boil water
+activate blast furnace,False,3,33,Your task is to boil water
+examine substance in metal pot,True,3,34,Your task is to boil water
+use thermometer in inventory on substance in metal pot,True,3,35,Your task is to boil water
+examine substance in metal pot,True,3,36,Your task is to boil water
