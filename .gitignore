@@ -131,4 +131,7 @@ dmypy.json
 .pyre/
 /data/goldpaths-all.zip
 /data/goldsequences-0-1-2-3-4-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-24-25-26-27-28-29.json
+/data/plans_csv
 /data/dataset_cache
+/models/drrn-task0/drrn-task0-results-seed0-dev-task0-train-0-561.json
+/models/drrn-task0/drrn-task0-results-seed0-dev-task0-eval-104-0-562-9.json

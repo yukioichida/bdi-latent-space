@@ -1,6 +1,6 @@
 import re
 
-from sources.bdi.plans import PlanLibrary, PlanParser
+from sources.bdi_old.plans import PlanLibrary, PlanParser
 
 if __name__ == '__main__':
     plan = """
@@ -8,8 +8,6 @@ if __name__ == '__main__':
             THEN
             go to the kitchen first, pick the metal pot, fill with water, heat the water
         """
-
-
 
     # plan go to the kitchen
     subplan_a = """

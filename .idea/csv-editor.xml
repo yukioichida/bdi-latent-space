@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="/data/plans_csv/task-1-boil/your_task_is_to_boil_apple_juice/8.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-1-boil/your_task_is_to_boil_gallium/26.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-1-boil/your_task_is_to_boil_water/0.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-measure-melting-point-(known-substance)/your_task_is_to_measure_the_melting_point_of_chocolate,_which_is_located_around_the_kitchen/0.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-measure-melting-point-(known-substance)/your_task_is_to_measure_the_melting_point_of_chocolate,_which_is_located_around_the_kitchen/101.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-measure-melting-point-(known-substance)/your_task_is_to_measure_the_melting_point_of_chocolate,_which_is_located_around_the_kitchen/107.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-measure-melting-point-(known-substance)/your_task_is_to_measure_the_melting_point_of_gallium,_which_is_located_around_the_kitchen/196.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-measure-melting-point-(known-substance)/your_task_is_to_measure_the_melting_point_of_gallium,_which_is_located_around_the_kitchen/4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-measure-melting-point-(known-substance)/your_task_is_to_measure_the_melting_point_of_gallium,_which_is_located_around_the_kitchen/5.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-measure-melting-point-(known-substance)/your_task_is_to_measure_the_melting_point_of_gallium,_which_is_located_around_the_kitchen/6.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-measure-melting-point-(known-substance)/your_task_is_to_measure_the_melting_point_of_gallium,_which_is_located_around_the_kitchen/7.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-use-thermometer/your_task_is_to_measure_the_temperature_of_metal_fork,_which_is_located_around_the_bathroom/13.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-use-thermometer/your_task_is_to_measure_the_temperature_of_metal_fork,_which_is_located_around_the_bathroom/54.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-use-thermometer/your_task_is_to_measure_the_temperature_of_metal_fork,_which_is_located_around_the_bathroom/90.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-use-thermometer/your_task_is_to_measure_the_temperature_of_metal_fork,_which_is_located_around_the_bedroom/21.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-use-thermometer/your_task_is_to_measure_the_temperature_of_metal_fork,_which_is_located_around_the_bedroom/22.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-use-thermometer/your_task_is_to_measure_the_temperature_of_metal_fork,_which_is_located_around_the_bedroom/250.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-10-use-thermometer/your_task_is_to_measure_the_temperature_of_metal_fork,_which_is_located_around_the_bedroom/267.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-4-grow-fruit/your_task_is_to_grow_a_apple/1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-4-grow-fruit/your_task_is_to_grow_a_apple/2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-4-grow-fruit/your_task_is_to_grow_a_apple/3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-5-chemistry-mix/your_task_is_to_use_chemistry_to_create_the_substance_'banana_sandwhich'/4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/plans_csv/task-7-identify-life-stages-1/your_task_is_to_focus_on_the_3_life_stages_of_the_beaver,_starting_from_earliest_to_latest/3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/goldpaths.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/15/your_task_is_to_grow_a_apple/3836.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/15/your_task_is_to_grow_a_apple/3837.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/15/your_task_is_to_grow_a_apple/3838.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/15/your_task_is_to_grow_a_apple/3839.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/22/your_task_is_to_find_the_animal_with_the_shortest_life_span/0.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/22/your_task_is_to_find_the_animal_with_the_shortest_life_span/2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/26/your_task_is_to_determine_which_of_the_two_inclined_planes_(aluminum,_ceramic)_has_the_least_friction/1047.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/26/your_task_is_to_determine_which_of_the_two_inclined_planes_(aluminum,_ceramic)_has_the_least_friction/585.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/29/your_task_is_to_determine_whether_round_seed_shape_is_a_dominant_or_recessive_trait_in_the_unknown_e_plant/30.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/29/your_task_is_to_determine_whether_yellow_seed_color_is_a_dominant_or_recessive_trait_in_the_unknown_b_plant/166.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/4/your_task_is_to_measure_the_melting_point_of_gallium,_which_is_located_around_the_kitchen/239.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/4/your_task_is_to_measure_the_melting_point_of_gallium,_which_is_located_around_the_kitchen/240.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/7/your_task_is_to_turn_on_the_blue_light_bulb/1104.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_apple_juice.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_apple_juice/8.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_apple_juice/9.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_caesium/28.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_caesium/29.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_chocolate/10.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_chocolate/11.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_gallium/26.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_gallium/27.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_ice/4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_ice/5.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_ice_cream/14.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_ice_cream/15.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_lead/20.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_lead/21.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_marshmallow/12.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_marshmallow/13.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_mercury/24.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_mercury/25.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_orange_juice/6.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_orange_juice/7.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_rubber/18.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_rubber/19.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_soap/16.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_soap/17.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_tin.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_tin/22.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_tin/23.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_water/0.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_water/1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_water/2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plans_csv/your_task_is_to_boil_water/3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
