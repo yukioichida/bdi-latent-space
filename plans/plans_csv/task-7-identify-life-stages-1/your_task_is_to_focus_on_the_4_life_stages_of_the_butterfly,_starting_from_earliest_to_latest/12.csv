@@ -1,0 +1,37 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,12,0,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+go to hallway,False,12,1,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+open door to green house,False,12,2,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+go to green house,False,12,3,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+open door to outside,False,12,4,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+go to outside,False,12,5,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+focus on egg butterfly in outside,False,12,6,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,7,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,8,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,9,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,10,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,11,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,12,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,13,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+focus on caterpillar butterfly in outside,False,12,14,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,15,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,16,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,17,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,18,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,19,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,20,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,21,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,22,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,23,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+focus on pupa butterfly in outside,False,12,24,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,25,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,26,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,27,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,28,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,29,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,30,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,31,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,32,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,33,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,12,34,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1
+focus on adult butterfly in outside,False,12,35,"Your task is to focus on the 4 life stages of the butterfly, starting from earliest to latest",task-7-identify-life-stages-1

@@ -1,0 +1,25 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,False,7,0,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+go to kitchen,False,7,1,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+open door to outside,False,7,2,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+go to outside,False,7,3,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+focus on egg frog in outside,False,7,4,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,5,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,6,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,7,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,8,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,9,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,10,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,11,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,12,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+focus on tadpole frog in outside,False,7,13,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,14,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,15,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,16,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,17,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,18,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,19,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,20,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,21,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,7,22,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1
+focus on adult frog in outside,False,7,23,"Your task is to focus on the 3 life stages of the frog, starting from earliest to latest",task-7-identify-life-stages-1

@@ -1,0 +1,46 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,True,21,0,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to kitchen,True,21,1,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open cupboard,True,21,2,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up tin cup,False,21,3,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to hallway,False,21,4,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to hallway,False,21,5,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to workshop,False,21,6,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to workshop,False,21,7,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up recipe,True,21,8,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+read recipe in inventory,True,21,9,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up flour,True,21,10,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+move flour to cup,False,21,11,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,12,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,13,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to hallway,False,21,14,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to hallway,False,21,15,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,16,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to bedroom,False,21,17,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to bedroom,False,21,18,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,19,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to hallway,False,21,20,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to hallway,False,21,21,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,22,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to art studio,False,21,23,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to art studio,False,21,24,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup containing flour,False,21,25,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to hallway,False,21,26,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to hallway,False,21,27,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,28,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to living room,False,21,29,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to living room,False,21,30,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,31,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to hallway,False,21,32,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to hallway,False,21,33,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,34,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+open door to green house,False,21,35,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+go to green house,False,21,36,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+move cup to sink,False,21,37,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+activate sink,True,21,38,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+deactivate sink,True,21,39,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pick up cup,False,21,40,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+pour cup into cup,False,21,41,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+examine cup,False,21,42,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+mix cup,False,21,43,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix
+focus on dough,True,21,44,Your task is to use chemistry to create the substance 'dough',task-5-chemistry-mix

@@ -7,10 +7,11 @@ class State(NamedTuple):
     Means-Ends Reasoning - pag 19
     ... The agent’s current beliefs about the *state* of the environment. ...
     """
-    goal: str
-    observation: str
+    goal: str # main goal
+    observation: str # observation perceived
     look: list[str] # objects that agent are seeing in the current state
-    inventory: str
+    inventory: str # agent's inventory
+    valid_actions: list[str]
 
     def sentence_list(self):
         return [self.inventory] + self.look

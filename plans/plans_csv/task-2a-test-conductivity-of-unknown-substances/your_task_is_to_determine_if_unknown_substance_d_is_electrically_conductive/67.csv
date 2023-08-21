@@ -1,0 +1,17 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,67,0,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to hallway,False,67,1,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to workshop,False,67,2,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to workshop,False,67,3,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+pick up unknown substance,True,67,4,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+focus on unknown substance,True,67,5,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+drop unknown substance,True,67,6,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery anode to yellow wire terminal 1,False,67,7,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery cathode to red wire terminal 1,False,67,8,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect yellow wire terminal 2 to cathode in electric motor,False,67,9,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect black wire terminal 2 to anode in electric motor,False,67,10,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance D terminal 1 to red wire terminal 2,False,67,11,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance D terminal 2 to black wire terminal 1,False,67,12,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,67,13,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,67,14,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+move unknown substance D to orange box,False,67,15,Your task is to determine if unknown substance D is electrically conductive,task-2a-test-conductivity-of-unknown-substances

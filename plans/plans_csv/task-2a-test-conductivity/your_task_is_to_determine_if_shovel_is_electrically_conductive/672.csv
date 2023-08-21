@@ -1,0 +1,17 @@
+action,landmark,variation,order,goal,task_id
+pick up shovel,True,672,0,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+focus on shovel,True,672,1,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,672,2,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+go to hallway,False,672,3,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,672,4,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+go to workshop,False,672,5,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+drop shovel,True,672,6,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect battery anode to green wire terminal 1,False,672,7,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect battery cathode to black wire terminal 1,False,672,8,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect green wire terminal 2 to cathode in buzzer,False,672,9,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect blue wire terminal 2 to anode in buzzer,False,672,10,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect shovel terminal 1 to black wire terminal 2,False,672,11,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect shovel terminal 2 to blue wire terminal 1,False,672,12,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+wait1,True,672,13,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+wait1,True,672,14,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+move shovel to blue box,False,672,15,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity

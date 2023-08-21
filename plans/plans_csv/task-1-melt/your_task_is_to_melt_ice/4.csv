@@ -1,0 +1,18 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,True,4,0,Your task is to melt ice,task-1-melt
+go to kitchen,True,4,1,Your task is to melt ice,task-1-melt
+pick up thermometer,True,4,2,Your task is to melt ice,task-1-melt
+open cupboard,True,4,3,Your task is to melt ice,task-1-melt
+pick up metal pot,True,4,4,Your task is to melt ice,task-1-melt
+open glass jar,False,4,5,Your task is to melt ice,task-1-melt
+open oven,False,4,6,Your task is to melt ice,task-1-melt
+open fridge,False,4,7,Your task is to melt ice,task-1-melt
+open freezer,True,4,8,Your task is to melt ice,task-1-melt
+focus on ice,True,4,9,Your task is to melt ice,task-1-melt
+move ice to metal pot,True,4,10,Your task is to melt ice,task-1-melt
+pick up metal pot,True,4,11,Your task is to melt ice,task-1-melt
+move metal pot to stove,True,4,12,Your task is to melt ice,task-1-melt
+activate stove,True,4,13,Your task is to melt ice,task-1-melt
+examine ice,False,4,14,Your task is to melt ice,task-1-melt
+use thermometer in inventory on ice,False,4,15,Your task is to melt ice,task-1-melt
+examine ice,False,4,16,Your task is to melt ice,task-1-melt

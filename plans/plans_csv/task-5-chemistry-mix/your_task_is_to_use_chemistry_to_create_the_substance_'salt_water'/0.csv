@@ -1,0 +1,23 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,True,0,0,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+go to kitchen,True,0,1,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+open cupboard,True,0,2,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+pick up cup containing nothing in table,True,0,3,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+pick up recipe,True,0,4,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+read recipe in inventory,True,0,5,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+open freezer,False,0,6,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+open oven,False,0,7,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+open fridge,False,0,8,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+open drawer in cupboard,False,0,9,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+open drawer in counter,False,0,10,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+open glass jar,False,0,11,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+pick up sodium chloride,True,0,12,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+move sodium chloride to cup containing nothing in inventory,False,0,13,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+move cup containing sodium chloride to sink,False,0,14,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+activate sink,True,0,15,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+deactivate sink,True,0,16,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+pick up cup containing sodium chloride and water,False,0,17,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+pour cup containing sodium chloride and water into cup containing sodium chloride and water,False,0,18,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+examine cup containing sodium chloride and water,False,0,19,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+mix cup containing sodium chloride and water,False,0,20,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix
+focus on salt water,True,0,21,Your task is to use chemistry to create the substance 'salt water',task-5-chemistry-mix

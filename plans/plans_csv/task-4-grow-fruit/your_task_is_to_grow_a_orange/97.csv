@@ -1,0 +1,75 @@
+action,landmark,variation,order,goal,task_id
+open door to outside,False,97,0,Your task is to grow a orange,task-4-grow-fruit
+go to outside,False,97,1,Your task is to grow a orange,task-4-grow-fruit
+open door to green house,True,97,2,Your task is to grow a orange,task-4-grow-fruit
+go to green house,True,97,3,Your task is to grow a orange,task-4-grow-fruit
+open door to hallway,False,97,4,Your task is to grow a orange,task-4-grow-fruit
+go to hallway,False,97,5,Your task is to grow a orange,task-4-grow-fruit
+open door to living room,False,97,6,Your task is to grow a orange,task-4-grow-fruit
+go to living room,False,97,7,Your task is to grow a orange,task-4-grow-fruit
+pick up seed jar,True,97,8,Your task is to grow a orange,task-4-grow-fruit
+open door to hallway,False,97,9,Your task is to grow a orange,task-4-grow-fruit
+go to hallway,False,97,10,Your task is to grow a orange,task-4-grow-fruit
+open door to green house,True,97,11,Your task is to grow a orange,task-4-grow-fruit
+go to green house,True,97,12,Your task is to grow a orange,task-4-grow-fruit
+move soil to flower pot 1,False,97,13,Your task is to grow a orange,task-4-grow-fruit
+open door to outside,False,97,14,Your task is to grow a orange,task-4-grow-fruit
+go to outside,False,97,15,Your task is to grow a orange,task-4-grow-fruit
+pick up shovel,False,97,16,Your task is to grow a orange,task-4-grow-fruit
+use shovel in inventory on ground,False,97,17,Your task is to grow a orange,task-4-grow-fruit
+pick up soil,False,97,18,Your task is to grow a orange,task-4-grow-fruit
+open door to green house,True,97,19,Your task is to grow a orange,task-4-grow-fruit
+go to green house,True,97,20,Your task is to grow a orange,task-4-grow-fruit
+move soil in inventory to flower pot 3,False,97,21,Your task is to grow a orange,task-4-grow-fruit
+open door to outside,False,97,22,Your task is to grow a orange,task-4-grow-fruit
+go to outside,False,97,23,Your task is to grow a orange,task-4-grow-fruit
+use shovel in inventory on ground,False,97,24,Your task is to grow a orange,task-4-grow-fruit
+pick up soil,False,97,25,Your task is to grow a orange,task-4-grow-fruit
+open door to green house,True,97,26,Your task is to grow a orange,task-4-grow-fruit
+go to green house,True,97,27,Your task is to grow a orange,task-4-grow-fruit
+move soil in inventory to flower pot 2,False,97,28,Your task is to grow a orange,task-4-grow-fruit
+move orange seed in seed jar to flower pot 1,True,97,29,Your task is to grow a orange,task-4-grow-fruit
+0,True,97,30,Your task is to grow a orange,task-4-grow-fruit
+move orange seed in seed jar to flower pot 3,True,97,31,Your task is to grow a orange,task-4-grow-fruit
+0,True,97,32,Your task is to grow a orange,task-4-grow-fruit
+move orange seed in seed jar to flower pot 2,True,97,33,Your task is to grow a orange,task-4-grow-fruit
+0,True,97,34,Your task is to grow a orange,task-4-grow-fruit
+activate sink,True,97,35,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,36,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 1,True,97,37,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,38,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 3,True,97,39,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,40,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 2,True,97,41,Your task is to grow a orange,task-4-grow-fruit
+deactivate sink,True,97,42,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,43,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,44,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,45,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,46,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,47,Your task is to grow a orange,task-4-grow-fruit
+activate sink,True,97,48,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,49,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 1,True,97,50,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,51,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 3,True,97,52,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,53,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 2,True,97,54,Your task is to grow a orange,task-4-grow-fruit
+deactivate sink,True,97,55,Your task is to grow a orange,task-4-grow-fruit
+close door to hallway,True,97,56,Your task is to grow a orange,task-4-grow-fruit
+close door to outside,True,97,57,Your task is to grow a orange,task-4-grow-fruit
+open bee hive,True,97,58,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,59,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,60,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,61,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,62,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,97,63,Your task is to grow a orange,task-4-grow-fruit
+activate sink,True,97,64,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,65,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 1,True,97,66,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,67,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 3,True,97,68,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,97,69,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 2,True,97,70,Your task is to grow a orange,task-4-grow-fruit
+deactivate sink,True,97,71,Your task is to grow a orange,task-4-grow-fruit
+focus on orange,False,97,72,Your task is to grow a orange,task-4-grow-fruit
+0,True,97,73,Your task is to grow a orange,task-4-grow-fruit

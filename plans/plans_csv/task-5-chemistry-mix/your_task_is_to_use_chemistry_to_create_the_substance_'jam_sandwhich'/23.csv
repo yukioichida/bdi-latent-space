@@ -1,0 +1,18 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,True,23,0,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+go to kitchen,True,23,1,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+open cupboard,True,23,2,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+pick up tin cup,False,23,3,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+open door to hallway,False,23,4,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+go to hallway,False,23,5,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+open door to workshop,False,23,6,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+go to workshop,False,23,7,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+pick up recipe,True,23,8,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+read recipe in inventory,True,23,9,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+pick up jam,True,23,10,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+move jam to cup,False,23,11,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+pick up bread,True,23,12,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+move bread to cup,False,23,13,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+examine cup,False,23,14,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+mix cup,False,23,15,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix
+focus on jam sandwhich,True,23,16,Your task is to use chemistry to create the substance 'jam sandwhich',task-5-chemistry-mix

@@ -1,0 +1,14 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,False,3,0,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+go to kitchen,False,3,1,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+open cupboard,True,3,2,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+pick up metal pot,False,3,3,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+pick up recipe,True,3,4,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+read recipe in inventory,True,3,5,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+pick up acetic acid,True,3,6,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+move acetic acid to metal pot,False,3,7,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+pick up sodium bicarbonate,True,3,8,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+move sodium bicarbonate to metal pot,False,3,9,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+examine metal pot,False,3,10,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+mix metal pot,False,3,11,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix
+focus on sodium acetate,True,3,12,Your task is to use chemistry to create the substance 'sodium acetate',task-5-chemistry-mix

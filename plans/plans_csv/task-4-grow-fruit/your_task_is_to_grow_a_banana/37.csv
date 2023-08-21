@@ -1,0 +1,70 @@
+action,landmark,variation,order,goal,task_id
+open door to outside,False,37,0,Your task is to grow a banana,task-4-grow-fruit
+go to outside,False,37,1,Your task is to grow a banana,task-4-grow-fruit
+open door to kitchen,False,37,2,Your task is to grow a banana,task-4-grow-fruit
+go to kitchen,False,37,3,Your task is to grow a banana,task-4-grow-fruit
+pick up seed jar,True,37,4,Your task is to grow a banana,task-4-grow-fruit
+open door to hallway,False,37,5,Your task is to grow a banana,task-4-grow-fruit
+go to hallway,False,37,6,Your task is to grow a banana,task-4-grow-fruit
+open door to green house,True,37,7,Your task is to grow a banana,task-4-grow-fruit
+go to green house,True,37,8,Your task is to grow a banana,task-4-grow-fruit
+move soil to flower pot 1,False,37,9,Your task is to grow a banana,task-4-grow-fruit
+open door to outside,False,37,10,Your task is to grow a banana,task-4-grow-fruit
+go to outside,False,37,11,Your task is to grow a banana,task-4-grow-fruit
+pick up shovel,False,37,12,Your task is to grow a banana,task-4-grow-fruit
+use shovel in inventory on ground,False,37,13,Your task is to grow a banana,task-4-grow-fruit
+pick up soil,False,37,14,Your task is to grow a banana,task-4-grow-fruit
+open door to green house,True,37,15,Your task is to grow a banana,task-4-grow-fruit
+go to green house,True,37,16,Your task is to grow a banana,task-4-grow-fruit
+move soil in inventory to flower pot 2,False,37,17,Your task is to grow a banana,task-4-grow-fruit
+open door to outside,False,37,18,Your task is to grow a banana,task-4-grow-fruit
+go to outside,False,37,19,Your task is to grow a banana,task-4-grow-fruit
+use shovel in inventory on ground,False,37,20,Your task is to grow a banana,task-4-grow-fruit
+pick up soil,False,37,21,Your task is to grow a banana,task-4-grow-fruit
+open door to green house,True,37,22,Your task is to grow a banana,task-4-grow-fruit
+go to green house,True,37,23,Your task is to grow a banana,task-4-grow-fruit
+move soil in inventory to flower pot 3,False,37,24,Your task is to grow a banana,task-4-grow-fruit
+move banana seed in seed jar to flower pot 1,True,37,25,Your task is to grow a banana,task-4-grow-fruit
+0,True,37,26,Your task is to grow a banana,task-4-grow-fruit
+move banana seed in seed jar to flower pot 2,True,37,27,Your task is to grow a banana,task-4-grow-fruit
+0,True,37,28,Your task is to grow a banana,task-4-grow-fruit
+move banana seed in seed jar to flower pot 3,True,37,29,Your task is to grow a banana,task-4-grow-fruit
+0,True,37,30,Your task is to grow a banana,task-4-grow-fruit
+activate sink,True,37,31,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,32,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 1,True,37,33,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,34,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 2,True,37,35,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,36,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 3,True,37,37,Your task is to grow a banana,task-4-grow-fruit
+deactivate sink,True,37,38,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,39,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,40,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,41,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,42,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,43,Your task is to grow a banana,task-4-grow-fruit
+activate sink,True,37,44,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,45,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 1,True,37,46,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,47,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 2,True,37,48,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,49,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 3,True,37,50,Your task is to grow a banana,task-4-grow-fruit
+deactivate sink,True,37,51,Your task is to grow a banana,task-4-grow-fruit
+close door to outside,True,37,52,Your task is to grow a banana,task-4-grow-fruit
+close door to hallway,True,37,53,Your task is to grow a banana,task-4-grow-fruit
+open bee hive,True,37,54,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,55,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,56,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,57,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,58,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,37,59,Your task is to grow a banana,task-4-grow-fruit
+activate sink,True,37,60,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,61,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 1,True,37,62,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,63,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 2,True,37,64,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,37,65,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 3,True,37,66,Your task is to grow a banana,task-4-grow-fruit
+deactivate sink,True,37,67,Your task is to grow a banana,task-4-grow-fruit
+focus on banana on living thing,False,37,68,Your task is to grow a banana,task-4-grow-fruit

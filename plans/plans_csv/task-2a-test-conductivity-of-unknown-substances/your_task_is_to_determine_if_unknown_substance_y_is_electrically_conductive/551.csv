@@ -1,0 +1,13 @@
+action,landmark,variation,order,goal,task_id
+pick up unknown substance,True,551,0,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+focus on unknown substance,True,551,1,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+drop unknown substance,True,551,2,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery anode to red wire terminal 1,False,551,3,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery cathode to blue wire terminal 1,False,551,4,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect red wire terminal 2 to cathode in red light bulb,False,551,5,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect orange wire terminal 2 to anode in red light bulb,False,551,6,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance Y terminal 1 to blue wire terminal 2,False,551,7,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance Y terminal 2 to orange wire terminal 1,False,551,8,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,551,9,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,551,10,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+move unknown substance Y to green box,False,551,11,Your task is to determine if unknown substance Y is electrically conductive,task-2a-test-conductivity-of-unknown-substances

@@ -1,0 +1,55 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,63,0,Your task is to grow a cherry,task-4-grow-fruit
+go to hallway,False,63,1,Your task is to grow a cherry,task-4-grow-fruit
+open door to bedroom,False,63,2,Your task is to grow a cherry,task-4-grow-fruit
+go to bedroom,False,63,3,Your task is to grow a cherry,task-4-grow-fruit
+pick up seed jar,True,63,4,Your task is to grow a cherry,task-4-grow-fruit
+open door to hallway,False,63,5,Your task is to grow a cherry,task-4-grow-fruit
+go to hallway,False,63,6,Your task is to grow a cherry,task-4-grow-fruit
+open door to green house,True,63,7,Your task is to grow a cherry,task-4-grow-fruit
+go to green house,True,63,8,Your task is to grow a cherry,task-4-grow-fruit
+move cherry seed in seed jar to flower pot 2,True,63,9,Your task is to grow a cherry,task-4-grow-fruit
+0,True,63,10,Your task is to grow a cherry,task-4-grow-fruit
+move cherry seed in seed jar to flower pot 1,True,63,11,Your task is to grow a cherry,task-4-grow-fruit
+0,True,63,12,Your task is to grow a cherry,task-4-grow-fruit
+move cherry seed in seed jar to flower pot 3,True,63,13,Your task is to grow a cherry,task-4-grow-fruit
+0,True,63,14,Your task is to grow a cherry,task-4-grow-fruit
+activate sink,True,63,15,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,16,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 2,True,63,17,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,18,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 1,True,63,19,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,20,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 3,True,63,21,Your task is to grow a cherry,task-4-grow-fruit
+deactivate sink,True,63,22,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,23,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,24,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,25,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,26,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,27,Your task is to grow a cherry,task-4-grow-fruit
+activate sink,True,63,28,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,29,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 2,True,63,30,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,31,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 1,True,63,32,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,33,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 3,True,63,34,Your task is to grow a cherry,task-4-grow-fruit
+deactivate sink,True,63,35,Your task is to grow a cherry,task-4-grow-fruit
+close door to outside,True,63,36,Your task is to grow a cherry,task-4-grow-fruit
+close door to hallway,True,63,37,Your task is to grow a cherry,task-4-grow-fruit
+open bee hive,True,63,38,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,39,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,40,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,41,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,42,Your task is to grow a cherry,task-4-grow-fruit
+wait1,True,63,43,Your task is to grow a cherry,task-4-grow-fruit
+activate sink,True,63,44,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,45,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 2,True,63,46,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,47,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 1,True,63,48,Your task is to grow a cherry,task-4-grow-fruit
+move jug to sink,True,63,49,Your task is to grow a cherry,task-4-grow-fruit
+pour jug into flower pot 3,True,63,50,Your task is to grow a cherry,task-4-grow-fruit
+deactivate sink,True,63,51,Your task is to grow a cherry,task-4-grow-fruit
+focus on cherry in reproducing plant,False,63,52,Your task is to grow a cherry,task-4-grow-fruit
+0,True,63,53,Your task is to grow a cherry,task-4-grow-fruit

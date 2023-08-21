@@ -1,0 +1,36 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,False,8,0,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+go to kitchen,False,8,1,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+open door to outside,False,8,2,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+go to outside,False,8,3,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+focus on egg blue jay in outside,False,8,4,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,5,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,6,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,7,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,8,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,9,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,10,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,11,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,12,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+focus on hatchling blue jay in outside,False,8,13,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,14,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,15,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,16,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,17,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,18,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,19,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,20,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,21,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,22,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+focus on juvenile blue jay in outside,False,8,23,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,24,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,25,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,26,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,27,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,28,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,29,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,30,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,31,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,32,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,8,33,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1
+focus on adult blue jay in outside,False,8,34,"Your task is to focus on the 4 life stages of the blue jay, starting from earliest to latest",task-7-identify-life-stages-1

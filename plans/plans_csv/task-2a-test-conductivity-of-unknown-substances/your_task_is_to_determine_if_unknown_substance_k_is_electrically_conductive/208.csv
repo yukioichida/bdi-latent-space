@@ -1,0 +1,23 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,False,208,0,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to kitchen,False,208,1,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to hallway,False,208,2,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to hallway,False,208,3,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to bedroom,False,208,4,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to bedroom,False,208,5,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to hallway,False,208,6,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to hallway,False,208,7,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to workshop,False,208,8,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to workshop,False,208,9,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+pick up unknown substance,True,208,10,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+focus on unknown substance,True,208,11,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+drop unknown substance,True,208,12,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery anode to red wire terminal 1,False,208,13,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery cathode to orange wire terminal 1,False,208,14,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect red wire terminal 2 to cathode in green light bulb,False,208,15,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect black wire terminal 2 to anode in green light bulb,False,208,16,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance K terminal 1 to orange wire terminal 2,False,208,17,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance K terminal 2 to black wire terminal 1,False,208,18,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,208,19,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,208,20,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+move unknown substance K to orange box,False,208,21,Your task is to determine if unknown substance K is electrically conductive,task-2a-test-conductivity-of-unknown-substances

@@ -1,0 +1,14 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,True,4,0,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+go to kitchen,True,4,1,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+open cupboard,True,4,2,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+pick up tin cup,False,4,3,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+pick up recipe,True,4,4,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+read recipe in inventory,True,4,5,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+pick up banana,True,4,6,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+move banana to cup containing nothing in inventory,False,4,7,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+pick up bread,True,4,8,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+move bread to cup containing banana,False,4,9,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+examine cup containing banana and bread,False,4,10,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+mix cup containing banana and bread,False,4,11,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix
+focus on banana sandwhich,True,4,12,Your task is to use chemistry to create the substance 'banana sandwhich',task-5-chemistry-mix

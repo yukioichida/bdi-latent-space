@@ -1,0 +1,16 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,True,7,0,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+go to kitchen,True,7,1,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+open cupboard,True,7,2,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+pick up cup containing nothing in table,False,7,3,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+pick up recipe,True,7,4,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+read recipe in inventory,True,7,5,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+pick up peanut,True,7,6,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+move peanut to cup containing nothing in inventory,False,7,7,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+pick up jam,True,7,8,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+move jam to cup containing peanut,False,7,9,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+pick up bread,True,7,10,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+move bread to cup containing jam and peanut,False,7,11,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+examine cup containing bread and jam and peanut,False,7,12,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+mix cup containing bread and jam and peanut,False,7,13,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix
+focus on peanut butter with jam sandwhich,True,7,14,Your task is to use chemistry to create the substance 'peanut butter with jam sandwhich',task-5-chemistry-mix

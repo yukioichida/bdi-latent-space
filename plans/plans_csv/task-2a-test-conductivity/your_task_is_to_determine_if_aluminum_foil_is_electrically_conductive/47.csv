@@ -1,0 +1,37 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,47,0,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to hallway,False,47,1,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to living room,False,47,2,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to living room,False,47,3,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,47,4,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to hallway,False,47,5,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to art studio,False,47,6,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to art studio,False,47,7,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,47,8,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to hallway,False,47,9,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to bedroom,False,47,10,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to bedroom,False,47,11,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,47,12,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to hallway,False,47,13,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,47,14,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to workshop,False,47,15,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,47,16,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to hallway,False,47,17,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to kitchen,False,47,18,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to kitchen,False,47,19,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+pick up aluminum foil,True,47,20,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+focus on aluminum foil,True,47,21,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,47,22,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to hallway,False,47,23,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,47,24,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+go to workshop,False,47,25,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+drop aluminum foil,True,47,26,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+connect battery anode to yellow wire terminal 1,False,47,27,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+connect battery cathode to green wire terminal 1,False,47,28,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+connect yellow wire terminal 2 to cathode in buzzer,False,47,29,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+connect black wire terminal 2 to anode in buzzer,False,47,30,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+connect aluminum foil terminal 1 to green wire terminal 2,False,47,31,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+connect aluminum foil terminal 2 to black wire terminal 1,False,47,32,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+wait1,True,47,33,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+wait1,True,47,34,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity
+move aluminum foil to blue box,False,47,35,Your task is to determine if aluminum foil is electrically conductive,task-2a-test-conductivity

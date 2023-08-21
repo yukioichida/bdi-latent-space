@@ -1,0 +1,24 @@
+action,landmark,variation,order,goal,task_id
+open door to outside,False,778,0,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+go to outside,False,778,1,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+open door to green house,False,778,2,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+go to green house,False,778,3,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+move jug to sink,False,778,4,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+activate sink,True,778,5,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+deactivate sink,True,778,6,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+pick up jug,False,778,7,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+focus on substance in jug,False,778,8,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+open door to hallway,True,778,9,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+go to hallway,True,778,10,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+open door to workshop,True,778,11,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+go to workshop,True,778,12,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+drop jug,False,778,13,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+connect battery anode to black wire terminal 1,False,778,14,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+connect battery cathode to blue wire terminal 1,False,778,15,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+connect black wire terminal 2 to cathode in red light bulb,False,778,16,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+connect orange wire terminal 2 to anode in red light bulb,False,778,17,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+connect water terminal 1 to blue wire terminal 2,False,778,18,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+connect water terminal 2 to orange wire terminal 1,False,778,19,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+wait1,True,778,20,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+wait1,True,778,21,Your task is to determine if water is electrically conductive,task-2a-test-conductivity
+move jug to yellow box,False,778,22,Your task is to determine if water is electrically conductive,task-2a-test-conductivity

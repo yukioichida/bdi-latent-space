@@ -1,0 +1,27 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,True,31,0,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+go to kitchen,True,31,1,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+open cupboard,True,31,2,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+pick up ceramic cup,False,31,3,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+open door to hallway,True,31,4,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+go to hallway,True,31,5,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+open door to workshop,True,31,6,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+go to workshop,True,31,7,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+pick up recipe,True,31,8,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+read recipe in inventory,True,31,9,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+pick up paper,True,31,10,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+move paper to ceramic cup,False,31,11,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+open freezer,True,31,12,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+open door to hallway,True,31,13,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+go to hallway,True,31,14,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+open door to bedroom,True,31,15,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+go to bedroom,True,31,16,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+open door to hallway,True,31,17,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+go to hallway,True,31,18,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+open door to art studio,True,31,19,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+go to art studio,True,31,20,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+pick up cup containing red paint in art studio,True,31,21,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+pour cup containing red paint in inventory into ceramic cup,False,31,22,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+examine ceramic cup,False,31,23,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+mix ceramic cup,False,31,24,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix
+focus on red paper,True,31,25,Your task is to use chemistry to create the substance 'red paper',task-5-chemistry-mix

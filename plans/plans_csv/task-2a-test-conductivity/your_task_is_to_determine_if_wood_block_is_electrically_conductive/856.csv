@@ -1,0 +1,43 @@
+action,landmark,variation,order,goal,task_id
+open door to foundry,False,856,0,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to foundry,False,856,1,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to outside,False,856,2,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to outside,False,856,3,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to green house,False,856,4,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to green house,False,856,5,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,856,6,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to hallway,False,856,7,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to living room,False,856,8,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to living room,False,856,9,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,856,10,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to hallway,False,856,11,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to bedroom,False,856,12,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to bedroom,False,856,13,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,856,14,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to hallway,False,856,15,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,856,16,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to workshop,False,856,17,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,856,18,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to hallway,False,856,19,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to art studio,False,856,20,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to art studio,False,856,21,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,856,22,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to hallway,False,856,23,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to kitchen,False,856,24,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to kitchen,False,856,25,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+pick up block,True,856,26,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+focus on block,True,856,27,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,856,28,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to hallway,False,856,29,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,856,30,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+go to workshop,False,856,31,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+drop block,True,856,32,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+connect battery anode to orange wire terminal 1,False,856,33,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+connect battery cathode to red wire terminal 1,False,856,34,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+connect orange wire terminal 2 to cathode in green light bulb,False,856,35,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+connect blue wire terminal 2 to anode in green light bulb,False,856,36,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+connect block terminal 1 to red wire terminal 2,False,856,37,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+connect block terminal 2 to blue wire terminal 1,False,856,38,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+wait1,True,856,39,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+wait1,True,856,40,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity
+move block to blue box,False,856,41,Your task is to determine if wood block is electrically conductive,task-2a-test-conductivity

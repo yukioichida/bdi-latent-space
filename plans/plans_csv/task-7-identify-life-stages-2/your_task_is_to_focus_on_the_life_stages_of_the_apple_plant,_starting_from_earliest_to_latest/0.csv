@@ -1,0 +1,11 @@
+action,landmark,variation,order,goal,task_id
+open door to green house,False,0,0,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+go to green house,False,0,1,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+open door to outside,False,0,2,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+go to outside,False,0,3,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on apple seed in the seed stage in self watering flower pot 4,False,0,4,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on apple tree in the seedling stage in self watering flower pot 6,False,0,5,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+wait1,False,0,6,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+wait1,False,0,7,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on apple tree in the adult stage in self watering flower pot 6,False,0,8,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on apple tree in the reproducing stage in self watering flower pot 9,False,0,9,"Your task is to focus on the life stages of the apple plant, starting from earliest to latest",task-7-identify-life-stages-2

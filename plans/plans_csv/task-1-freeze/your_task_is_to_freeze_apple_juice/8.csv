@@ -1,0 +1,19 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,True,8,0,Your task is to freeze apple juice,task-1-freeze
+go to kitchen,True,8,1,Your task is to freeze apple juice,task-1-freeze
+pick up thermometer,True,8,2,Your task is to freeze apple juice,task-1-freeze
+open cupboard,True,8,3,Your task is to freeze apple juice,task-1-freeze
+pick up metal pot,False,8,4,Your task is to freeze apple juice,task-1-freeze
+open glass jar,True,8,5,Your task is to freeze apple juice,task-1-freeze
+open fridge,True,8,6,Your task is to freeze apple juice,task-1-freeze
+focus on apple juice,True,8,7,Your task is to freeze apple juice,task-1-freeze
+pour ceramic cup containing apple juice into metal pot,False,8,8,Your task is to freeze apple juice,task-1-freeze
+pick up metal pot,False,8,9,Your task is to freeze apple juice,task-1-freeze
+open freezer,True,8,10,Your task is to freeze apple juice,task-1-freeze
+move metal pot to freezer,False,8,11,Your task is to freeze apple juice,task-1-freeze
+examine apple juice,True,8,12,Your task is to freeze apple juice,task-1-freeze
+use thermometer in inventory on apple juice,True,8,13,Your task is to freeze apple juice,task-1-freeze
+wait,True,8,14,Your task is to freeze apple juice,task-1-freeze
+examine apple juice,True,8,15,Your task is to freeze apple juice,task-1-freeze
+use thermometer in inventory on apple juice,True,8,16,Your task is to freeze apple juice,task-1-freeze
+wait,True,8,17,Your task is to freeze apple juice,task-1-freeze

@@ -1,0 +1,22 @@
+action,landmark,variation,order,goal,task_id
+pick up thermometer,True,11,0,Your task is to melt chocolate,task-1-melt
+open cupboard,True,11,1,Your task is to melt chocolate,task-1-melt
+pick up metal pot,True,11,2,Your task is to melt chocolate,task-1-melt
+open drawer in cupboard,False,11,3,Your task is to melt chocolate,task-1-melt
+open oven,True,11,4,Your task is to melt chocolate,task-1-melt
+open drawer in counter,False,11,5,Your task is to melt chocolate,task-1-melt
+open fridge,True,11,6,Your task is to melt chocolate,task-1-melt
+focus on chocolate,True,11,7,Your task is to melt chocolate,task-1-melt
+move chocolate to metal pot,True,11,8,Your task is to melt chocolate,task-1-melt
+pick up metal pot,True,11,9,Your task is to melt chocolate,task-1-melt
+move metal pot to stove,True,11,10,Your task is to melt chocolate,task-1-melt
+activate stove,True,11,11,Your task is to melt chocolate,task-1-melt
+pick up metal pot,True,11,12,Your task is to melt chocolate,task-1-melt
+open door to outside,False,11,13,Your task is to melt chocolate,task-1-melt
+go to outside,False,11,14,Your task is to melt chocolate,task-1-melt
+open door to foundry,False,11,15,Your task is to melt chocolate,task-1-melt
+go to foundry,False,11,16,Your task is to melt chocolate,task-1-melt
+open blast furnace,False,11,17,Your task is to melt chocolate,task-1-melt
+move metal pot to blast furnace,False,11,18,Your task is to melt chocolate,task-1-melt
+activate blast furnace,False,11,19,Your task is to melt chocolate,task-1-melt
+examine chocolate,True,11,20,Your task is to melt chocolate,task-1-melt

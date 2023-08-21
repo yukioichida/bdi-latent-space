@@ -1,0 +1,77 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,122,0,Your task is to grow a peach,task-4-grow-fruit
+go to hallway,False,122,1,Your task is to grow a peach,task-4-grow-fruit
+open door to workshop,False,122,2,Your task is to grow a peach,task-4-grow-fruit
+go to workshop,False,122,3,Your task is to grow a peach,task-4-grow-fruit
+pick up seed jar,True,122,4,Your task is to grow a peach,task-4-grow-fruit
+open door to hallway,False,122,5,Your task is to grow a peach,task-4-grow-fruit
+go to hallway,False,122,6,Your task is to grow a peach,task-4-grow-fruit
+open door to green house,True,122,7,Your task is to grow a peach,task-4-grow-fruit
+go to green house,True,122,8,Your task is to grow a peach,task-4-grow-fruit
+open door to outside,False,122,9,Your task is to grow a peach,task-4-grow-fruit
+go to outside,False,122,10,Your task is to grow a peach,task-4-grow-fruit
+pick up shovel,False,122,11,Your task is to grow a peach,task-4-grow-fruit
+use shovel in inventory on ground,False,122,12,Your task is to grow a peach,task-4-grow-fruit
+pick up soil,False,122,13,Your task is to grow a peach,task-4-grow-fruit
+open door to green house,True,122,14,Your task is to grow a peach,task-4-grow-fruit
+go to green house,True,122,15,Your task is to grow a peach,task-4-grow-fruit
+move soil in inventory to flower pot 2,False,122,16,Your task is to grow a peach,task-4-grow-fruit
+open door to outside,False,122,17,Your task is to grow a peach,task-4-grow-fruit
+go to outside,False,122,18,Your task is to grow a peach,task-4-grow-fruit
+use shovel in inventory on ground,False,122,19,Your task is to grow a peach,task-4-grow-fruit
+pick up soil,False,122,20,Your task is to grow a peach,task-4-grow-fruit
+open door to green house,True,122,21,Your task is to grow a peach,task-4-grow-fruit
+go to green house,True,122,22,Your task is to grow a peach,task-4-grow-fruit
+move soil in inventory to flower pot 3,False,122,23,Your task is to grow a peach,task-4-grow-fruit
+open door to outside,False,122,24,Your task is to grow a peach,task-4-grow-fruit
+go to outside,False,122,25,Your task is to grow a peach,task-4-grow-fruit
+use shovel in inventory on ground,False,122,26,Your task is to grow a peach,task-4-grow-fruit
+pick up soil,False,122,27,Your task is to grow a peach,task-4-grow-fruit
+open door to green house,True,122,28,Your task is to grow a peach,task-4-grow-fruit
+go to green house,True,122,29,Your task is to grow a peach,task-4-grow-fruit
+move soil in inventory to flower pot 1,False,122,30,Your task is to grow a peach,task-4-grow-fruit
+move peach seed in seed jar to flower pot 2,True,122,31,Your task is to grow a peach,task-4-grow-fruit
+0,True,122,32,Your task is to grow a peach,task-4-grow-fruit
+move peach seed in seed jar to flower pot 3,True,122,33,Your task is to grow a peach,task-4-grow-fruit
+0,True,122,34,Your task is to grow a peach,task-4-grow-fruit
+move peach seed in seed jar to flower pot 1,True,122,35,Your task is to grow a peach,task-4-grow-fruit
+0,True,122,36,Your task is to grow a peach,task-4-grow-fruit
+activate sink,True,122,37,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,38,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 2,True,122,39,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,40,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 3,True,122,41,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,42,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 1,True,122,43,Your task is to grow a peach,task-4-grow-fruit
+deactivate sink,True,122,44,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,45,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,46,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,47,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,48,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,49,Your task is to grow a peach,task-4-grow-fruit
+activate sink,True,122,50,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,51,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 2,True,122,52,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,53,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 3,True,122,54,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,55,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 1,True,122,56,Your task is to grow a peach,task-4-grow-fruit
+deactivate sink,True,122,57,Your task is to grow a peach,task-4-grow-fruit
+close door to outside,True,122,58,Your task is to grow a peach,task-4-grow-fruit
+close door to hallway,True,122,59,Your task is to grow a peach,task-4-grow-fruit
+open bee hive,True,122,60,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,61,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,62,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,63,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,64,Your task is to grow a peach,task-4-grow-fruit
+wait1,True,122,65,Your task is to grow a peach,task-4-grow-fruit
+activate sink,True,122,66,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,67,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 2,True,122,68,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,69,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 3,True,122,70,Your task is to grow a peach,task-4-grow-fruit
+move jug to sink,True,122,71,Your task is to grow a peach,task-4-grow-fruit
+pour jug into flower pot 1,True,122,72,Your task is to grow a peach,task-4-grow-fruit
+deactivate sink,True,122,73,Your task is to grow a peach,task-4-grow-fruit
+focus on peach on peach tree in the reproducing stage,False,122,74,Your task is to grow a peach,task-4-grow-fruit
+0,True,122,75,Your task is to grow a peach,task-4-grow-fruit

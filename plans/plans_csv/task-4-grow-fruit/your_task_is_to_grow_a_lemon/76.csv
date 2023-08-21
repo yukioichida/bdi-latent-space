@@ -1,0 +1,75 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,76,0,Your task is to grow a lemon,task-4-grow-fruit
+go to hallway,False,76,1,Your task is to grow a lemon,task-4-grow-fruit
+open door to kitchen,False,76,2,Your task is to grow a lemon,task-4-grow-fruit
+go to kitchen,False,76,3,Your task is to grow a lemon,task-4-grow-fruit
+open door to bathroom,False,76,4,Your task is to grow a lemon,task-4-grow-fruit
+go to bathroom,False,76,5,Your task is to grow a lemon,task-4-grow-fruit
+pick up seed jar,True,76,6,Your task is to grow a lemon,task-4-grow-fruit
+open door to kitchen,False,76,7,Your task is to grow a lemon,task-4-grow-fruit
+go to kitchen,False,76,8,Your task is to grow a lemon,task-4-grow-fruit
+open door to hallway,False,76,9,Your task is to grow a lemon,task-4-grow-fruit
+go to hallway,False,76,10,Your task is to grow a lemon,task-4-grow-fruit
+open door to green house,True,76,11,Your task is to grow a lemon,task-4-grow-fruit
+go to green house,True,76,12,Your task is to grow a lemon,task-4-grow-fruit
+move soil to flower pot 1,False,76,13,Your task is to grow a lemon,task-4-grow-fruit
+open door to outside,False,76,14,Your task is to grow a lemon,task-4-grow-fruit
+go to outside,False,76,15,Your task is to grow a lemon,task-4-grow-fruit
+pick up shovel,False,76,16,Your task is to grow a lemon,task-4-grow-fruit
+use shovel in inventory on ground,False,76,17,Your task is to grow a lemon,task-4-grow-fruit
+pick up soil,False,76,18,Your task is to grow a lemon,task-4-grow-fruit
+open door to green house,True,76,19,Your task is to grow a lemon,task-4-grow-fruit
+go to green house,True,76,20,Your task is to grow a lemon,task-4-grow-fruit
+move soil in inventory to flower pot 3,False,76,21,Your task is to grow a lemon,task-4-grow-fruit
+open door to outside,False,76,22,Your task is to grow a lemon,task-4-grow-fruit
+go to outside,False,76,23,Your task is to grow a lemon,task-4-grow-fruit
+use shovel in inventory on ground,False,76,24,Your task is to grow a lemon,task-4-grow-fruit
+pick up soil,False,76,25,Your task is to grow a lemon,task-4-grow-fruit
+open door to green house,True,76,26,Your task is to grow a lemon,task-4-grow-fruit
+go to green house,True,76,27,Your task is to grow a lemon,task-4-grow-fruit
+move soil in inventory to flower pot 2,False,76,28,Your task is to grow a lemon,task-4-grow-fruit
+move lemon seed in seed jar to flower pot 1,True,76,29,Your task is to grow a lemon,task-4-grow-fruit
+0,True,76,30,Your task is to grow a lemon,task-4-grow-fruit
+move lemon seed in seed jar to flower pot 3,True,76,31,Your task is to grow a lemon,task-4-grow-fruit
+0,True,76,32,Your task is to grow a lemon,task-4-grow-fruit
+move lemon seed in seed jar to flower pot 2,True,76,33,Your task is to grow a lemon,task-4-grow-fruit
+0,True,76,34,Your task is to grow a lemon,task-4-grow-fruit
+activate sink,True,76,35,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,36,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 1,True,76,37,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,38,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 3,True,76,39,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,40,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 2,True,76,41,Your task is to grow a lemon,task-4-grow-fruit
+deactivate sink,True,76,42,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,43,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,44,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,45,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,46,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,47,Your task is to grow a lemon,task-4-grow-fruit
+activate sink,True,76,48,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,49,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 1,True,76,50,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,51,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 3,True,76,52,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,53,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 2,True,76,54,Your task is to grow a lemon,task-4-grow-fruit
+deactivate sink,True,76,55,Your task is to grow a lemon,task-4-grow-fruit
+close door to outside,True,76,56,Your task is to grow a lemon,task-4-grow-fruit
+close door to hallway,True,76,57,Your task is to grow a lemon,task-4-grow-fruit
+open bee hive,True,76,58,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,59,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,60,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,61,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,62,Your task is to grow a lemon,task-4-grow-fruit
+wait1,True,76,63,Your task is to grow a lemon,task-4-grow-fruit
+activate sink,True,76,64,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,65,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 1,True,76,66,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,67,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 3,True,76,68,Your task is to grow a lemon,task-4-grow-fruit
+move jug to sink,True,76,69,Your task is to grow a lemon,task-4-grow-fruit
+pour jug into flower pot 2,True,76,70,Your task is to grow a lemon,task-4-grow-fruit
+deactivate sink,True,76,71,Your task is to grow a lemon,task-4-grow-fruit
+focus on lemon,False,76,72,Your task is to grow a lemon,task-4-grow-fruit
+0,True,76,73,Your task is to grow a lemon,task-4-grow-fruit

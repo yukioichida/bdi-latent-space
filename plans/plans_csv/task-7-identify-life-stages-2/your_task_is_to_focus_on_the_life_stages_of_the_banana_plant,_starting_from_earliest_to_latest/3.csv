@@ -1,0 +1,5 @@
+action,landmark,variation,order,goal,task_id
+focus on plant in the seed stage in self watering flower pot 6,False,3,0,"Your task is to focus on the life stages of the banana plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on banana tree in the seedling stage in self watering flower pot 8,False,3,1,"Your task is to focus on the life stages of the banana plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on banana tree in the adult stage in self watering flower pot 9,False,3,2,"Your task is to focus on the life stages of the banana plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on banana tree in the reproducing stage in self watering flower pot 4,False,3,3,"Your task is to focus on the life stages of the banana plant, starting from earliest to latest",task-7-identify-life-stages-2

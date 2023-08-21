@@ -1,0 +1,11 @@
+action,landmark,variation,order,goal,task_id
+open door to green house,False,7,0,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+go to green house,False,7,1,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+open door to outside,False,7,2,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+go to outside,False,7,3,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on orange seed in the seed stage in self watering flower pot 2,False,7,4,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on orange tree in the seedling stage in self watering flower pot 9,False,7,5,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+wait1,False,7,6,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+wait1,False,7,7,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on orange tree in the adult stage in self watering flower pot 9,False,7,8,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2
+focus on orange tree in the reproducing stage in self watering flower pot 6,False,7,9,"Your task is to focus on the life stages of the orange plant, starting from earliest to latest",task-7-identify-life-stages-2

@@ -1,0 +1,53 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,False,51,0,Your task is to grow a banana,task-4-grow-fruit
+go to kitchen,False,51,1,Your task is to grow a banana,task-4-grow-fruit
+open door to outside,False,51,2,Your task is to grow a banana,task-4-grow-fruit
+go to outside,False,51,3,Your task is to grow a banana,task-4-grow-fruit
+open door to green house,True,51,4,Your task is to grow a banana,task-4-grow-fruit
+go to green house,True,51,5,Your task is to grow a banana,task-4-grow-fruit
+pick up seed jar,True,51,6,Your task is to grow a banana,task-4-grow-fruit
+move banana seed in seed jar to flower pot 2,True,51,7,Your task is to grow a banana,task-4-grow-fruit
+0,True,51,8,Your task is to grow a banana,task-4-grow-fruit
+move banana seed in seed jar to flower pot 1,True,51,9,Your task is to grow a banana,task-4-grow-fruit
+0,True,51,10,Your task is to grow a banana,task-4-grow-fruit
+move banana seed in seed jar to flower pot 3,True,51,11,Your task is to grow a banana,task-4-grow-fruit
+0,True,51,12,Your task is to grow a banana,task-4-grow-fruit
+activate sink,True,51,13,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,14,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 2,True,51,15,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,16,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 1,True,51,17,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,18,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 3,True,51,19,Your task is to grow a banana,task-4-grow-fruit
+deactivate sink,True,51,20,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,21,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,22,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,23,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,24,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,25,Your task is to grow a banana,task-4-grow-fruit
+activate sink,True,51,26,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,27,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 2,True,51,28,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,29,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 1,True,51,30,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,31,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 3,True,51,32,Your task is to grow a banana,task-4-grow-fruit
+deactivate sink,True,51,33,Your task is to grow a banana,task-4-grow-fruit
+close door to hallway,True,51,34,Your task is to grow a banana,task-4-grow-fruit
+close door to outside,True,51,35,Your task is to grow a banana,task-4-grow-fruit
+open bee hive,True,51,36,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,37,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,38,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,39,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,40,Your task is to grow a banana,task-4-grow-fruit
+wait1,True,51,41,Your task is to grow a banana,task-4-grow-fruit
+activate sink,True,51,42,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,43,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 2,True,51,44,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,45,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 1,True,51,46,Your task is to grow a banana,task-4-grow-fruit
+move jug to sink,True,51,47,Your task is to grow a banana,task-4-grow-fruit
+pour jug into flower pot 3,True,51,48,Your task is to grow a banana,task-4-grow-fruit
+deactivate sink,True,51,49,Your task is to grow a banana,task-4-grow-fruit
+focus on banana on reproducing banana tree,False,51,50,Your task is to grow a banana,task-4-grow-fruit
+0,True,51,51,Your task is to grow a banana,task-4-grow-fruit

@@ -1,0 +1,17 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,138,0,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to hallway,False,138,1,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to workshop,False,138,2,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to workshop,False,138,3,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+pick up unknown substance,True,138,4,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+focus on unknown substance,True,138,5,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+drop unknown substance,True,138,6,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery anode to red wire terminal 1,False,138,7,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery cathode to yellow wire terminal 1,False,138,8,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect red wire terminal 2 to blue light bulb cathode,False,138,9,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect orange wire terminal 2 to anode in blue light bulb,False,138,10,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance G terminal 1 to yellow wire terminal 2,False,138,11,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance G terminal 2 to orange wire terminal 1,False,138,12,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,138,13,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,138,14,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+move unknown substance G to orange box,False,138,15,Your task is to determine if unknown substance G is electrically conductive,task-2a-test-conductivity-of-unknown-substances

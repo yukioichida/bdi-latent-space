@@ -1,0 +1,55 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,102,0,Your task is to grow a orange,task-4-grow-fruit
+go to hallway,False,102,1,Your task is to grow a orange,task-4-grow-fruit
+open door to workshop,False,102,2,Your task is to grow a orange,task-4-grow-fruit
+go to workshop,False,102,3,Your task is to grow a orange,task-4-grow-fruit
+pick up seed jar,True,102,4,Your task is to grow a orange,task-4-grow-fruit
+open door to hallway,False,102,5,Your task is to grow a orange,task-4-grow-fruit
+go to hallway,False,102,6,Your task is to grow a orange,task-4-grow-fruit
+open door to green house,True,102,7,Your task is to grow a orange,task-4-grow-fruit
+go to green house,True,102,8,Your task is to grow a orange,task-4-grow-fruit
+move orange seed in seed jar to flower pot 2,True,102,9,Your task is to grow a orange,task-4-grow-fruit
+0,True,102,10,Your task is to grow a orange,task-4-grow-fruit
+move orange seed in seed jar to flower pot 1,True,102,11,Your task is to grow a orange,task-4-grow-fruit
+0,True,102,12,Your task is to grow a orange,task-4-grow-fruit
+move orange seed in seed jar to flower pot 3,True,102,13,Your task is to grow a orange,task-4-grow-fruit
+0,True,102,14,Your task is to grow a orange,task-4-grow-fruit
+activate sink,True,102,15,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,16,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 2,True,102,17,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,18,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 1,True,102,19,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,20,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 3,True,102,21,Your task is to grow a orange,task-4-grow-fruit
+deactivate sink,True,102,22,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,23,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,24,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,25,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,26,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,27,Your task is to grow a orange,task-4-grow-fruit
+activate sink,True,102,28,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,29,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 2,True,102,30,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,31,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 1,True,102,32,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,33,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 3,True,102,34,Your task is to grow a orange,task-4-grow-fruit
+deactivate sink,True,102,35,Your task is to grow a orange,task-4-grow-fruit
+close door to outside,True,102,36,Your task is to grow a orange,task-4-grow-fruit
+close door to hallway,True,102,37,Your task is to grow a orange,task-4-grow-fruit
+open bee hive,True,102,38,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,39,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,40,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,41,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,42,Your task is to grow a orange,task-4-grow-fruit
+wait1,True,102,43,Your task is to grow a orange,task-4-grow-fruit
+activate sink,True,102,44,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,45,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 2,True,102,46,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,47,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 1,True,102,48,Your task is to grow a orange,task-4-grow-fruit
+move jug to sink,True,102,49,Your task is to grow a orange,task-4-grow-fruit
+pour jug into flower pot 3,True,102,50,Your task is to grow a orange,task-4-grow-fruit
+deactivate sink,True,102,51,Your task is to grow a orange,task-4-grow-fruit
+focus on orange on orange tree,False,102,52,Your task is to grow a orange,task-4-grow-fruit
+0,True,102,53,Your task is to grow a orange,task-4-grow-fruit

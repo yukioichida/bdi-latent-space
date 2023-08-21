@@ -1,0 +1,18 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,True,25,0,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+go to hallway,True,25,1,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+open door to kitchen,True,25,2,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+go to kitchen,True,25,3,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+open cupboard,True,25,4,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+pick up metal pot,True,25,5,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+pick up recipe,True,25,6,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+read recipe in inventory,True,25,7,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+pick up peanut,True,25,8,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+move peanut to metal pot,True,25,9,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+pick up banana,True,25,10,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+move banana to metal pot,True,25,11,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+pick up bread,True,25,12,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+move bread to metal pot,True,25,13,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+examine metal pot,True,25,14,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+mix metal pot,True,25,15,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
+focus on peanut butter with banana sandwhich,True,25,16,Your task is to use chemistry to create the substance 'peanut butter with banana sandwhich',task-5-chemistry-mix
