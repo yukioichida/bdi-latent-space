@@ -41,7 +41,7 @@ subplan_b = """
 
 # heat water on stove
 subplan_c = """
-    IF your goal is to heat water on stove CONSIDERING you have metal pot with water AND you see a stove THEN
+    IF your goal is to heat water on stove CONSIDERING you have metal pot with water in your inventory AND you see a stove THEN
         move metal pot to stove,
         activate stove,
         wait,
