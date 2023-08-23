@@ -62,6 +62,7 @@ all_plans = [main_plan, subplan_a, subplan_b, subplan_c, subplan_d]
 
 pl = PlanLibrary()
 pl.load_plans_from_strings(all_plans)
+pl.load_plans_from_file("notebooks/plans.txt")
 print(pl.plans.keys())
 
 env = ScienceWorldEnv("", "", envStepLimit=100)

@@ -9,6 +9,11 @@ from sources.bdi_components.plans import Plan, PlanLibrary
 class BDIAgent:
 
     def __init__(self, plan_library: PlanLibrary, nli_model: NLIModel):
+        """
+        BDI agent main class
+        :param plan_library: Structure storing the plans to be executed by the agent.
+        :param nli_model: Model to make logical inference over natural language information
+        """
         self.belief_base = BeliefBase()
         self.plan_library = plan_library
         self.nli_model = nli_model
@@ -18,12 +23,11 @@ class BDIAgent:
             current_state: State,
             step_function: Callable[[str], State]):
         """
-        Perceive new observations and goal, deliberates over them and act.
+        Perceive new observations and goal, deliberates, and act.
         :param current_state: Current agent state in environment
         :param step_function: function that executes an step in the environment and returns the new state
         :return: set of actions contained in the plan body whether there is a candidate plan
         """
-
         # root plan
         visited_events = []
         self.reasoning_cycle(current_state, current_state.goal, visited_events, step_function)
@@ -44,18 +48,19 @@ class BDIAgent:
         """
 
         # TODO: rever termo "state", talvez mudar para "belief base"
-        # TODO: usar networkx para pegar a árvore de planos executado
+        # TODO: usar treelib para pegar a árvore de planos executado
         plan = self.get_plan(state, triggering_event)
-        self.plan_tree.add_node(triggering_event)
         if plan is not None:
             plan_body = plan.body
             current_state = state
             for event in plan_body:
                 if event in self.plan_library.plans.keys():  # goal addition, proceed in decomposition
                     if event not in visited_events:
-                        self.plan_tree.add_edge(triggering_event, event)
+                        self.plan_tree.add_edge(triggering_event, event) # TODO: allow duplicade node labels
                         visited_events.append(event)
                         current_state = self.reasoning_cycle(current_state, event, visited_events, step_function)
+                        if current_state is None:
+                            break # action failure must raise a plan failure
                 elif event in current_state.valid_actions:  # action, primitive task
                     self.plan_tree.add_edge(triggering_event, event)
                     current_state = step_function(event)  # executes the action and receives the updated state
@@ -74,8 +79,10 @@ class BDIAgent:
         :return: Plan to be executed whether there is a candidate one
         """
         candidate_plans = []
+        # get plans triggered by the event (new goal)
         all_plans = self.plan_library.plans[triggering_event]
         all_beliefs = state.sentence_list()
+        # FIXME: remove this loop and apply a inference with the whole plan library into a single batch to avoid unnecessary nli model calls
         for plan in all_plans:
             if len(plan.context) > 0:
                 entailment, confidence = self.nli_model.check_context_entailment(beliefs=all_beliefs,

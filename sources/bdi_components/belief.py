@@ -3,7 +3,7 @@ from typing import NamedTuple, Dict
 
 class State(NamedTuple):
     """
-    Current beliefs seeing by the agent
+    Environment state perceived by the agent
     Means-Ends Reasoning - pag 19
     ... The agent’s current beliefs about the *state* of the environment. ...
     """
@@ -11,7 +11,7 @@ class State(NamedTuple):
     observation: str # observation perceived
     look: list[str] # objects that agent are seeing in the current state
     inventory: str # agent's inventory
-    valid_actions: list[str]
+    valid_actions: list[str] # valid actions that the agent can perform in the current state
 
     def sentence_list(self):
         return [self.inventory] + self.look
@@ -20,6 +20,9 @@ class State(NamedTuple):
 class BeliefBase:
 
     def __init__(self):
+        """
+        Agent's Belief base that contains perceived environment state
+        """
         self.memory = []
 
     def belief_addition(self, new_state: State):
@@ -27,7 +30,7 @@ class BeliefBase:
 
     def get_current_beliefs(self) -> State:
         """
-        Retrieve current beliefs
-        :return: List of sentences corresponding to the current beliefs
+        Retrieve current state stored in the belief base
+        :return: List of sentences corresponding to the current state perceived in the belief base
         """
         return self.memory[-1] if len(self.memory) > 0 else []

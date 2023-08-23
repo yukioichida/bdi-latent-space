@@ -68,7 +68,7 @@ def load_plans_from_file(file: str):
     with open(file) as f:
         plan_str = f.read()
 
-    plans = plan_str.split("\n;\n")
+    plans = plan_str.split("\n")
     return [parser.parse(plan, idx) for idx, plan in enumerate(plans)]
 
 
