@@ -1,13 +1,10 @@
 from sources.bdi_components.plans import PlanLibrary
-from sources.bdi_components.belief import BeliefBase, State
+from sources.bdi_components.belief import State
 from sources.bdi_components.inference import NLIModel
-from sources.agent.agent import BDIAgent
-
-from sources.agent.scienceworld import parse_observation
+from sources.agent import BDIAgent
 
 from scienceworld import ScienceWorldEnv
 import re
-from sources.agent.scienceworld import parse_observation
 
 hg_model_hub_name = "alisawuffles/roberta-large-wanli"
 nli_model = NLIModel(hg_model_hub_name)

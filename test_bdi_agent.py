@@ -4,8 +4,8 @@ import time
 
 from scienceworld import ScienceWorldEnv
 
-from sources.agent.agent import BDIAgent
-from sources.agent.scienceworld import parse_observation
+from sources.agent import BDIAgent
+from sources.scienceworld import parse_observation
 from sources.bdi_components.belief import State
 from sources.bdi_components.inference import NLIModel
 from sources.bdi_components.policy import DRRNDefaultPolicy
