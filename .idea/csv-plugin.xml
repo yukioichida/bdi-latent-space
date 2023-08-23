@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="/plans/plans_csv/task-5-chemistry-mix/your_task_is_to_use_chemistry_to_create_the_substance_'banana_sandwhich'/12.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/plans/plans_csv/task-5-chemistry-mix/your_task_is_to_use_chemistry_to_create_the_substance_'banana_sandwhich'/4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/plans/plans_csv/task-5-chemistry-mix/your_task_is_to_use_chemistry_to_create_the_substance_'blue_paper'/13.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/plans/plans_csv/task-5-chemistry-mix/your_task_is_to_use_chemistry_to_create_the_substance_'blue_paper'/5.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/plans/plans_csv/task-5-chemistry-mix/your_task_is_to_use_chemistry_to_create_the_substance_'dough'/17.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
