@@ -3,7 +3,8 @@ import re
 from sources.bdi_components.belief import State
 
 
-def parse_observation(observation: str, inventory: str, look_around: str, task: str, valid_actions: list[str]) -> State:
+def parse_observation(observation: str, inventory: str, look_around: str, task: str, valid_actions: list[str],
+                      score: float = 0) -> State:
     """
     ScienceWorld environment specific function to convert environment information into a State object.
 
@@ -12,6 +13,7 @@ def parse_observation(observation: str, inventory: str, look_around: str, task: 
     :param look_around: agent observations in the current environment state
     :param task: agent's goal
     :param valid_actions: actions allowed to perform given the current environment state
+    :param score: score received by the environment
     :return:
     """
     x = re.search(r"([\S\s]*?)(?:In it, you see:)([\S\s]*?)(?:You also see:)([\S\s]*)", look_around)
@@ -34,4 +36,5 @@ def parse_observation(observation: str, inventory: str, look_around: str, task: 
                  observation=observation,
                  look=env_state_sentences,
                  inventory=inventory,
-                 valid_actions=valid_actions)
+                 valid_actions=valid_actions,
+                 reward=score)

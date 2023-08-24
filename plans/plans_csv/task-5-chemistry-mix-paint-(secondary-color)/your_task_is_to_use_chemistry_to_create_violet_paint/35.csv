@@ -1,5 +1,0 @@
-action,landmark,variation,order,goal,task_id
-pour cup containing red paint in art studio in jug,False,35,0,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)
-pour cup containing blue paint in art studio in jug,False,35,1,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)
-mix jug,False,35,2,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)
-focus on paint in jug,False,35,3,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)

@@ -1,5 +1,0 @@
-action,landmark,variation,order,goal,task_id
-pour cup containing blue paint in art studio in bowl,False,1,0,Your task is to use chemistry to create green paint,task-5-chemistry-mix-paint-(secondary-color)
-pour cup containing yellow paint in art studio in bowl,False,1,1,Your task is to use chemistry to create green paint,task-5-chemistry-mix-paint-(secondary-color)
-mix bowl,False,1,2,Your task is to use chemistry to create green paint,task-5-chemistry-mix-paint-(secondary-color)
-focus on green paint,True,1,3,Your task is to use chemistry to create green paint,task-5-chemistry-mix-paint-(secondary-color)

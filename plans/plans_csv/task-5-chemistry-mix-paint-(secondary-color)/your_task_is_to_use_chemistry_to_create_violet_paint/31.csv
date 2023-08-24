@@ -1,7 +1,0 @@
-action,landmark,variation,order,goal,task_id
-open door to art studio,False,31,0,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)
-go to art studio,False,31,1,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)
-pour cup containing red paint in art studio in cup containing nothing in table,False,31,2,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)
-pour cup containing blue paint in art studio in cup containing red paint in table,False,31,3,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)
-mix cup containing blue paint and red paint,False,31,4,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)
-focus on paint in cup containing violet paint,False,31,5,Your task is to use chemistry to create violet paint,task-5-chemistry-mix-paint-(secondary-color)

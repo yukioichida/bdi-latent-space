@@ -1,4 +1,5 @@
 from typing import NamedTuple, Dict
+import copy
 
 
 class State(NamedTuple):
@@ -7,14 +8,17 @@ class State(NamedTuple):
     Means-Ends Reasoning - pag 19
     ... The agent’s current beliefs about the *state* of the environment. ...
     """
-    goal: str # main goal
-    observation: str # observation perceived
-    look: list[str] # objects that agent are seeing in the current state
-    inventory: str # agent's inventory
-    valid_actions: list[str] # valid actions that the agent can perform in the current state
+    goal: str = "" # main goal
+    observation: str = ""  # observation perceived
+    look: list[str] = [] # objects that agent are seeing in the current state
+    inventory: str  = "" # agent's inventory
+    valid_actions: list[str] = []  # valid actions that the agent can perform in the current state
+    reward: float = 0  # reward received by the environment
+    error: bool = False # flag indicating an error occurred by the action executed
 
     def sentence_list(self):
         return [self.inventory] + self.look
+
 
 
 class BeliefBase:

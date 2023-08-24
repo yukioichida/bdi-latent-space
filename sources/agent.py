@@ -21,16 +21,15 @@ class BDIAgent:
 
     def act(self,
             current_state: State,
-            step_function: Callable[[str], State]):
+            step_function: Callable[[str], State]) -> State:
         """
         Perceive new observations and goal, deliberates, and act.
         :param current_state: Current agent state in environment
         :param step_function: function that executes an step in the environment and returns the new state
-        :return: set of actions contained in the plan body whether there is a candidate plan
         """
         # root plan
         visited_events = []
-        self.reasoning_cycle(current_state, current_state.goal, visited_events, step_function)
+        return self.reasoning_cycle(current_state, current_state.goal, visited_events, step_function)
 
     def reasoning_cycle(self,
                         state: State,
@@ -59,14 +58,19 @@ class BDIAgent:
                         self.plan_tree.add_edge(triggering_event, event) # TODO: allow duplicade node labels
                         visited_events.append(event)
                         current_state = self.reasoning_cycle(current_state, event, visited_events, step_function)
-                        if current_state is None:
+                        if current_state.error:
                             break # action failure must raise a plan failure
                 elif event in current_state.valid_actions:  # action, primitive task
                     self.plan_tree.add_edge(triggering_event, event)
                     current_state = step_function(event)  # executes the action and receives the updated state
                 else:  # invalid token
                     print(f"Event {event} is not a subgoal nor an action.")
-                    return None  # automatically break as a plan failure
+                    return State(error=True,
+                                 reward=current_state.reward,
+                                 goal=current_state.goal,
+                                 observation=current_state.observation,
+                                 look=current_state.look,
+                                 valid_actions=current_state.valid_actions)  # automatically break as a plan failure
             return current_state
         else:
             print(f"No plan found for event ({triggering_event}) with beliefs ({state.sentence_list()})")
@@ -82,7 +86,7 @@ class BDIAgent:
         # get plans triggered by the event (new goal)
         all_plans = self.plan_library.plans[triggering_event]
         all_beliefs = state.sentence_list()
-        # FIXME: remove this loop and apply a inference with the whole plan library into a single batch to avoid unnecessary nli model calls
+        # FIXME: remove this loop and apply a inference with the entire plan library into a single batch to avoid unnecessary nli model calls
         for plan in all_plans:
             if len(plan.context) > 0:
                 entailment, confidence = self.nli_model.check_context_entailment(beliefs=all_beliefs,
@@ -95,6 +99,6 @@ class BDIAgent:
 
         if len(candidate_plans) > 0:
             candidate_plans.sort(key=lambda x: x[0])  # order by confidence
-            return candidate_plans[0][1]  # plan with the highest confidence score
+            return candidate_plans[-1][1]  # plan with the highest confidence score
         else:
             return None
