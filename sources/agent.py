@@ -47,7 +47,7 @@ class BDIAgent:
         """
 
         # TODO: rever termo "state", talvez mudar para "belief base"
-        # TODO: usar treelib para pegar a árvore de planos executado
+        print(f"event -> {triggering_event} -> state {state.error}")
         plan = self.get_plan(state, triggering_event)
         if plan is not None:
             plan_body = plan.body
@@ -60,20 +60,21 @@ class BDIAgent:
                         current_state = self.reasoning_cycle(current_state, event, visited_events, step_function)
                         if current_state.error:
                             break # action failure must raise a plan failure
-                elif event in current_state.valid_actions:  # action, primitive task
+                else:# event in current_state.valid_actions:  # action, primitive task
                     self.plan_tree.add_edge(triggering_event, event)
                     current_state = step_function(event)  # executes the action and receives the updated state
-                else:  # invalid token
-                    print(f"Event {event} is not a subgoal nor an action.")
-                    return State(error=True,
-                                 reward=current_state.reward,
-                                 goal=current_state.goal,
-                                 observation=current_state.observation,
-                                 look=current_state.look,
-                                 valid_actions=current_state.valid_actions)  # automatically break as a plan failure
+                #else:  # invalid token
+                #    print(f"Event {event} is not a subgoal nor an action.")
+                #    return State(error=True,
+                #                 reward=current_state.reward,
+                #                 goal=current_state.goal,
+                #                 observation=current_state.observation,
+                #                 look=current_state.look,
+                #                 valid_actions=current_state.valid_actions)  # automatically break as a plan failure
             return current_state
         else:
             print(f"No plan found for event ({triggering_event}) with beliefs ({state.sentence_list()})")
+            return state
 
     def get_plan(self, state: State, triggering_event: str) -> Plan:
         """
@@ -85,6 +86,7 @@ class BDIAgent:
         candidate_plans = []
         # get plans triggered by the event (new goal)
         all_plans = self.plan_library.plans[triggering_event]
+        #print(f"Goal {triggering_event} - {all_plans}")
         all_beliefs = state.sentence_list()
         # FIXME: remove this loop and apply a inference with the entire plan library into a single batch to avoid unnecessary nli model calls
         for plan in all_plans:
