@@ -1,0 +1,17 @@
+action,landmark,variation,order,goal,task_id
+pick up metal pot containing nothing in kitchen,False,420,0,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+focus on metal pot containing nothing in inventory,False,420,1,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,420,2,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+go to hallway,False,420,3,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,420,4,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+go to workshop,False,420,5,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+drop metal pot,True,420,6,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+connect battery anode to green wire terminal 1,False,420,7,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+connect battery cathode to orange wire terminal 1,False,420,8,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+connect green wire terminal 2 to cathode in buzzer,False,420,9,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+connect red wire terminal 2 to anode in buzzer,False,420,10,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+connect metal pot terminal 1 to orange wire terminal 2,False,420,11,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+connect metal pot terminal 2 to red wire terminal 1,False,420,12,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+wait1,True,420,13,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+wait1,True,420,14,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity
+move metal pot to red box,False,420,15,Your task is to determine if metal pot is electrically conductive,task-2a-test-conductivity

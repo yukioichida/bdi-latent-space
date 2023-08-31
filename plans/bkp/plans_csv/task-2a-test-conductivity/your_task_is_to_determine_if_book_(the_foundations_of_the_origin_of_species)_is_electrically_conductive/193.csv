@@ -1,0 +1,41 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,193,0,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to hallway,False,193,1,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,193,2,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to workshop,False,193,3,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,193,4,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to hallway,False,193,5,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to living room,False,193,6,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to living room,False,193,7,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,193,8,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to hallway,False,193,9,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to bedroom,False,193,10,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to bedroom,False,193,11,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,193,12,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to hallway,False,193,13,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to green house,False,193,14,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to green house,False,193,15,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to outside,False,193,16,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to outside,False,193,17,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to foundry,False,193,18,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to foundry,False,193,19,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to outside,False,193,20,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to outside,False,193,21,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to kitchen,False,193,22,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to kitchen,False,193,23,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+pick up book,False,193,24,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+focus on book,False,193,25,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,193,26,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to hallway,False,193,27,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,193,28,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+go to workshop,False,193,29,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+drop book,True,193,30,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+connect battery anode to red wire terminal 1,False,193,31,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+connect battery cathode to orange wire terminal 1,False,193,32,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+connect red wire terminal 2 to cathode in electric motor,False,193,33,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+connect blue wire terminal 2 to anode in electric motor,False,193,34,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+connect book terminal 1 to orange wire terminal 2,False,193,35,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+connect book terminal 2 to blue wire terminal 1,False,193,36,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+wait1,True,193,37,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+wait1,True,193,38,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity
+move book to yellow box,False,193,39,Your task is to determine if book (The Foundations of the Origin of Species) is electrically conductive,task-2a-test-conductivity

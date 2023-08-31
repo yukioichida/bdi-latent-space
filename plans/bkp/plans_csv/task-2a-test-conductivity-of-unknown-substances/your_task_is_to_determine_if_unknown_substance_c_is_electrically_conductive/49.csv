@@ -1,0 +1,13 @@
+action,landmark,variation,order,goal,task_id
+pick up unknown substance,True,49,0,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+focus on unknown substance,True,49,1,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+drop unknown substance,True,49,2,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery anode to green wire terminal 1,False,49,3,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery cathode to orange wire terminal 1,False,49,4,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect green wire terminal 2 to cathode in buzzer,False,49,5,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect blue wire terminal 2 to anode in buzzer,False,49,6,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance C terminal 1 to orange wire terminal 2,False,49,7,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance C terminal 2 to blue wire terminal 1,False,49,8,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,49,9,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,49,10,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+move unknown substance C to yellow box,False,49,11,Your task is to determine if unknown substance C is electrically conductive,task-2a-test-conductivity-of-unknown-substances

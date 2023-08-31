@@ -1,0 +1,25 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,292,0,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+go to hallway,False,292,1,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,292,2,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+go to workshop,False,292,3,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,292,4,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+go to hallway,False,292,5,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+open door to living room,False,292,6,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+go to living room,False,292,7,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+pick up glass jar,False,292,8,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+focus on glass jar,False,292,9,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,292,10,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+go to hallway,False,292,11,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,292,12,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+go to workshop,False,292,13,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+drop glass jar,True,292,14,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+connect battery anode to yellow wire terminal 1,False,292,15,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+connect battery cathode to blue wire terminal 1,False,292,16,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+connect yellow wire terminal 2 to cathode in electric motor,False,292,17,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+connect red wire terminal 2 to anode in electric motor,False,292,18,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+connect glass jar terminal 1 to blue wire terminal 2,False,292,19,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+connect glass jar terminal 2 to red wire terminal 1,False,292,20,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+wait1,True,292,21,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+wait1,True,292,22,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity
+move glass jar to orange box,False,292,23,Your task is to determine if glass jar is electrically conductive,task-2a-test-conductivity

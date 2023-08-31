@@ -1,0 +1,17 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,495,0,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to hallway,False,495,1,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to workshop,False,495,2,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to workshop,False,495,3,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+pick up unknown substance,True,495,4,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+focus on unknown substance,True,495,5,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+drop unknown substance,True,495,6,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery anode to blue wire terminal 1,False,495,7,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery cathode to green wire terminal 1,False,495,8,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect blue wire terminal 2 to cathode in buzzer,False,495,9,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect yellow wire terminal 2 to anode in buzzer,False,495,10,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance V terminal 1 to green wire terminal 2,False,495,11,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance V terminal 2 to yellow wire terminal 1,False,495,12,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,495,13,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,495,14,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+move unknown substance V to green box,False,495,15,Your task is to determine if unknown substance V is electrically conductive,task-2a-test-conductivity-of-unknown-substances

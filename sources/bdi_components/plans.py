@@ -24,6 +24,8 @@ class PlanParser:
         :return Plan parsed
         """
 
+        # TODO: see http://textx.github.io/textX/3.1/ to create more robust DSL
+
         re_full = r"(?<=IF your goal is to)([\S\s]*?)(?:CONSIDERING)([\S\s]*)(?:THEN)([\S\s]*)"
         re_partial = r"(?<=IF your goal is to)([\S\s]*?)(?:THEN)([\S\s]*)"  # no context
 
@@ -68,8 +70,16 @@ def load_plans_from_file(file: str):
     with open(file) as f:
         plan_str = f.read()
 
-    plans = plan_str.split("\n")
+    plans = plan_str.split("\n--\n")
     return [parser.parse(plan, idx) for idx, plan in enumerate(plans)]
+
+def write_plans_to_file(plan_contents: list[str],file: str):
+    separator = '\n--\n'
+    with open(file, 'a') as f:
+        for plan in plan_contents:
+            f.write(plan)
+            f.write(separator)
+
 
 
 class PlanLibrary:

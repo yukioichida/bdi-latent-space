@@ -1,0 +1,13 @@
+action,landmark,variation,order,goal,task_id
+pick up unknown substance,True,380,0,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+focus on unknown substance,True,380,1,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+drop unknown substance,True,380,2,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery anode to orange wire terminal 1,False,380,3,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery cathode to blue wire terminal 1,False,380,4,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect orange wire terminal 2 to cathode in green light bulb,False,380,5,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect red wire terminal 2 to anode in green light bulb,False,380,6,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance R terminal 1 to blue wire terminal 2,False,380,7,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance R terminal 2 to red wire terminal 1,False,380,8,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,380,9,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,380,10,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+move unknown substance R to green box,False,380,11,Your task is to determine if unknown substance R is electrically conductive,task-2a-test-conductivity-of-unknown-substances
