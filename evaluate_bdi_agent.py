@@ -9,8 +9,9 @@ from sources.bdi_components.plans import PlanLibrary
 
 def load_plan_library():
     pl = PlanLibrary()
-    pl.load_plans_from_file("plans/plans_nl/plan_1_boil.plan")  # load plans from strings above
-    pl.load_plans_from_file("notebooks/plans_navigation.txt")  # load plans from file
+    pl.load_plans_from_file("plans/plans_nl/plan_1_melt.plan")
+    pl.load_plans_from_file("plans/plans_nl/plan_common.plan")
+    pl.load_plans_from_file("notebooks/plans_navigation.txt")
     print(pl.plans.keys())
     return pl
 
@@ -28,12 +29,12 @@ def load_step_function(env: ScienceWorldEnv, goal: str):
     return step_function
 
 if __name__ == '__main__':
-    task = 'boil'
+    task = 'melt'
     pl = load_plan_library()
     nli_model = NLIModel("alisawuffles/roberta-large-wanli")
     env = ScienceWorldEnv("", "", envStepLimit=100)
     env.load(task, 0)
-    num_episode = 5
+    num_episode = 10
     all_scores = []
 
     for episode in range(num_episode):
@@ -51,6 +52,8 @@ if __name__ == '__main__':
         agent = BDIAgent(plan_library=pl, nli_model=nli_model)
         last_state = agent.act(current_state, step_function=step_function)
         all_scores.append(last_state.reward)
+        if last_state.error is False:
+            print(env.getGoalProgressStr())
 
     print(f"score = {sum(all_scores) / len(all_scores)}")
     print(f"all_scores = {all_scores}")
