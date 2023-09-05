@@ -18,6 +18,10 @@ class BDIAgent:
         self.plan_library = plan_library
         self.nli_model = nli_model
         self.plan_tree = nx.Graph()
+        self.trace = []
+
+    def reset_trace(self):
+        self.trace = []
 
     def act(self,
             current_state: State,
@@ -49,9 +53,9 @@ class BDIAgent:
         """
 
         # TODO: rever termo "state", talvez mudar para "belief base"
-        #print(f"event -> {triggering_event} -> state {state.error}")
         plan = self.get_plan(state, triggering_event)
         if plan is not None:
+            self.trace.append(triggering_event)
             plan_body = plan.body
             current_state = state
             for breadth, event in enumerate(plan_body):
@@ -59,7 +63,8 @@ class BDIAgent:
                     event_id = f"{depth}-{breadth}-{event}"
                     if event_id not in visited_events:
                         visited_events.append(event_id)
-                        current_state = self.reasoning_cycle(current_state, event, visited_events, step_function, depth + 1)
+                        current_state = self.reasoning_cycle(current_state, event, visited_events, step_function,
+                                                             depth + 1)
                         if current_state.error:
                             break  # action failure must raise a plan failure
                 else:  # event in current_state.valid_actions:  # action, primitive task
@@ -68,7 +73,7 @@ class BDIAgent:
         else:
             print(f"No plan found for event ({triggering_event}) with beliefs ({state.sentence_list()})")
             return State(error=True,
-                         reward=state.reward,
+                         score=state.score,
                          goal=state.goal,
                          observation=state.observation,
                          look=state.look,
@@ -86,20 +91,19 @@ class BDIAgent:
         all_plans = self.plan_library.plans[triggering_event]
         # print(f"Goal {triggering_event} - {all_plans}")
         all_beliefs = state.sentence_list()
-        # TODO: remove this loop and apply a inference with the entire plan library into a single batch to avoid unnecessary nli model calls
+        # TODO: remove this loop to avoid unnecessary nli model calls and do the inference
         for plan in all_plans:
             if len(plan.context) > 0:
                 entailment, confidence = self.nli_model.check_context_entailment(beliefs=all_beliefs,
                                                                                  plan_contexts=plan.context)
             else:
-                entailment, confidence = True, 1  # assumes True whether a plan does not have context
+                entailment, confidence = True, 1  # it assumes True whether a plan does not have context
 
             if entailment:
                 candidate_plans.append((confidence, plan))
 
         if len(candidate_plans) > 0:
             candidate_plans.sort(key=lambda x: x[0])  # order by confidence
-            #print(candidate_plans)
             return candidate_plans[-1][1]  # plan with the highest confidence score
         else:
             return None

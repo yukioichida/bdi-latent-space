@@ -1,6 +1,8 @@
 from typing import NamedTuple, Dict
 import copy
 
+from sources.bdi_components.plans import Plan
+
 
 class State(NamedTuple):
     """
@@ -13,8 +15,9 @@ class State(NamedTuple):
     look: list[str] = [] # objects that agent are seeing in the current state
     inventory: str  = "" # agent's inventory
     valid_actions: list[str] = []  # valid actions that the agent can perform in the current state
-    reward: float = 0  # reward received by the environment
+    score: float = 0  # reward received by the environment
     error: bool = False # flag indicating an error occurred by the action executed
+    complete: bool = False
 
     def sentence_list(self):
         return [self.inventory] + self.look

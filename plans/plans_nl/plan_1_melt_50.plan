@@ -28,65 +28,6 @@ IF your goal is to heat caesium on blast furnace CONSIDERING you have metal pot 
 
 
 
-IF your goal is to melt gallium THEN
-        move to kitchen,
-        pick up thermometer,
-        get metal pot,
-        get gallium,
-        heat gallium on blast furnace
---
-IF your goal is to get gallium CONSIDERING you have metal pot in your inventory THEN
-        move to workshop,
-        pick up gallium,
-        focus on gallium,
-        move gallium to metal pot
---
-IF your goal is to heat gallium on blast furnace CONSIDERING you have metal pot with gallium in your inventory THEN
-    move to foundry,
-    open blast furnace,
-    move metal pot to blast furnace,
-    activate blast furnace,
-    use thermometer on metal pot,
-    wait,
-    use thermometer on metal pot
-
-
-
-
---
-
-
-
-
-IF your goal is to melt tin THEN
-        move to kitchen,
-        pick up thermometer,
-        get tin,
-        focus on tin,
-        heat tin on blast furnace,
-        focus on substance in metal pot
---
-IF your goal is to get tin CONSIDERING you are not in workshop THEN
-        move to workshop,
-        pick up metal pot
---
-IF your goal is to heat tin on blast furnace CONSIDERING you have metal pot with tin in your inventory THEN
-        move to foundry,
-        open blast furnace,
-        move metal pot to blast furnace,
-        activate blast furnace,
-        use thermometer on metal pot,
-        wait,
-        use thermometer on metal pot
-
-
-
-
---
-
-
-
-
 IF your goal is to melt mercury THEN
         move to kitchen,
         pick up thermometer,

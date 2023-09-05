@@ -16,6 +16,8 @@ class NLIModel:
         self.device = device
         config = AutoConfig.from_pretrained(hg_model_name)
         self.entailment_idx = config.label2id['entailment']
+        model_size = self.llm.num_parameters()
+        print(f"model size: {model_size:,}")
 
     def check_goal(self, goal: str, plan_goal: str):
         """
