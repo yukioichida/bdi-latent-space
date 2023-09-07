@@ -26,8 +26,8 @@ def load_step_function(env: ScienceWorldEnv, goal: str) -> Callable[[str], State
 
         error = False
         if observation in error_messages:
-            print(info['look'])
-            print(f"Action: {action} - obs: {observation}")
+            #print(info['look'])
+            #print(f"Action: {action} - obs: {observation}")
             error = True
 
         updated_state = parse_observation(observation=observation,
@@ -50,7 +50,8 @@ def parse_observation(observation: str,
                       valid_actions: list[str],
                       score: float = 0,
                       complete: bool = False,
-                      error: bool = False) -> State:
+                      error: bool = False,
+                      task_description: str = "") -> State:
     """
     ScienceWorld environment specific function to convert environment information into a State object.
 
@@ -85,4 +86,5 @@ def parse_observation(observation: str,
                  valid_actions=valid_actions,
                  score=score,
                  complete=complete,
-                 error=error)
+                 error=error,
+                 task_description=task_description)

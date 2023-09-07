@@ -6,7 +6,7 @@ import random
 import itertools
 
 from sources.drrn.util import pad_sequences
-from sources.drrn.memory import State
+from sources.drrn.memory import DRRNState
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -66,7 +66,7 @@ class DRRN(torch.nn.Module):
             Returns a tuple of tensors containing q-values for each item in the batch
         """
         # Zip the state_batch into an easy access format
-        state = State(*zip(*state_batch))
+        state = DRRNState(*zip(*state_batch))
         # This is number of admissible commands in each element of the batch
         act_sizes = [len(a) for a in act_batch]
         # Combine next actions into one long list

@@ -10,6 +10,10 @@ import pandas as pd
 import random
 import numpy
 import torch
+import re
+
+from os import listdir
+from os.path import isfile, join
 
 
 def load_plan_library(plan_file: str):
@@ -19,6 +23,43 @@ def load_plan_library(plan_file: str):
     pl.load_plans_from_file("notebooks/plans_navigation.txt")
     print(pl.plans.keys())
     return pl
+
+
+def get_drrn_trained_models(path: str):
+    # = '../models/model_task1melt/'
+    model_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".pt")]
+    model_metadata = []
+    models_trained = {}
+
+    for file in model_files:
+        x = re.findall("model-steps(\d*)-eps(\d*).pt", file)[0]
+        steps, eps = x
+        model_metadata.append({
+            'file': path + file,
+            'eps': eps,
+            'steps': steps
+        })
+
+    models_df = pd.DataFrame(model_metadata).sort_values("eps")
+
+    return models_df
+
+def get_plan_files():
+    plan_files = ["plans/plans_nl/plan_1_melt_100.plan",
+                  "plans/plans_nl/plan_1_melt_75.plan",
+                  "plans/plans_nl/plan_1_melt_50.plan",
+                  "plans/plans_nl/plan_1_melt_25.plan"]
+    rows = []
+    for file in plan_files:
+        x = re.findall("plans/plans_nl/plan_1_melt_(\d*).plan", file)[0]
+        pct = x[0]
+        rows.append({
+            'file': file,
+            'pct_plans': pct
+        })
+
+    plans_df = pd.DataFrame(rows).sort_values("pct_plans")
+    return plans_df
 
 
 def random_seed(seed):
@@ -35,12 +76,13 @@ if __name__ == '__main__':
     nli_model = NLIModel(hg_nli_model, device='cuda')
     env = ScienceWorldEnv("", "", envStepLimit=100)
     env.load(task, 0)
-    num_episode = 10
 
-    plan_files = ["plans/plans_nl/plan_1_melt.plan",
+    plan_files = ["plans/plans_nl/plan_1_melt_100.plan",
                   "plans/plans_nl/plan_1_melt_75.plan",
                   "plans/plans_nl/plan_1_melt_50.plan",
                   "plans/plans_nl/plan_1_melt_25.plan"]
+
+    models_df = load_plan_library("models/model_task1melt/")
 
     statistics = []
     for file in plan_files:

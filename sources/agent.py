@@ -1,4 +1,5 @@
-from typing import List, Callable
+from typing import Callable
+
 import networkx as nx
 
 from sources.bdi_components.belief import BeliefBase, State
@@ -18,10 +19,8 @@ class BDIAgent:
         self.plan_library = plan_library
         self.nli_model = nli_model
         self.plan_tree = nx.Graph()
-        self.trace = []
-
-    def reset_trace(self):
-        self.trace = []
+        self.event_trace = []
+        self.action_trace = []
 
     def act(self,
             current_state: State,
@@ -33,7 +32,16 @@ class BDIAgent:
         """
         # root plan
         visited_events = []
-        return self.reasoning_cycle(current_state, current_state.goal, visited_events, step_function, 0)
+        plan_state = self.reasoning_cycle(current_state, current_state.goal, visited_events, step_function, 0)
+        # if there is no plan available or the current plan were executed partially, then uses a policy to act
+        #if plan_state.error and self.default_policy is not None:
+        #    current_state = plan_state
+        #    for _ in range(100):  # stepLimits
+        #        action = self.default_policy.select_action(current_state)
+        #        current_state = step_function(action)
+        #        if current_state.complete:
+        #            break
+        return plan_state
 
     def reasoning_cycle(self,
                         state: State,
@@ -55,7 +63,7 @@ class BDIAgent:
         # TODO: rever termo "state", talvez mudar para "belief base"
         plan = self.get_plan(state, triggering_event)
         if plan is not None:
-            self.trace.append(triggering_event)
+            self.event_trace.append(triggering_event)
             plan_body = plan.body
             current_state = state
             for breadth, event in enumerate(plan_body):
@@ -68,10 +76,11 @@ class BDIAgent:
                         if current_state.error:
                             break  # action failure must raise a plan failure
                 else:  # event in current_state.valid_actions:  # action, primitive task
+                    self.action_trace.append(event)
                     current_state = step_function(event)
             return current_state
         else:
-            print(f"No plan found for event ({triggering_event}) with beliefs ({state.sentence_list()})")
+            #print(f"No plan found for event ({triggering_event}) with beliefs ({state.sentence_list()})")
             return State(error=True,
                          score=state.score,
                          goal=state.goal,
