@@ -8,7 +8,6 @@ from sources.bdi_components.inference import NLIModel
 from sources.bdi_components.plans import PlanLibrary
 from sources.drrn.drrn_agent import DRRN_Agent
 
-
 import pandas as pd
 import random
 import numpy
@@ -48,13 +47,15 @@ def get_drrn_trained_models(path: str):
 
 
 def get_plan_files():
-    plan_files = ["plans/plans_nl/plan_1_melt_100.plan",
-                  "plans/plans_nl/plan_1_melt_75.plan",
-                  "plans/plans_nl/plan_1_melt_50.plan",
-                  "plans/plans_nl/plan_1_melt_25.plan"]
+    task = "plan_1_melt"
+    task = "plan_3_focus_non_living_thing"
+    plan_files = [f"plans/plans_nl/{task}_100.plan",
+                  f"plans/plans_nl/{task}_75.plan",
+                  f"plans/plans_nl/{task}_50.plan",
+                  f"plans/plans_nl/{task}_25.plan"]
     rows = []
     for file in plan_files:
-        x = re.findall("plans/plans_nl/plan_1_melt_(\d*).plan", file)[0]
+        x = re.findall(f"plans/plans_nl/{task}_(\d*).plan", file)[0]
         pct = x[0]
         rows.append({
             'plan_file': file,
@@ -72,7 +73,8 @@ def random_seed(seed):
 
 if __name__ == '__main__':
     random_seed(42)
-    task = 'melt'
+    # task = 'melt'
+    task = 'find-non-living-thing'
     hg_nli_model = "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli"  # best
     # hg_nli_model = "MoritzLaurer/MiniLM-L6-mnli"
     # hg_nli_model = "ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli"
@@ -82,7 +84,8 @@ if __name__ == '__main__':
 
     plans_df = get_plan_files()
     plans_df['id'] = 0
-    models_df = get_drrn_trained_models("models/model_task1melt/")
+    # models_df = get_drrn_trained_models("models/model_task1melt/")
+    models_df = get_drrn_trained_models("models/models_task13-overfit/")
     models_df['id'] = 0
     experiment_df = plans_df.merge(models_df, on='id', how='outer')
 
@@ -97,7 +100,17 @@ if __name__ == '__main__':
         for var in test_variations:
             env.load(task, var, simplificationStr="easy")
 
-            main_goal = env.getTaskDescription().split('.')[0].replace("Your task is to", "").strip()
+            # main_goal = env.getTaskDescription().split('.')[0].replace("Your task is to", "").strip()
+            # main_goal = env.getTaskDescription() \
+            #    .replace(". First, focus on the thing. Then,", "") \
+            #    .replace("move", "Your task is to", "") \
+            #    .replace(".", "") \
+            #    .strip()
+            main_goal = env.getTaskDescription().replace(". First, focus on the thing. Then,", "").replace("move",
+                                                                                                           "by moving").replace(
+                "Your task is to", "").replace(".", "").strip()
+
+            # print(main_goal)
             env.reset()
             step_function = load_step_function(env, main_goal)
 
@@ -114,12 +127,12 @@ if __name__ == '__main__':
             bdi_state = bdi_agent.act(current_state, step_function=step_function)
             score = bdi_state.score
 
-            if bdi_state.error: # TODO: maybe I should incorporate this code into the BDI agent
+            # initial state
+            rl_actions = []
+            if bdi_state.error:  # TODO: maybe I should incorporate this code into the BDI agent
                 print(f"BDIScore = {score} - Starting RL agent ...")
                 drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
                 drrn_agent.load(row['model_file'])
-                # initial state
-                rl_actions = []
                 observation, reward, isCompleted, info = env.step('look around')
                 for _ in range(100):  # stepLimits
                     drrn_state = drrn_agent.build_state(obs=observation, inv=info['inv'], look=info['look'])
@@ -157,4 +170,4 @@ if __name__ == '__main__':
         print(f"score = {avg_score}")
         print(f"all_scores = {all_scores}")
 
-    pd.DataFrame(results).to_csv("results.csv", index=False)
+    pd.DataFrame(results).to_csv("results_melt.csv", index=False)
