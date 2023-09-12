@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
         test_variations = env.getVariationsTest()
         for var in test_variations:
-            env.load(task, var)
+            env.load(task, var, simplificationStr="easy")
 
             main_goal = env.getTaskDescription().split('.')[0].replace("Your task is to", "").strip()
             env.reset()
@@ -113,7 +113,8 @@ if __name__ == '__main__':
             bdi_agent = BDIAgent(plan_library=pl, nli_model=nli_model)
             bdi_state = bdi_agent.act(current_state, step_function=step_function)
             score = bdi_state.score
-            if bdi_state.error: # TODO: maybe we should incorporate this code into the BDI agent
+
+            if bdi_state.error: # TODO: maybe I should incorporate this code into the BDI agent
                 print(f"BDIScore = {score} - Starting RL agent ...")
                 drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
                 drrn_agent.load(row['model_file'])
