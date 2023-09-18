@@ -44,13 +44,13 @@ def get_drrn_pretrained_info(path: str) -> pd.DataFrame:
 def get_plan_files(task: str) -> pd.DataFrame:
     # task = "plan_1_melt"
     # task = "plan_3_focus_non_living_thing"
-    plan_files = [f"plans/plans_nl/{task}_100.plan",
-                  f"plans/plans_nl/{task}_75.plan",
-                  f"plans/plans_nl/{task}_50.plan",
-                  f"plans/plans_nl/{task}_25.plan"]
+    plan_files = [f"plans/plans_nl/plan_{task}_100.plan",
+                  f"plans/plans_nl/plan_{task}_75.plan",
+                  f"plans/plans_nl/plan_{task}_50.plan",
+                  f"plans/plans_nl/plan_{task}_25.plan"]
     rows = []
     for file in plan_files:
-        x = re.findall(f"plans/plans_nl/{task}_(\d*).plan", file)[0]
+        x = re.findall(f"plans/plans_nl/plan_{task}_(\d*).plan", file)[0]
         pct = x[0]
         rows.append({
             'plan_file': file,
@@ -66,8 +66,7 @@ def load_experiment_info(args: argparse.Namespace) -> pd.DataFrame:
     Loads all test scenarios to be executed in experiments.
     :return: Dataframe containing information of each test scenario.
     """
-    task = ""
-    plans_df = get_plan_files(task)
+    plans_df = get_plan_files(args.task)
     plans_df['id'] = 0
     models_df = get_drrn_pretrained_info(args.drrn_pretrained_file)
     models_df['id'] = 0
