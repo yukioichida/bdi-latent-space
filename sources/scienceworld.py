@@ -36,7 +36,7 @@ def load_step_function(env: ScienceWorldEnv, goal: str) -> Callable[[str], State
                                           task=goal,
                                           valid_actions=info['valid'],
                                           score=info['score'],
-                                          complete=isCompleted,
+                                          completed=isCompleted,
                                           error=error)
         return updated_state
 

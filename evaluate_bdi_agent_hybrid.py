@@ -147,6 +147,7 @@ def parse_args() -> argparse.Namespace:
 if __name__ == '__main__':
     random_seed(42)
     args = parse_args()
+    print(args)
     nli_model = NLIModel(args.nli_model, device='cuda')
     # loads env
     env = ScienceWorldEnv("", "", envStepLimit=100)
