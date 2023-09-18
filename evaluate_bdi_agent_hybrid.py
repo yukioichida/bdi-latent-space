@@ -25,7 +25,7 @@ def load_plan_library(plan_file: str):
     return pl
 
 
-def get_drrn_pertrained_info(path: str) -> pd.DataFrame:
+def get_drrn_pretrained_info(path: str) -> pd.DataFrame:
     # = '../models/model_task1melt/'
     model_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".pt")]
     metadata = []
@@ -59,6 +59,20 @@ def get_plan_files(task: str) -> pd.DataFrame:
 
     plans_df = pd.DataFrame(rows).sort_values("pct_plans")
     return plans_df
+
+
+def load_experiment_info(args: argparse.Namespace) -> pd.DataFrame:
+    """
+    Loads all test scenarios to be executed in experiments.
+    :return: Dataframe containing information of each test scenario.
+    """
+    task = ""
+    plans_df = get_plan_files(task)
+    plans_df['id'] = 0
+    models_df = get_drrn_pretrained_info(args.drrn_pretrained_file)
+    models_df['id'] = 0
+    experiment_df = plans_df.merge(models_df, on='id', how='outer')
+    return experiment_df
 
 
 def random_seed(seed):
@@ -121,21 +135,6 @@ def drrn_phase(env: ScienceWorldEnv) -> (State, list[str]):
     return State(completed=isCompleted, score=info['score']), rl_actions
 
 
-def load_experiment_info(args: argparse.Namespace) -> pd.DataFrame:
-    """
-    Loads all test scenarios to be executed in experiments.
-    :return: Dataframe containing information of each test scenario.
-    """
-    task = ""
-    plans_df = get_plan_files(task)
-    plans_df['id'] = 0
-    # models_df = get_drrn_trained_models("models/model_task1melt/")
-    models_df = get_drrn_pertrained_info(args.drrn_pretrained_file)
-    models_df['id'] = 0
-    experiment_df = plans_df.merge(models_df, on='id', how='outer')
-    return experiment_df
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument('--task', type=str, default='melt')
@@ -143,7 +142,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
     # parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
     # parser.add_argument('--nli_model', type=str, default='ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli')
-
     return parser.parse_args()
 
 
@@ -151,9 +149,10 @@ if __name__ == '__main__':
     random_seed(42)
     args = parse_args()
     nli_model = NLIModel(args.nli_model, device='cuda')
+    # loads env
     env = ScienceWorldEnv("", "", envStepLimit=100)
     env.load(args.task, 0)
-
+    # test scenarios
     experiment_df = load_experiment_info(args)
     results = []
 
