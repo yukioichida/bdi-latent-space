@@ -1,0 +1,12 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,False,3,0,Your task is to turn on the red light bulb,task-2-power-component
+go to kitchen,False,3,1,Your task is to turn on the red light bulb,task-2-power-component
+open door to hallway,False,3,2,Your task is to turn on the red light bulb,task-2-power-component
+go to hallway,False,3,3,Your task is to turn on the red light bulb,task-2-power-component
+open door to workshop,True,3,4,Your task is to turn on the red light bulb,task-2-power-component
+go to workshop,True,3,5,Your task is to turn on the red light bulb,task-2-power-component
+focus on red light bulb,True,3,6,Your task is to turn on the red light bulb,task-2-power-component
+connect battery anode to black wire terminal 1,False,3,7,Your task is to turn on the red light bulb,task-2-power-component
+connect battery cathode to blue wire terminal 1,False,3,8,Your task is to turn on the red light bulb,task-2-power-component
+connect black wire terminal 2 to cathode in red light bulb,False,3,9,Your task is to turn on the red light bulb,task-2-power-component
+connect blue wire terminal 2 to anode in red light bulb,False,3,10,Your task is to turn on the red light bulb,task-2-power-component

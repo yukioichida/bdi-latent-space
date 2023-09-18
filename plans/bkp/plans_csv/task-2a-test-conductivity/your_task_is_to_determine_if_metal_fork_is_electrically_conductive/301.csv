@@ -1,0 +1,29 @@
+action,landmark,variation,order,goal,task_id
+open door to outside,False,301,0,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+go to outside,False,301,1,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+open door to green house,False,301,2,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+go to green house,False,301,3,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,301,4,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+go to hallway,False,301,5,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+open door to bedroom,False,301,6,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+go to bedroom,False,301,7,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,301,8,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+go to hallway,False,301,9,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+open door to living room,False,301,10,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+go to living room,False,301,11,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,301,12,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+go to hallway,False,301,13,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,301,14,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+go to workshop,False,301,15,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+pick up metal fork,True,301,16,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+focus on metal fork,True,301,17,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+drop metal fork,True,301,18,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+connect battery anode to orange wire terminal 1,False,301,19,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+connect battery cathode to black wire terminal 1,False,301,20,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+connect orange wire terminal 2 to cathode in red light bulb,False,301,21,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+connect green wire terminal 2 to anode in red light bulb,False,301,22,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+connect metal fork terminal 1 to black wire terminal 2,False,301,23,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+connect metal fork terminal 2 to green wire terminal 1,False,301,24,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+wait1,True,301,25,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+wait1,True,301,26,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity
+move metal fork to green box,False,301,27,Your task is to determine if metal fork is electrically conductive,task-2a-test-conductivity

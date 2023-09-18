@@ -190,7 +190,7 @@ def parse_args():
 
 def load_drrn_agent(path: str = "models/drrn-task0/"):
     agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
-    agent.load(path, "-steps80000-eps562")
+    #agent.load(path, "-steps80000-eps562")
     print("DRRN agent initialized")
     return agent
 

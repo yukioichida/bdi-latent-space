@@ -1,0 +1,17 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,86,0,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to hallway,False,86,1,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,86,2,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to workshop,False,86,3,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+pick up apricot,True,86,4,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+focus on apricot,True,86,5,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+drop apricot,True,86,6,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect battery anode to orange wire terminal 1,False,86,7,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect battery cathode to black wire terminal 1,False,86,8,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect orange wire terminal 2 to blue light bulb cathode,False,86,9,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect green wire terminal 2 to anode in blue light bulb,False,86,10,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect apricot terminal 1 to black wire terminal 2,False,86,11,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect apricot terminal 2 to green wire terminal 1,False,86,12,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+wait1,True,86,13,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+wait1,True,86,14,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+move apricot to blue box,False,86,15,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity

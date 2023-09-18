@@ -1,0 +1,29 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,536,0,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+go to hallway,False,536,1,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+open door to living room,False,536,2,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+go to living room,False,536,3,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,536,4,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+go to hallway,False,536,5,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+open door to art studio,False,536,6,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+go to art studio,False,536,7,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,536,8,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+go to hallway,False,536,9,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+open door to bedroom,False,536,10,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+go to bedroom,False,536,11,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,536,12,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+go to hallway,False,536,13,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,536,14,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+go to workshop,False,536,15,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+pick up plastic fork,True,536,16,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+focus on plastic fork,True,536,17,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+drop plastic fork,True,536,18,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+connect battery anode to yellow wire terminal 1,False,536,19,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+connect battery cathode to green wire terminal 1,False,536,20,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+connect yellow wire terminal 2 to blue light bulb cathode,False,536,21,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+connect blue wire terminal 2 to anode in blue light bulb,False,536,22,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+connect plastic fork terminal 1 to green wire terminal 2,False,536,23,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+connect plastic fork terminal 2 to blue wire terminal 1,False,536,24,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+wait1,True,536,25,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+wait1,True,536,26,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity
+move plastic fork to blue box,False,536,27,Your task is to determine if plastic fork is electrically conductive,task-2a-test-conductivity

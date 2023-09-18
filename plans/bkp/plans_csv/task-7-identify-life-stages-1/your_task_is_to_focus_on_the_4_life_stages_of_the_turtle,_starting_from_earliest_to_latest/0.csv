@@ -1,0 +1,36 @@
+action,landmark,variation,order,goal,task_id
+open door to kitchen,False,0,0,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+go to kitchen,False,0,1,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+open door to outside,False,0,2,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+go to outside,False,0,3,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+focus on egg turtle in outside,False,0,4,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,5,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,6,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,7,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,8,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,9,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,10,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,11,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,12,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+focus on hatchling turtle in outside,False,0,13,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,14,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,15,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,16,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,17,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,18,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,19,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,20,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,21,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,22,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+focus on juvenile turtle in outside,False,0,23,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,24,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,25,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,26,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,27,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,28,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,29,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,30,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,31,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,32,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,0,33,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1
+focus on adult turtle in outside,False,0,34,"Your task is to focus on the 4 life stages of the turtle, starting from earliest to latest",task-7-identify-life-stages-1

@@ -1,0 +1,19 @@
+action,landmark,variation,order,goal,task_id
+open door to art studio,False,100,0,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to art studio,False,100,1,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to hallway,False,100,2,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to hallway,False,100,3,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+open door to workshop,False,100,4,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+go to workshop,False,100,5,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+pick up unknown substance,True,100,6,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+focus on unknown substance,True,100,7,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+drop unknown substance,True,100,8,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery anode to red wire terminal 1,False,100,9,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect battery cathode to blue wire terminal 1,False,100,10,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect red wire terminal 2 to cathode in red light bulb,False,100,11,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect green wire terminal 2 to anode in red light bulb,False,100,12,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance F terminal 1 to blue wire terminal 2,False,100,13,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+connect unknown substance F terminal 2 to green wire terminal 1,False,100,14,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,100,15,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+wait1,True,100,16,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances
+move unknown substance F to green box,False,100,17,Your task is to determine if unknown substance F is electrically conductive,task-2a-test-conductivity-of-unknown-substances

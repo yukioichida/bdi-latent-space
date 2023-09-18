@@ -1,0 +1,9 @@
+action,landmark,variation,order,goal,task_id
+open door to workshop,True,18,0,Your task is to turn on the electric buzzer,task-2-power-component
+go to workshop,True,18,1,Your task is to turn on the electric buzzer,task-2-power-component
+focus on buzzer,True,18,2,Your task is to turn on the electric buzzer,task-2-power-component
+connect battery anode to green wire terminal 1,False,18,3,Your task is to turn on the electric buzzer,task-2-power-component
+connect battery cathode to yellow wire terminal 1,False,18,4,Your task is to turn on the electric buzzer,task-2-power-component
+connect green wire terminal 2 to cathode in buzzer,False,18,5,Your task is to turn on the electric buzzer,task-2-power-component
+connect yellow wire terminal 2 to anode in buzzer,False,18,6,Your task is to turn on the electric buzzer,task-2-power-component
+wait1,False,18,7,Your task is to turn on the electric buzzer,task-2-power-component

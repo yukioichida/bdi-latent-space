@@ -1,0 +1,37 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,9,0,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+go to hallway,False,9,1,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+open door to green house,False,9,2,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+go to green house,False,9,3,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+open door to outside,False,9,4,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+go to outside,False,9,5,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+focus on egg giant tortoise in outside,False,9,6,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,7,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,8,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,9,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,10,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,11,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,12,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,13,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+focus on hatchling giant tortoise in outside,False,9,14,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,15,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,16,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,17,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,18,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,19,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,20,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,21,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,22,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,23,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+focus on juvenile giant tortoise in outside,False,9,24,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,25,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,26,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,27,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,28,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,29,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,30,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,31,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,32,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,33,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,9,34,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1
+focus on adult giant tortoise in outside,False,9,35,"Your task is to focus on the 4 life stages of the giant tortoise, starting from earliest to latest",task-7-identify-life-stages-1

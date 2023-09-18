@@ -1,0 +1,10 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,6,0,Your task is to turn on the green light bulb,task-2-power-component
+go to hallway,False,6,1,Your task is to turn on the green light bulb,task-2-power-component
+open door to workshop,False,6,2,Your task is to turn on the green light bulb,task-2-power-component
+go to workshop,False,6,3,Your task is to turn on the green light bulb,task-2-power-component
+focus on green light bulb,True,6,4,Your task is to turn on the green light bulb,task-2-power-component
+connect battery anode to red wire terminal 1,False,6,5,Your task is to turn on the green light bulb,task-2-power-component
+connect battery cathode to green wire terminal 1,False,6,6,Your task is to turn on the green light bulb,task-2-power-component
+connect red wire terminal 2 to cathode in green light bulb,False,6,7,Your task is to turn on the green light bulb,task-2-power-component
+connect green wire terminal 2 to anode in green light bulb,False,6,8,Your task is to turn on the green light bulb,task-2-power-component

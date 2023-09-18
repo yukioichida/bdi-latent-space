@@ -3,7 +3,7 @@ import numpy as np
 import json
 import sys
 
-State = namedtuple('State', ('obs', 'description', 'inventory'))
+DRRNState = namedtuple('State', ('obs', 'description', 'inventory'))
 Transition = namedtuple('Transition', ('state', 'act', 'reward', 'next_state', 'next_acts', 'done'))
 
 

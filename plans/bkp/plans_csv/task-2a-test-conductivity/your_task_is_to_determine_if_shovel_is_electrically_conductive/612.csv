@@ -1,0 +1,17 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,612,0,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+go to hallway,False,612,1,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,612,2,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+go to workshop,False,612,3,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+pick up shovel,True,612,4,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+focus on shovel,True,612,5,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+drop shovel,True,612,6,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect battery anode to yellow wire terminal 1,False,612,7,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect battery cathode to orange wire terminal 1,False,612,8,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect yellow wire terminal 2 to blue light bulb cathode,False,612,9,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect green wire terminal 2 to anode in blue light bulb,False,612,10,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect shovel terminal 1 to orange wire terminal 2,False,612,11,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+connect shovel terminal 2 to green wire terminal 1,False,612,12,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+wait1,True,612,13,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+wait1,True,612,14,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity
+move shovel to blue box,False,612,15,Your task is to determine if shovel is electrically conductive,task-2a-test-conductivity

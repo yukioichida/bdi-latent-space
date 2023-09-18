@@ -1,0 +1,21 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,746,0,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+go to hallway,False,746,1,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+open door to living room,False,746,2,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+go to living room,False,746,3,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+pick up sodium chloride,False,746,4,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+focus on sodium chloride,False,746,5,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,746,6,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+go to hallway,False,746,7,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,746,8,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+go to workshop,False,746,9,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+drop sodium chloride,True,746,10,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+connect battery anode to blue wire terminal 1,False,746,11,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+connect battery cathode to black wire terminal 1,False,746,12,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+connect blue wire terminal 2 to cathode in buzzer,False,746,13,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+connect red wire terminal 2 to anode in buzzer,False,746,14,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+connect sodium chloride terminal 1 to black wire terminal 2,False,746,15,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+connect sodium chloride terminal 2 to red wire terminal 1,False,746,16,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+wait1,True,746,17,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+wait1,True,746,18,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity
+move sodium chloride to blue box,False,746,19,Your task is to determine if sodium chloride is electrically conductive,task-2a-test-conductivity

@@ -1,0 +1,10 @@
+action,landmark,variation,order,goal,task_id
+open door to workshop,False,7,0,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+go to workshop,False,7,1,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+focus on green light bulb,True,7,2,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+connect nuclear generator anode to green wire terminal 1,False,7,3,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+connect nuclear generator cathode to red wire terminal 1,False,7,4,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+connect green wire terminal 2 to cathode in green light bulb,False,7,5,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+connect red wire terminal 2 to anode in green light bulb,False,7,6,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+activate nuclear generator,True,7,7,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+wait1,True,7,8,Your task is to turn on the green light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)

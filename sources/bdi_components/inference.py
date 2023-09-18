@@ -6,16 +6,18 @@ import torch
 
 class NLIModel:
 
-    def __init__(self, hg_model_name: str):
+    def __init__(self, hg_model_name: str, device: str = 'cpu'):
         """
         Natural Language Inference component.
         :param hg_model_name: Hugging Face name of the pretrained NLI model
         """
-        self.llm = AutoModelForSequenceClassification.from_pretrained(hg_model_name)
+        self.llm = AutoModelForSequenceClassification.from_pretrained(hg_model_name).to(device)
         self.tokenizer = AutoTokenizer.from_pretrained(hg_model_name)
-        self.device = 'cpu'
+        self.device = device
         config = AutoConfig.from_pretrained(hg_model_name)
         self.entailment_idx = config.label2id['entailment']
+        model_size = self.llm.num_parameters()
+        print(f"model size: {model_size:,}")
 
     def check_goal(self, goal: str, plan_goal: str):
         """

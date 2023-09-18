@@ -1,0 +1,12 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,True,1,0,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+go to hallway,True,1,1,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+open door to workshop,True,1,2,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+go to workshop,True,1,3,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+focus on red light bulb,True,1,4,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+connect nuclear generator anode to yellow wire terminal 1,False,1,5,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+connect nuclear generator cathode to red wire terminal 1,False,1,6,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+connect yellow wire terminal 2 to cathode in red light bulb,False,1,7,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+connect red wire terminal 2 to anode in red light bulb,False,1,8,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+activate nuclear generator,True,1,9,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
+wait1,True,1,10,Your task is to turn on the red light bulb by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)

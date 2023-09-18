@@ -1,0 +1,37 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,False,106,0,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to hallway,False,106,1,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to living room,False,106,2,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to living room,False,106,3,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,106,4,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to hallway,False,106,5,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to art studio,False,106,6,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to art studio,False,106,7,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,106,8,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to hallway,False,106,9,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to bedroom,False,106,10,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to bedroom,False,106,11,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,106,12,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to hallway,False,106,13,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,106,14,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to workshop,False,106,15,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,106,16,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to hallway,False,106,17,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to kitchen,False,106,18,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to kitchen,False,106,19,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+pick up apricot,True,106,20,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+focus on apricot,True,106,21,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,106,22,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to hallway,False,106,23,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,106,24,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+go to workshop,False,106,25,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+drop apricot,True,106,26,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect battery anode to blue wire terminal 1,False,106,27,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect battery cathode to orange wire terminal 1,False,106,28,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect blue wire terminal 2 to cathode in green light bulb,False,106,29,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect red wire terminal 2 to anode in green light bulb,False,106,30,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect apricot terminal 1 to orange wire terminal 2,False,106,31,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+connect apricot terminal 2 to red wire terminal 1,False,106,32,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+wait1,True,106,33,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+wait1,True,106,34,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity
+move apricot to blue box,False,106,35,Your task is to determine if apricot is electrically conductive,task-2a-test-conductivity

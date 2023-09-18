@@ -1,0 +1,35 @@
+action,landmark,variation,order,goal,task_id
+open door to outside,False,2,0,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+go to outside,False,2,1,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+focus on egg crocodile in outside,False,2,2,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,3,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,4,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,5,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,6,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,7,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,8,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,9,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,10,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,11,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+focus on hatchling crocodile in outside,False,2,12,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,13,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,14,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,15,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,16,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,17,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,18,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,19,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,20,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,21,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+focus on juvenile crocodile in outside,False,2,22,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,23,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,24,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,25,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,26,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,27,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,28,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,29,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,30,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,31,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+wait1,False,2,32,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1
+focus on adult crocodile in outside,False,2,33,"Your task is to focus on the 4 life stages of the crocodile, starting from earliest to latest",task-7-identify-life-stages-1

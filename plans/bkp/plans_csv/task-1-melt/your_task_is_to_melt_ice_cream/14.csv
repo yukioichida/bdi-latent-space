@@ -1,0 +1,16 @@
+action,landmark,variation,order,goal,task_id
+open door to hallway,True,14,0,Your task is to melt ice cream,task-1-melt
+go to hallway,True,14,1,Your task is to melt ice cream,task-1-melt
+open door to kitchen,True,14,2,Your task is to melt ice cream,task-1-melt
+go to kitchen,True,14,3,Your task is to melt ice cream,task-1-melt
+pick up thermometer,True,14,4,Your task is to melt ice cream,task-1-melt
+open cupboard,True,14,5,Your task is to melt ice cream,task-1-melt
+pick up metal pot,False,14,6,Your task is to melt ice cream,task-1-melt
+open glass jar,True,14,7,Your task is to melt ice cream,task-1-melt
+open freezer,True,14,8,Your task is to melt ice cream,task-1-melt
+focus on ice cream,True,14,9,Your task is to melt ice cream,task-1-melt
+move ice cream to metal pot,False,14,10,Your task is to melt ice cream,task-1-melt
+pick up metal pot,False,14,11,Your task is to melt ice cream,task-1-melt
+move metal pot to stove,False,14,12,Your task is to melt ice cream,task-1-melt
+activate stove,True,14,13,Your task is to melt ice cream,task-1-melt
+examine ice cream,False,14,14,Your task is to melt ice cream,task-1-melt

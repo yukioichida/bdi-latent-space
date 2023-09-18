@@ -1,0 +1,17 @@
+action,landmark,variation,order,goal,task_id
+pick up paper clip,True,493,0,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+focus on paper clip,True,493,1,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+open door to hallway,False,493,2,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+go to hallway,False,493,3,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+open door to workshop,False,493,4,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+go to workshop,False,493,5,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+drop paper clip,True,493,6,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+connect battery anode to orange wire terminal 1,False,493,7,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+connect battery cathode to green wire terminal 1,False,493,8,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+connect orange wire terminal 2 to cathode in electric motor,False,493,9,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+connect yellow wire terminal 2 to anode in electric motor,False,493,10,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+connect paper clip terminal 1 to green wire terminal 2,False,493,11,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+connect paper clip terminal 2 to yellow wire terminal 1,False,493,12,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+wait1,True,493,13,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+wait1,True,493,14,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity
+move paper clip to orange box,False,493,15,Your task is to determine if paper clip is electrically conductive,task-2a-test-conductivity

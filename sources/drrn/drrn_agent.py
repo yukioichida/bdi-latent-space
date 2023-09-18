@@ -8,7 +8,7 @@ from os.path import join as pjoin
 import sentencepiece as spm
 import torch
 
-from sources.drrn.memory import State
+from sources.drrn.memory import DRRNState
 from sources.drrn.model import DRRN
 
 import sources.drrn.model as model
@@ -69,7 +69,7 @@ class DRRN_Agent:
         # TextWorld
         look_ids = self.sp.EncodeAsIds(inv)
         inv_ids = self.sp.EncodeAsIds(look)
-        return State(obs_ids, look_ids, inv_ids)
+        return DRRNState(obs_ids, look_ids, inv_ids)
 
     def encode(self, obs_list):
         """ Encode a list of observations """
@@ -81,11 +81,12 @@ class DRRN_Agent:
         act_ids = [poss_acts[batch][idx] for batch, idx in enumerate(idxs)]
         return act_ids, idxs, values
 
-    def load(self, path, suffixStr=""):
-        print("Loading agent from path: " + str(path))
+    def load(self, model_file):
+        print("Loading agent from path: " + str(model_file))
         try:
             sys.modules['model'] = model
-            self.network = torch.load(pjoin(path, "model" + suffixStr + ".pt"))
+            #self.network = torch.load(pjoin(path, "model" + suffixStr + ".pt"))
+            self.network = torch.load(model_file)
         except Exception as e:
             print("Error loading model.")
             logging.error(traceback.format_exc())
