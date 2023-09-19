@@ -186,14 +186,14 @@ if __name__ == '__main__':
             if bdi_state.error:  # TODO: maybe I should incorporate this code into the BDI agent
                 # RL trained Policy Phase
                 drrn_model_file = row['drrn_model_file']
-                if drrn_model_file not in drrn_cache.keys():
-                    logger.info(f"Bootstrap DRRN Model with model_file {drrn_model_file}")
-                    drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
-                    drrn_agent.load(drrn_model_file)
-                    drrn_cache[drrn_model_file] = drrn_agent
-                else:
-                    logger.info(f"Loading model_file {drrn_model_file} from cache")
-                    drrn_agent = drrn_cache[drrn_model_file]
+                #if drrn_model_file not in drrn_cache.keys():
+                logger.info(f"Bootstrap DRRN Model with model_file {drrn_model_file}")
+                drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
+                drrn_agent.load(drrn_model_file)
+                    #drrn_cache[drrn_model_file] = drrn_agent
+                #else:
+                #    logger.info(f"Loading model_file {drrn_model_file} from cache")
+                #    drrn_agent = drrn_cache[drrn_model_file]
 
                 rl_state, rl_actions = drrn_phase(env, drrn_agent=drrn_agent)
                 last_state = rl_state
