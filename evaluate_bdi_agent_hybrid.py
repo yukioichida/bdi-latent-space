@@ -1,6 +1,8 @@
 import random
 import re
 import argparse
+import logging
+import sys
 from os import listdir
 from os.path import isfile, join
 
@@ -15,13 +17,25 @@ from sources.bdi_components.plans import PlanLibrary
 from sources.drrn.drrn_agent import DRRN_Agent
 from sources.scienceworld import parse_observation, load_step_function
 
+logging.getLogger("scienceworld").setLevel(logging.WARNING)
+
+stdout_handler = logging.StreamHandler(stream=sys.stdout)
+handlers = [stdout_handler]
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s',
+    handlers=handlers
+)
+
+logger = logging.getLogger(__name__)
+
 
 def load_plan_library(plan_file: str):
     pl = PlanLibrary()
     pl.load_plans_from_file(plan_file)
     pl.load_plans_from_file("plans/plans_nl/plan_common.plan")
     pl.load_plans_from_file("notebooks/plans_navigation.txt")
-    print(pl.plans.keys())
+    # print(pl.plans.keys())
     return pl
 
 
@@ -33,7 +47,7 @@ def get_drrn_pretrained_info(path: str) -> pd.DataFrame:
         x = re.findall("model-steps(\d*)-eps(\d*).pt", file)[0]
         steps, eps = x
         metadata.append({
-            'model_file': path + file,
+            'drrn_model_file': path + file,
             'eps': eps,
             'steps': steps
         })
@@ -42,8 +56,6 @@ def get_drrn_pretrained_info(path: str) -> pd.DataFrame:
 
 
 def get_plan_files(task: str) -> pd.DataFrame:
-    # task = "plan_1_melt"
-    # task = "plan_3_focus_non_living_thing"
     plan_files = [f"plans/plans_nl/plan_{task}_100.plan",
                   f"plans/plans_nl/plan_{task}_75.plan",
                   f"plans/plans_nl/plan_{task}_50.plan",
@@ -104,21 +116,18 @@ def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldE
                                       task=main_goal,
                                       valid_actions=info['valid'],
                                       task_description=env.getTaskDescription())
-    print(f"== {main_goal} - {var} ==")
     bdi_agent = BDIAgent(plan_library=plan_library, nli_model=nli_model)
     bdi_state = bdi_agent.act(current_state, step_function=step_function)
     return bdi_state, bdi_agent
 
 
-def drrn_phase(env: ScienceWorldEnv) -> (State, list[str]):
+def drrn_phase(env: ScienceWorldEnv, drrn_agent: DRRN_Agent) -> (State, list[str]):
     """
     Executed the experiment phase where the agent using a RL trained policy tries to reach the goal
     given the current environment state.
     :param env: Current state of environment
     :return: last state achieved by the Policy-driven agent with its list of action perfomed.
     """
-    drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
-    drrn_agent.load(row['model_file'])
     observation, reward, isCompleted, info = env.step('look around')
     rl_actions = []
     for _ in range(100):  # stepLimits
@@ -147,7 +156,7 @@ def parse_args() -> argparse.Namespace:
 if __name__ == '__main__':
     random_seed(42)
     args = parse_args()
-    print(args)
+    logger.info(args)
     nli_model = NLIModel(args.nli_model, device='cuda')
     # loads env
     env = ScienceWorldEnv("", "", envStepLimit=100)
@@ -155,15 +164,20 @@ if __name__ == '__main__':
     # test scenarios
     experiment_df = load_experiment_info(args)
     results = []
+    all_cases = len(experiment_df)
+
+    drrn_cache = {}
 
     for i, row in experiment_df.iterrows():
-        print(f"Loading plan file: {row['plan_file']}")
+        logger.info(f"Experiment {i}/{all_cases}")
+        logger.info(f"Loading plan file: {row['plan_file']}")
         pl = load_plan_library(row['plan_file'])
         all_scores = []
 
-        for var in env.getVariationsTest():
+        for i, var in enumerate(env.getVariationsTest()):
             env.load(args.task, var, simplificationStr="easy")
             # BDI Phase
+            logger.info(f"Start BDI reasoning phase {i}/{len(env.getVariationsTest())}")
             bdi_state, bdi_agent = bdi_phase(plan_library=pl, nli_model=nli_model, env=env)
             rl_actions = []
             last_state = bdi_state
@@ -171,9 +185,19 @@ if __name__ == '__main__':
 
             if bdi_state.error:  # TODO: maybe I should incorporate this code into the BDI agent
                 # RL trained Policy Phase
-                rl_state, rl_actions = drrn_phase(env)
+                drrn_model_file = row['drrn_model_file']
+                if drrn_model_file not in drrn_cache.keys():
+                    logger.info(f"Bootstrap DRRN Model with model_file {drrn_model_file}")
+                    drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
+                    drrn_agent.load(drrn_model_file)
+                    drrn_cache[drrn_model_file] = drrn_agent
+                else:
+                    logger.info(f"Loading model_file {drrn_model_file} from cache")
+                    drrn_agent = drrn_cache[drrn_model_file]
+
+                rl_state, rl_actions = drrn_phase(env, drrn_agent=drrn_agent)
                 last_state = rl_state
-                rl_score = rl_state.score - bdi_state.score  # score acquired exclusively from DRRN (RL)
+                rl_score = max(rl_state.score - bdi_state.score, 0)  # score acquired exclusively from DRRN (RL)
 
             plan_found = 1 if len(bdi_agent.event_trace) > 0 else 0
             results.append({
