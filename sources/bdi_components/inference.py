@@ -1,7 +1,7 @@
 import itertools
 
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig
 import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig
 
 
 class NLIModel:

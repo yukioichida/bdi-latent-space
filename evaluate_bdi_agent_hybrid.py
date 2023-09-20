@@ -1,7 +1,7 @@
-import random
-import re
 import argparse
 import logging
+import random
+import re
 import sys
 from os import listdir
 from os.path import isfile, join
@@ -16,19 +16,9 @@ from sources.bdi_components.inference import NLIModel
 from sources.bdi_components.plans import PlanLibrary
 from sources.drrn.drrn_agent import DRRN_Agent
 from sources.scienceworld import parse_observation, load_step_function
+from sources.utils import setup_logger
 
-logging.getLogger("scienceworld").setLevel(logging.WARNING)
-logging.getLogger("py4j").setLevel(logging.WARNING)
-
-stdout_handler = logging.StreamHandler(stream=sys.stdout)
-handlers = [stdout_handler]
-logging.basicConfig(
-    level=logging.INFO,
-    format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s',
-    handlers=handlers
-)
-
-logger = logging.getLogger(__name__)
+logger = setup_logger()
 
 
 def load_plan_library(plan_file: str):
@@ -36,7 +26,6 @@ def load_plan_library(plan_file: str):
     pl.load_plans_from_file(plan_file)
     pl.load_plans_from_file("plans/plans_nl/plan_common.plan")
     pl.load_plans_from_file("notebooks/plans_navigation.txt")
-    # print(pl.plans.keys())
     return pl
 
 
@@ -91,7 +80,7 @@ def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldE
     :return: Last state achieved by the BDI agent with its own instance.
     """
 
-    logger.info(f"Start BDI reasoning phase {i}/{len(env.getVariationsTest())}")
+    logger.info(f"Start BDI reasoning phase")
     main_goal = env.getTaskDescription() \
         .replace(". First, focus on the thing. Then,", "") \
         .replace(". First, focus on the substance. Then, take actions that will cause it to change its state of matter",
@@ -165,6 +154,7 @@ if __name__ == '__main__':
     results = []
     all_cases = len(experiment_df)
 
+    # TODO: optimize this part to execute BDI agent (num_plan_files * num_variations) times, instead of (num_plans * num_drrn_models * num_variations) times
     for i, row in experiment_df.iterrows():
         logger.info(f"Experiment {i}/{all_cases} - Loading plan file: {row['plan_file']}")
         pl = load_plan_library(row['plan_file'])

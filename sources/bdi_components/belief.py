@@ -1,7 +1,4 @@
-from typing import NamedTuple, Dict
-import copy
-
-from sources.bdi_components.plans import Plan
+from typing import NamedTuple
 
 
 class State(NamedTuple):
