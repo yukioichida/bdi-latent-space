@@ -191,7 +191,7 @@ if __name__ == '__main__':
                 'plan_library_size': len(pl.plans.keys()),
                 'plans_pct': row['pct_plans'],
                 'eps': row['eps'],
-                'drrn_model_file': row['plan_file']
+                'drrn_model_file': row['drrn_model_file']
             }
             results.append(data)
             logger.info(f"Results: {data}")
