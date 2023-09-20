@@ -1,7 +1,5 @@
 from typing import Callable
 
-import networkx as nx
-
 from sources.bdi_components.belief import BeliefBase, State
 from sources.bdi_components.inference import NLIModel
 from sources.bdi_components.plans import Plan, PlanLibrary
@@ -18,7 +16,6 @@ class BDIAgent:
         self.belief_base = BeliefBase()
         self.plan_library = plan_library
         self.nli_model = nli_model
-        self.plan_tree = nx.Graph()
         self.event_trace = []
         self.action_trace = []
 
@@ -34,7 +31,7 @@ class BDIAgent:
         visited_events = []
         plan_state = self.reasoning_cycle(current_state, current_state.goal, visited_events, step_function, 0)
         # if there is no plan available or the current plan were executed partially, then uses a policy to act
-        #if plan_state.error and self.default_policy is not None:
+        # if plan_state.error and self.default_policy is not None:
         #    current_state = plan_state
         #    for _ in range(100):  # stepLimits
         #        action = self.default_policy.select_action(current_state)
@@ -80,7 +77,7 @@ class BDIAgent:
                     current_state = step_function(event)
             return current_state
         else:
-            #print(f"No plan found for event ({triggering_event}) with beliefs ({state.sentence_list()})")
+            # print(f"No plan found for event ({triggering_event}) with beliefs ({state.sentence_list()})")
             return State(error=True,
                          score=state.score,
                          goal=state.goal,
