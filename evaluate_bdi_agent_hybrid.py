@@ -118,6 +118,8 @@ def drrn_phase(env: ScienceWorldEnv, drrn_model_file: str) -> (State, list[str])
     drrn_agent.load(drrn_model_file)
     observation, reward, isCompleted, info = env.step('look around')
     rl_actions = []
+
+    logger.info(f"Starting DRRN agent: {drrn_model_file}")
     for _ in range(50):  # stepLimits
         drrn_state = drrn_agent.build_state(obs=observation, inv=info['inv'], look=info['look'])
         valid_ids = drrn_agent.encode(info['valid'])
