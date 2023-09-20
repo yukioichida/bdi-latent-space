@@ -220,4 +220,4 @@ if __name__ == '__main__':
             results.append(data)
             logger.info(f"Results: {data}")
 
-    pd.DataFrame(results).to_csv(f"results_{args.task}.csv", index=False)
+    pd.DataFrame(results).to_csv(f"results/results_{args.task}.csv", index=False)
