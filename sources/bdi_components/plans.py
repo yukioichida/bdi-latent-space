@@ -1,7 +1,6 @@
 import re
-from typing import NamedTuple, Dict, List
 from collections import defaultdict
-from sources.bdi_components.inference import NLIModel
+from typing import NamedTuple, Dict, List
 
 
 class Plan(NamedTuple):

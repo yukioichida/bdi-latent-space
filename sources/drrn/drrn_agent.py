@@ -82,7 +82,7 @@ class DRRN_Agent:
         return act_ids, idxs, values
 
     def load(self, model_file):
-        print("Loading agent from path: " + str(model_file))
+        #print("Loading agent from path: " + str(model_file))
         try:
             sys.modules['model'] = model
             #self.network = torch.load(pjoin(path, "model" + suffixStr + ".pt"))

@@ -1,7 +1,7 @@
 import itertools
 
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig
 import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig
 
 
 class NLIModel:
@@ -11,7 +11,7 @@ class NLIModel:
         Natural Language Inference component.
         :param hg_model_name: Hugging Face name of the pretrained NLI model
         """
-        self.llm = AutoModelForSequenceClassification.from_pretrained(hg_model_name).to(device)
+        self.llm = AutoModelForSequenceClassification.from_pretrained(hg_model_name, torch_dtype=torch.float16).to(device)
         self.tokenizer = AutoTokenizer.from_pretrained(hg_model_name)
         self.device = device
         config = AutoConfig.from_pretrained(hg_model_name)
@@ -89,4 +89,4 @@ class NLIModel:
                            token_type_ids=token_type_ids,
                            labels=None)
 
-        return outputs[0]  # logits predicted by LLM
+        return outputs[0]

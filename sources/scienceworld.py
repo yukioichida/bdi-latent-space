@@ -36,7 +36,7 @@ def load_step_function(env: ScienceWorldEnv, goal: str) -> Callable[[str], State
                                           task=goal,
                                           valid_actions=info['valid'],
                                           score=info['score'],
-                                          complete=isCompleted,
+                                          completed=isCompleted,
                                           error=error)
         return updated_state
 
@@ -49,7 +49,7 @@ def parse_observation(observation: str,
                       task: str,
                       valid_actions: list[str],
                       score: float = 0,
-                      complete: bool = False,
+                      completed: bool = False,
                       error: bool = False,
                       task_description: str = "") -> State:
     """
@@ -85,6 +85,6 @@ def parse_observation(observation: str,
                  inventory=inventory,
                  valid_actions=valid_actions,
                  score=score,
-                 complete=complete,
+                 completed=completed,
                  error=error,
                  task_description=task_description)

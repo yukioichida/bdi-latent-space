@@ -1,7 +1,4 @@
-from typing import NamedTuple, Dict
-import copy
-
-from sources.bdi_components.plans import Plan
+from typing import NamedTuple
 
 
 class State(NamedTuple):
@@ -18,7 +15,7 @@ class State(NamedTuple):
     valid_actions: list[str] = []  # valid actions that the agent can perform in the current state
     score: float = 0  # reward received by the environment
     error: bool = False  # flag indicating an error occurred by the action executed
-    complete: bool = False # whether the agent could finish the task
+    completed: bool = False # whether the agent could finish the task
 
     def sentence_list(self):
         return [self.inventory] + self.look
