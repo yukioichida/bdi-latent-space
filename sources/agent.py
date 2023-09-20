@@ -30,14 +30,6 @@ class BDIAgent:
         # root plan
         visited_events = []
         plan_state = self.reasoning_cycle(current_state, current_state.goal, visited_events, step_function, 0)
-        # if there is no plan available or the current plan were executed partially, then uses a policy to act
-        # if plan_state.error and self.default_policy is not None:
-        #    current_state = plan_state
-        #    for _ in range(100):  # stepLimits
-        #        action = self.default_policy.select_action(current_state)
-        #        current_state = step_function(action)
-        #        if current_state.complete:
-        #            break
         return plan_state
 
     def reasoning_cycle(self,

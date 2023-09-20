@@ -188,7 +188,8 @@ if __name__ == '__main__':
                 'num_plans': len(bdi_agent.event_trace),
                 'plan_library_size': len(pl.plans.keys()),
                 'plans_pct': row['pct_plans'],
-                'eps': row['eps']
+                'eps': row['eps'],
+                'drrn_model_file': row['plan_file']
             }
             results.append(data)
             logger.info(f"Results: {data}")
