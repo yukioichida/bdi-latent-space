@@ -49,7 +49,8 @@ def get_plan_files(task: str) -> pd.DataFrame:
     plan_files = [{"plan_file": f"plans/plans_nl/plan_{task}_100.plan", "pct_plans": 100},
                   {"plan_file": f"plans/plans_nl/plan_{task}_75.plan", "pct_plans": 75},
                   {"plan_file": f"plans/plans_nl/plan_{task}_50.plan", "pct_plans": 50},
-                  {"plan_file": f"plans/plans_nl/plan_{task}_25.plan", "pct_plans": 25}]
+                  {"plan_file": f"plans/plans_nl/plan_{task}_25.plan", "pct_plans": 25},
+                  {"plan_file": f"plans/plans_nl/plan_{task}_0.plan", "pct_plans": 0}]
     return pd.DataFrame(plan_files).sort_values("pct_plans")
 
 
