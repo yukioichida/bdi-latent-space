@@ -89,4 +89,4 @@ class NLIModel:
                            token_type_ids=token_type_ids,
                            labels=None)
 
-        return outputs[0]  # logits predicted by LLM
+        return outputs[0]

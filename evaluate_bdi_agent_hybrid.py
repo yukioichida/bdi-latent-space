@@ -18,6 +18,7 @@ from sources.drrn.drrn_agent import DRRN_Agent
 from sources.scienceworld import parse_observation, load_step_function
 
 logging.getLogger("scienceworld").setLevel(logging.WARNING)
+logging.getLogger("py4j").setLevel(logging.WARNING)
 
 stdout_handler = logging.StreamHandler(stream=sys.stdout)
 handlers = [stdout_handler]
@@ -101,6 +102,7 @@ def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldE
     """
     main_goal = env.getTaskDescription() \
         .replace(". First, focus on the thing. Then,", "") \
+        .replace(". First, focus on the substance. Then, take actions that will cause it to change its state of matter", "") \
         .replace("move", "by moving") \
         .replace("Your task is to", "") \
         .replace(".", "").strip()
@@ -200,7 +202,7 @@ if __name__ == '__main__':
                 rl_score = max(rl_state.score - bdi_state.score, 0)  # score acquired exclusively from DRRN (RL)
 
             plan_found = 1 if len(bdi_agent.event_trace) > 0 else 0
-            results.append({
+            data = {
                 'num_bdi_actions': len(bdi_agent.action_trace),
                 'num_rl_actions': len(rl_actions),
                 'plan_found': plan_found,
@@ -214,6 +216,8 @@ if __name__ == '__main__':
                 'plan_library_size': len(pl.plans.keys()),
                 'plans_pct': row['pct_plans'],
                 'eps': row['eps']
-            })
+            }
+            results.append(data)
+            logger.info(f"Results: {data}")
 
     pd.DataFrame(results).to_csv(f"results_{args.task}.csv", index=False)
