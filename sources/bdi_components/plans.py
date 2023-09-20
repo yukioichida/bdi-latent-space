@@ -69,7 +69,8 @@ def load_plans_from_file(file: str):
     with open(file) as f:
         plan_str = f.read()
 
-    plans = plan_str.split("\n--\n")
+    #plans = plan_str.split("\n--\n")
+    plans = plan_str.split("\n--\n") if len(plan_str) > 0 else []
     return [parser.parse(plan, idx) for idx, plan in enumerate(plans)]
 
 def write_plans_to_file(plan_contents: list[str],file: str):
@@ -96,3 +97,7 @@ class PlanLibrary:
         for i, plan_str in enumerate(plans_str_list):
             plan = parser.parse(plan_str, i)
             self.plans[plan.triggering_event].append(plan)
+
+
+if __name__ == '__main__':
+    load_plans_from_file("../../plans/plans_nl/plan_melt_0.plan")
