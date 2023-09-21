@@ -85,20 +85,21 @@ class BDIAgent:
         :return: Plan to be executed whether there is a candidate one
         """
         candidate_plans = []
-        # get plans triggered by the event (new goal)
-        all_plans = self.plan_library.plans[triggering_event]
-        # print(f"Goal {triggering_event} - {all_plans}")
-        all_beliefs = state.sentence_list()
-        # TODO: remove this loop to avoid unnecessary nli model calls and do the inference
-        for plan in all_plans:
-            if len(plan.context) > 0:
-                entailment, confidence = self.nli_model.check_context_entailment(beliefs=all_beliefs,
-                                                                                 plan_contexts=plan.context)
-            else:
-                entailment, confidence = True, 1  # it assumes True whether a plan does not have context
+        # get plans triggered by the event (goal addition)
+        if triggering_event in self.plan_library.plans:
+            all_plans = self.plan_library.plans[triggering_event]
+            # print(f"Goal {triggering_event} - {all_plans}")
+            all_beliefs = state.sentence_list()
+            # TODO: remove this loop to avoid unnecessary nli model calls and do the inference
+            for plan in all_plans:
+                if len(plan.context) > 0:
+                    entailment, confidence = self.nli_model.check_context_entailment(beliefs=all_beliefs,
+                                                                                     plan_contexts=plan.context)
+                else:
+                    entailment, confidence = True, 1  # it assumes True whether a plan does not have context
 
-            if entailment:
-                candidate_plans.append((confidence, plan))
+                if entailment:
+                    candidate_plans.append((confidence, plan))
 
         if len(candidate_plans) > 0:
             candidate_plans.sort(key=lambda x: x[0])  # order by confidence

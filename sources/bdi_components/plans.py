@@ -85,7 +85,7 @@ def write_plans_to_file(plan_contents: list[str],file: str):
 class PlanLibrary:
 
     def __init__(self):
-        self.plans: Dict[str, List[Plan]] = defaultdict(list[Plan])
+        self.plans: Dict[str, List[Plan]] = {}
 
     def load_plans_from_file(self, plans_file: str):
         plans_from_file = load_plans_from_file(plans_file)
@@ -97,7 +97,3 @@ class PlanLibrary:
         for i, plan_str in enumerate(plans_str_list):
             plan = parser.parse(plan_str, i)
             self.plans[plan.triggering_event].append(plan)
-
-
-if __name__ == '__main__':
-    load_plans_from_file("../../plans/plans_nl/plan_melt_0.plan")
