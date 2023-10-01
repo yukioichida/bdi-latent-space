@@ -102,3 +102,7 @@ class PlanLibrary:
         if plan.triggering_event not in self.plans:
             self.plans[plan.triggering_event] = []
         self.plans[plan.triggering_event].append(plan)
+
+    def get_plan_library_length(self):
+        lengths = [len(plan) for key, plan in self.plans.items()]
+        return sum(lengths)

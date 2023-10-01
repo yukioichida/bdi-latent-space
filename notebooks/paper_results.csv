@@ -1,0 +1,11 @@
+task,variation,eps,Num Plans,Score,BDI Score,RL Score,Num BDI actions,Num RL actions
+find-non-living-thing,75,242,0,0.66,0.00,0.66,0.00,50.00
+find-non-living-thing,75,242,8,0.75,0.30,0.45,3.33,38.00
+find-non-living-thing,75,242,15,0.84,0.58,0.26,6.25,24.00
+find-non-living-thing,75,242,23,0.91,0.79,0.12,7.64,13.33
+find-non-living-thing,75,242,30,0.98,0.98,0.00,9.19,4.00
+melt,9,457,0,0.03,0.00,0.03,0.00,50.00
+melt,9,457,4,0.14,0.11,0.03,5.11,44.44
+melt,9,457,7,0.36,0.34,0.02,10.89,33.33
+melt,9,457,10,0.57,0.56,0.01,17.11,22.22
+melt,9,457,13,0.68,0.67,0.00,20.89,16.67
