@@ -137,9 +137,10 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument('--task', type=str, default='melt')
     parser.add_argument('--drrn_pretrained_file', type=str, default='models/models_task13-overfit/')
-    parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
-    # parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
-    # parser.add_argument('--nli_model', type=str, default='ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli')
+    #parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
+    #parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
+    parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
+    #parser.add_argument('--nli_model', type=str, default='ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli')
     return parser.parse_args()
 
 
@@ -156,13 +157,15 @@ if __name__ == '__main__':
     experiment_df = load_experiment_info(args)
     results = []
     all_cases = len(experiment_df)
+    
+    nli_stats = []
 
     # TODO: optimize this part to execute BDI agent (num_plan_files * num_variations) times, instead of (num_plans * num_drrn_models * num_variations) times
     for i, row in experiment_df.iterrows():
         logger.info(f"Experiment {i}/{all_cases} - Loading plan file: {row['plan_file']}")
         pl = load_plan_library(row['plan_file'])
         all_scores = []
-
+        nli_model.reset_statistics()
         for i, var in enumerate(env.getVariationsTest()):
             env.load(args.task, var, simplificationStr="easy")
             # BDI Phase
@@ -191,9 +194,13 @@ if __name__ == '__main__':
                 'plan_library_size': len(pl.plans.keys()),
                 'plans_pct': row['pct_plans'],
                 'eps': row['eps'],
-                'drrn_model_file': row['drrn_model_file']
+                'drrn_model_file': row['drrn_model_file'],
+                'nli_model': args.nli_model
             }
             results.append(data)
             logger.info(f"Results: {data}")
+            
+        nli_stats = nli_stats + nli_model.statistics
 
-    pd.DataFrame(results).to_csv(f"results/results_{args.task}.csv", index=False)
+    pd.DataFrame(results).to_csv(f"results/v2/results_{args.task}.csv", index=False)
+    pd.DataFrame(nli_stats).drop_duplicates().to_csv(f"results/v2/results_nli_{args.task}.csv", index=False)
