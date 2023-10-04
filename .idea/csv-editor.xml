@@ -171,6 +171,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/results/v2-roberta_large_mnli/results_melt.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/results/v2/results_nli_melt.csv">
           <value>
             <Attribute>
