@@ -164,6 +164,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/notebooks/ground_truth.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/notebooks/plan_statistics.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/results/results_nli_melt.csv">
           <value>
             <Attribute>
@@ -171,7 +185,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/results/v2-minilm/results_melt.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/results/v2-roberta_large_mnli/results_melt.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results/v2-roberta_large_mnli/results_nli_melt.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results/v2/results_melt.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

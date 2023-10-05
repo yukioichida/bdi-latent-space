@@ -15,7 +15,7 @@ class NLIResult(NamedTuple):
 
 class NLIModel:
     
-    def __init__(self, hg_model_name: str, device: str = 'cpu'):
+    def __init__(self, hg_model_name: str, device: str = 'cpu', labels2id: dict[str, int] = None):
         """
         Natural Language Inference component.
         :param hg_model_name: Hugging Face name of the pretrained NLI model
@@ -25,8 +25,9 @@ class NLIModel:
         self.model_name = hg_model_name
         self.tokenizer = AutoTokenizer.from_pretrained(hg_model_name)
         self.device = device
-        config = AutoConfig.from_pretrained(hg_model_name)
-        labels2id = {k.lower(): v for k,v in config.label2id.items()}
+        if labels2id is None:
+            config = AutoConfig.from_pretrained(hg_model_name)
+            labels2id = {k.lower(): v for k,v in config.label2id.items()}
         self.entailment_idx = labels2id['entailment']
         model_size = self.llm.num_parameters()
         print(f"model size: {model_size:,}")
