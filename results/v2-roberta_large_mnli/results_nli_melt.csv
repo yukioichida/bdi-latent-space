@@ -1,6 +1,6 @@
-p,h,output,model, label
-"In your inventory, you see: an orange ",you are in hallway,0,roberta-large-mnli,
-This room is called the bathroom.,you are in hallway,0,roberta-large-mnli,
+p,h,output,model
+"In your inventory, you see: an orange ",you are in hallway,0,roberta-large-mnli
+This room is called the bathroom.,you are in hallway,0,roberta-large-mnli
 You see the agent,you are in hallway,1,roberta-large-mnli
 You see a substance called air,you are in hallway,1,roberta-large-mnli
 "You see a bathtub, which is turned off. In the bathtub is: nothing.",you are in hallway,1,roberta-large-mnli
