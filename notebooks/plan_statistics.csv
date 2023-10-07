@@ -1,4 +1,4 @@
-plans_pct,task,num_plans,num_common_plans,num_specific_plans
+plans_pct,task,num_total_plans,num_common_plans,num_specific_plans
 0,melt,180,180,0
 25,melt,184,180,4
 50,melt,187,180,7
