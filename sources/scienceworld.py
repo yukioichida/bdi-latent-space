@@ -26,8 +26,6 @@ def load_step_function(env: ScienceWorldEnv, goal: str) -> Callable[[str], State
 
         error = False
         if observation in error_messages:
-            #print(info['look'])
-            #print(f"Action: {action} - obs: {observation}")
             error = True
 
         updated_state = parse_observation(observation=observation,
@@ -35,9 +33,10 @@ def load_step_function(env: ScienceWorldEnv, goal: str) -> Callable[[str], State
                                           look_around=info['look'],
                                           task=goal,
                                           valid_actions=info['valid'],
-                                          score=info['score'],
+                                          score=reward,
                                           completed=isCompleted,
-                                          error=error)
+                                          error=error,
+                                          metadata=info)
         return updated_state
 
     return step_function
@@ -48,10 +47,11 @@ def parse_observation(observation: str,
                       look_around: str,
                       task: str,
                       valid_actions: list[str],
-                      score: float = 0,
+                      reward: float = 0,
                       completed: bool = False,
                       error: bool = False,
-                      task_description: str = "") -> State:
+                      task_description: str = "",
+                      info: dict = None) -> State:
     """
     ScienceWorld environment specific function to convert environment information into a State object.
 
@@ -84,7 +84,9 @@ def parse_observation(observation: str,
                  look=env_state_sentences,
                  inventory=inventory,
                  valid_actions=valid_actions,
-                 score=score,
+                 score=info['score'],
+                 reward = reward,
                  completed=completed,
                  error=error,
-                 task_description=task_description)
+                 task_description=task_description,
+                 info=info)

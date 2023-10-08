@@ -21,7 +21,8 @@ class BDIAgent:
 
     def act(self,
             current_state: State,
-            step_function: Callable[[str], State]) -> State:
+            step_function: Callable[[str], State],
+            fallback_policy: Callable[[State], str]) -> State:
         """
         Perceive new observations and goal, deliberates, and act.
         :param current_state: Current agent state in environment
@@ -29,7 +30,12 @@ class BDIAgent:
         """
         # root plan
         visited_events = []
-        plan_state = self.reasoning_cycle(current_state, current_state.goal, visited_events, step_function, 0)
+        plan_state = self.reasoning_cycle(current_state,
+                                          current_state.goal,
+                                          visited_events,
+                                          step_function,
+                                          fallback_policy,
+                                          depth=0)
         return plan_state
 
     def reasoning_cycle(self,
@@ -37,6 +43,7 @@ class BDIAgent:
                         triggering_event: str,
                         visited_events: list[str],
                         step_function: Callable[[str], State],
+                        fallback_policy: Callable[[State], str],
                         depth: int) -> State:
         """
         Reasoning cycle based on BDI event-driven plan selection.
@@ -70,12 +77,10 @@ class BDIAgent:
             return current_state
         else:
             # print(f"No plan found for event ({triggering_event}) with beliefs ({state.sentence_list()})")
-            return State(error=True,
-                         score=state.score,
-                         goal=state.goal,
-                         observation=state.observation,
-                         look=state.look,
-                         valid_actions=state.valid_actions)
+            fallback_action = fallback_policy(state)
+            fallback_state =  step_function(fallback_action)
+
+            return fallback_state
 
     def get_plan(self, state: State, triggering_event: str) -> Plan:
         """

@@ -6,6 +6,7 @@ import re
 import sys
 from os import listdir
 from os.path import isfile, join
+from typing import Callable
 
 import pandas as pd
 import torch
@@ -82,7 +83,8 @@ def random_seed(seed):
     random.seed(seed)
 
 
-def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldEnv) -> (State, BDIAgent):
+def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldEnv, drrn_model_file: str) \
+        -> (State, BDIAgent):
     """
     Executes the experiment phase where the BDI agent reasons over the environment state and call plans.
     :param plan_library: Plan Library containing plans
@@ -102,6 +104,9 @@ def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldE
 
     env.reset()
     step_function = load_step_function(env, main_goal)
+    drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
+    drrn_agent.load(drrn_model_file)
+    fallback_function = load_fallback_function(drrn_agent)
 
     # initial state
     observation, reward, isCompleted, info = env.step('look around')
@@ -112,7 +117,7 @@ def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldE
                                       valid_actions=info['valid'],
                                       task_description=env.getTaskDescription())
     bdi_agent = BDIAgent(plan_library=plan_library, nli_model=nli_model)
-    bdi_state = bdi_agent.act(current_state, step_function=step_function)
+    bdi_state = bdi_agent.act(current_state, step_function=step_function, fallback_function=fallback_function)
     return bdi_state, bdi_agent
 
 
@@ -143,14 +148,27 @@ def drrn_phase(env: ScienceWorldEnv, drrn_model_file: str) -> (State, list[str])
     return State(completed=isCompleted, score=info['score']), rl_actions
 
 
+def load_fallback_function(drrn_agent: DRRN_Agent) -> Callable[[State], str]:
+    def fallback_function(state: State) -> str:
+        info = state.metadata
+        drrn_state = drrn_agent.build_state(obs=state.observation, inv=info['inv'], look=info['look'])
+        valid_ids = drrn_agent.encode(info['valid'])
+        _, action_idx, action_values = drrn_agent.act([drrn_state], [valid_ids], sample=False)
+        action_idx = action_idx[0]
+        action_str = info['valid'][action_idx]
+        return action_str
+
+    return fallback_function
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument('--task', type=str, default='melt')
     parser.add_argument('--drrn_pretrained_file', type=str, default='models/models_task13-overfit/')
-    #parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
-    #parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
-    #parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
-    #parser.add_argument('--nli_model', type=str, default='gchhablani/bert-base-cased-finetuned-mnli')
+    # parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
+    # parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
+    # parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
+    # parser.add_argument('--nli_model', type=str, default='gchhablani/bert-base-cased-finetuned-mnli')
     parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
     # parser.add_argument('--nli_model', type=str, default='ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli')
     parser.add_argument('--eps', type=int)
@@ -186,11 +204,11 @@ if __name__ == '__main__':
             rl_actions = []
             last_state = bdi_state
             rl_score = 0
-            if bdi_state.error:  # TODO: maybe I should incorporate this code into the BDI agent
+            #if bdi_state.error:  # TODO: maybe I should incorporate this code into the BDI agent
                 # RL trained Policy Phase
-                rl_state, rl_actions = drrn_phase(env, drrn_model_file=row['drrn_model_file'])
-                last_state = rl_state
-                rl_score = max(rl_state.score - bdi_state.score, 0)  # score acquired exclusively from DRRN (RL)
+            #    rl_state, rl_actions = drrn_phase(env, drrn_model_file=row['drrn_model_file'])
+            #    last_state = rl_state
+            #    rl_score = max(rl_state.score - bdi_state.score, 0)  # score acquired exclusively from DRRN (RL)
 
             plan_found = 1 if len(bdi_agent.event_trace) > 0 else 0
             data = {
@@ -214,7 +232,6 @@ if __name__ == '__main__':
             logger.info(f"Results: {data}")
 
         nli_stats = nli_stats + nli_model.statistics
-
 
     dir = f"results/v2-{args.nli_model.replace('/', '-')}"
     if not os.path.exists(dir):
