@@ -83,7 +83,7 @@ def random_seed(seed):
     random.seed(seed)
 
 
-def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldEnv, drrn_model_file: str) \
+def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldEnv, drrn_agent: DRRN_Agent) \
         -> (State, BDIAgent):
     """
     Executes the experiment phase where the BDI agent reasons over the environment state and call plans.
@@ -104,8 +104,6 @@ def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldE
 
     env.reset()
     step_function = load_step_function(env, main_goal)
-    drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
-    drrn_agent.load(drrn_model_file)
     fallback_function = load_fallback_function(drrn_agent)
 
     # initial state
@@ -197,15 +195,17 @@ if __name__ == '__main__':
         pl = load_plan_library(row['plan_file'])
         all_scores = []
         nli_model.reset_statistics()
+        drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
+        drrn_agent.load(row['drrn_model_file'])
         for i, var in enumerate(env.getVariationsTest()):
             env.load(args.task, var, simplificationStr="easy")
             # BDI Phase
-            bdi_state, bdi_agent = bdi_phase(plan_library=pl, nli_model=nli_model, env=env)
+            bdi_state, bdi_agent = bdi_phase(plan_library=pl, nli_model=nli_model, env=env, drrn_agent=drrn_agent)
             rl_actions = []
             last_state = bdi_state
             rl_score = 0
-            #if bdi_state.error:  # TODO: maybe I should incorporate this code into the BDI agent
-                # RL trained Policy Phase
+            # if bdi_state.error:  # TODO: maybe I should incorporate this code into the BDI agent
+            # RL trained Policy Phase
             #    rl_state, rl_actions = drrn_phase(env, drrn_model_file=row['drrn_model_file'])
             #    last_state = rl_state
             #    rl_score = max(rl_state.score - bdi_state.score, 0)  # score acquired exclusively from DRRN (RL)
