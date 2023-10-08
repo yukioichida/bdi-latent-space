@@ -1,0 +1,7 @@
+Task,Model,LO(E),Mean Beliefs,Mean Plan Context,num_inferences
+find-non-living-thing,Bert Base,7.560,4.160,8.400,1075
+find-non-living-thing,MiniLM L6,6.960,4.200,7.840,1076
+find-non-living-thing,Roberta Large,6.852,4.185,7.296,1076
+melt,Bert Base,9.280,4.800,11.120,690
+melt,MiniLM L6,8.913,4.826,10.957,691
+melt,Roberta Large,9.219,5.250,11.062,790
