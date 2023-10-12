@@ -1,5 +1,6 @@
 import argparse
 import logging
+import os.path
 import random
 import re
 import sys
@@ -49,7 +50,9 @@ def get_plan_files(task: str) -> pd.DataFrame:
     plan_files = [{"plan_file": f"plans/plans_nl/plan_{task}_100.plan", "pct_plans": 100},
                   {"plan_file": f"plans/plans_nl/plan_{task}_75.plan", "pct_plans": 75},
                   {"plan_file": f"plans/plans_nl/plan_{task}_50.plan", "pct_plans": 50},
-                  {"plan_file": f"plans/plans_nl/plan_{task}_25.plan", "pct_plans": 25}]
+                  {"plan_file": f"plans/plans_nl/plan_{task}_25.plan", "pct_plans": 25},
+                  {"plan_file": f"plans/plans_nl/plan_{task}_0.plan", "pct_plans": 0}
+                  ]
     return pd.DataFrame(plan_files).sort_values("pct_plans")
 
 
@@ -63,6 +66,14 @@ def load_experiment_info(args: argparse.Namespace) -> pd.DataFrame:
     models_df = get_drrn_pretrained_info(args.drrn_pretrained_file)
     models_df['id'] = 0
     experiment_df = plans_df.merge(models_df, on='id', how='outer')
+    if args.pct_plans:
+        logger.info(f"Running with specific pct_plans: {args.pct_plans}")
+        experiment_df = experiment_df[experiment_df['pct_plans'] == args.pct_plans].reset_index(drop=True)
+
+    if args.eps:
+        logger.info(f"Running with specific eps: {args.eps}")
+        experiment_df = experiment_df[experiment_df['eps'] == f"{args.eps}"].reset_index(drop=True)
+
     return experiment_df
 
 
@@ -117,7 +128,9 @@ def drrn_phase(env: ScienceWorldEnv, drrn_model_file: str) -> (State, list[str])
     drrn_agent.load(drrn_model_file)
     observation, reward, isCompleted, info = env.step('look around')
     rl_actions = []
-    for _ in range(100):  # stepLimits
+
+    logger.info(f"Starting DRRN agent: {drrn_model_file}")
+    for _ in range(50):  # stepLimits
         drrn_state = drrn_agent.build_state(obs=observation, inv=info['inv'], look=info['look'])
         valid_ids = drrn_agent.encode(info['valid'])
         _, action_idx, action_values = drrn_agent.act([drrn_state], [valid_ids], sample=False)
@@ -134,9 +147,14 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument('--task', type=str, default='melt')
     parser.add_argument('--drrn_pretrained_file', type=str, default='models/models_task13-overfit/')
-    parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
-    # parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
+    #parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
+    #parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
+    #parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
+    #parser.add_argument('--nli_model', type=str, default='gchhablani/bert-base-cased-finetuned-mnli')
+    parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
     # parser.add_argument('--nli_model', type=str, default='ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli')
+    parser.add_argument('--eps', type=int)
+    parser.add_argument('--pct_plans', type=int)
     return parser.parse_args()
 
 
@@ -153,13 +171,14 @@ if __name__ == '__main__':
     experiment_df = load_experiment_info(args)
     results = []
     all_cases = len(experiment_df)
+    nli_stats = []
 
     # TODO: optimize this part to execute BDI agent (num_plan_files * num_variations) times, instead of (num_plans * num_drrn_models * num_variations) times
     for i, row in experiment_df.iterrows():
         logger.info(f"Experiment {i}/{all_cases} - Loading plan file: {row['plan_file']}")
         pl = load_plan_library(row['plan_file'])
         all_scores = []
-
+        nli_model.reset_statistics()
         for i, var in enumerate(env.getVariationsTest()):
             env.load(args.task, var, simplificationStr="easy")
             # BDI Phase
@@ -187,9 +206,18 @@ if __name__ == '__main__':
                 'num_plans': len(bdi_agent.event_trace),
                 'plan_library_size': len(pl.plans.keys()),
                 'plans_pct': row['pct_plans'],
-                'eps': row['eps']
+                'eps': row['eps'],
+                'drrn_model_file': row['drrn_model_file'],
+                'nli_model': args.nli_model
             }
             results.append(data)
             logger.info(f"Results: {data}")
 
-    pd.DataFrame(results).to_csv(f"results/results_{args.task}.csv", index=False)
+        nli_stats = nli_stats + nli_model.statistics
+
+
+    dir = f"results/v2-{args.nli_model.replace('/', '-')}"
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+    pd.DataFrame(results).to_csv(f"{dir}/results_{args.task}.csv", index=False)
+    pd.DataFrame(nli_stats).drop_duplicates().to_csv(f"{dir}/results_nli_{args.task}.csv", index=False)

@@ -1,8 +1,0 @@
-action,landmark,variation,order,goal,task_id
-focus on electric motor,True,15,0,Your task is to turn on the electric motor by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
-connect nuclear generator anode to black wire terminal 1,False,15,1,Your task is to turn on the electric motor by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
-connect nuclear generator cathode to orange wire terminal 1,False,15,2,Your task is to turn on the electric motor by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
-connect black wire terminal 2 to cathode in electric motor,False,15,3,Your task is to turn on the electric motor by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
-connect orange wire terminal 2 to anode in electric motor,False,15,4,Your task is to turn on the electric motor by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
-activate nuclear generator,True,15,5,Your task is to turn on the electric motor by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)
-wait1,True,15,6,Your task is to turn on the electric motor by powering it using a nonrenewable power source,task-2-power-component-(renewable-vs-nonrenewable-energy)

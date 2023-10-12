@@ -16,6 +16,7 @@ class State(NamedTuple):
     score: float = 0  # reward received by the environment
     error: bool = False  # flag indicating an error occurred by the action executed
     completed: bool = False # whether the agent could finish the task
+    metadata: dict = {} # additional info collected by the agent
 
     def sentence_list(self):
         return [self.inventory] + self.look
