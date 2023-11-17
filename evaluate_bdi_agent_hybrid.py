@@ -116,41 +116,14 @@ def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldE
     return bdi_state, bdi_agent
 
 
-def drrn_phase(env: ScienceWorldEnv, drrn_model_file: str) -> (State, list[str]):
-    """
-    Executed the experiment phase where the agent using a RL trained policy tries to reach the goal
-    given the current environment state.
-    :param env: Current state of environment
-    :return: last state achieved by the Policy-driven agent with its list of action perfomed.
-    """
-    logger.info(f"Bootstrap DRRN Model with model_file {drrn_model_file}")
-    drrn_agent = DRRN_Agent(spm_path="models/spm_models/unigram_8k.model")
-    drrn_agent.load(drrn_model_file)
-    observation, reward, isCompleted, info = env.step('look around')
-    rl_actions = []
-
-    logger.info(f"Starting DRRN agent: {drrn_model_file}")
-    for _ in range(50):  # stepLimits
-        drrn_state = drrn_agent.build_state(obs=observation, inv=info['inv'], look=info['look'])
-        valid_ids = drrn_agent.encode(info['valid'])
-        _, action_idx, action_values = drrn_agent.act([drrn_state], [valid_ids], sample=False)
-        action_idx = action_idx[0]
-        action_str = info['valid'][action_idx]
-        rl_actions.append(action_str)
-        observation, reward, isCompleted, info = env.step(action_str)
-        if isCompleted:
-            break
-    return State(completed=isCompleted, score=info['score']), rl_actions
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument('--task', type=str, default='melt')
     parser.add_argument('--drrn_pretrained_file', type=str, default='models/models_task13-overfit/')
-    #parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
-    #parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
-    #parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
-    #parser.add_argument('--nli_model', type=str, default='gchhablani/bert-base-cased-finetuned-mnli')
+    # parser.add_argument('--nli_model', type=str, default='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli')
+    # parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
+    # parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
+    # parser.add_argument('--nli_model', type=str, default='gchhablani/bert-base-cased-finetuned-mnli')
     parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
     # parser.add_argument('--nli_model', type=str, default='ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli')
     parser.add_argument('--eps', type=int)
@@ -214,7 +187,6 @@ if __name__ == '__main__':
             logger.info(f"Results: {data}")
 
         nli_stats = nli_stats + nli_model.statistics
-
 
     dir = f"results/v2-{args.nli_model.replace('/', '-')}"
     if not os.path.exists(dir):

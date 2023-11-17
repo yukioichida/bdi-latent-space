@@ -8,18 +8,10 @@ class State(NamedTuple):
     ... The agent’s current beliefs about the *state* of the environment. ...
     """
     goal: str = ""  # main goal
-    task_description: str = ""  # task description
-    observation: str = ""  # observation perceived
-    look: list[str] = []  # objects that agent are seeing in the current state
-    inventory: str = ""  # agent's inventory
-    valid_actions: list[str] = []  # valid actions that the agent can perform in the current state
+    beliefs: list[str] = []  # objects that agent are seeing in the current state
     score: float = 0  # reward received by the environment
-    error: bool = False  # flag indicating an error occurred by the action executed
-    completed: bool = False # whether the agent could finish the task
-    metadata: dict = {} # additional info collected by the agent
-
-    def sentence_list(self):
-        return [self.inventory] + self.look
+    error: bool = False
+    completed: bool = False
 
 
 class BeliefBase:
@@ -30,7 +22,11 @@ class BeliefBase:
         """
         self.memory = []
 
-    def belief_addition(self, new_state: State):
+    def belief_update(self, new_state: State):
+        """
+        Updates the current state of belief base given a new environment state.
+        :param new_state: current environment state
+        """
         self.memory.append(new_state)
 
     def get_current_beliefs(self) -> State:

@@ -1,5 +1,4 @@
 import re
-
 from typing import Callable
 
 from scienceworld import ScienceWorldEnv
@@ -22,21 +21,12 @@ def load_step_function(env: ScienceWorldEnv, goal: str) -> Callable[[str], State
         :param action: action to be performed by the agent in the environment
         :return: state updated given the action performed
         """
-        observation, reward, isCompleted, info = env.step(action)
-
-        error = False
-        if observation in error_messages:
-            #print(info['look'])
-            #print(f"Action: {action} - obs: {observation}")
-            error = True
-
+        observation, reward, completed, info = env.step(action)
+        error = True if observation in error_messages else False
         updated_state = parse_observation(observation=observation,
-                                          inventory=info['inv'],
-                                          look_around=info['look'],
                                           task=goal,
-                                          valid_actions=info['valid'],
-                                          score=info['score'],
-                                          completed=isCompleted,
+                                          info=info,
+                                          completed=completed,
                                           error=error)
         return updated_state
 
@@ -44,27 +34,26 @@ def load_step_function(env: ScienceWorldEnv, goal: str) -> Callable[[str], State
 
 
 def parse_observation(observation: str,
-                      inventory: str,
-                      look_around: str,
                       task: str,
-                      valid_actions: list[str],
-                      score: float = 0,
+                      info: dict,
                       completed: bool = False,
-                      error: bool = False,
-                      task_description: str = "") -> State:
+                      error: bool = False) -> State:
     """
     ScienceWorld environment specific function to convert environment information into a State object.
 
+    :param info: dict containing scienceworld metadata resulted from performed action
     :param observation: agent observation
     :param inventory:  itens in inventory
     :param look_around: agent observations in the current environment state
     :param task: agent's goal
-    :param valid_actions: actions allowed to perform given the current environment state
     :param score: score received by the environment
+    :param completed: informs whether the agent could finish the main goal
+    :param error: indicates if the agent executes an action that resulted in an error
     :return:
     """
+    look_around = info['look']
     x = re.search(r"([\S\s]*?)(?:In it, you see:)([\S\s]*?)(?:You also see:)([\S\s]*)", look_around)
-    if x == None:
+    if x is None:
         x = re.search(r"([\S\s]*?)(?:Here you see:)([\S\s]*?)(?:You also see:)([\S\s]*)", look_around)
     groups = x.groups()
 
@@ -76,15 +65,7 @@ def parse_observation(observation: str,
     obs_split = [obs.strip() for obs in objects.split('\n') if len(obs.strip()) > 0]
     obs_split = [f"You see {obs}" for obs in obs_split]
     doors_split = [door.strip() for door in doors.split('\n') if len(door.strip()) > 0]
-    env_state_sentences = loc_split + obs_split + doors_split
-    inventory = inventory.replace('\n', ' ').replace('\t', '')
+    inventory = info['inv'].replace('\n', ' ').replace('\t', '')
+    env_state_sentences = loc_split + obs_split + doors_split + [inventory, observation]
 
-    return State(goal=task,
-                 observation=observation,
-                 look=env_state_sentences,
-                 inventory=inventory,
-                 valid_actions=valid_actions,
-                 score=score,
-                 completed=completed,
-                 error=error,
-                 task_description=task_description)
+    return State(goal=task, beliefs=env_state_sentences, score=info['score'], completed=completed, error=error)
