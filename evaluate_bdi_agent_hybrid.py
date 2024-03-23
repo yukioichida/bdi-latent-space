@@ -16,7 +16,7 @@ from sources.bdi_components.belief import State
 from sources.bdi_components.inference import NLIModel
 from sources.bdi_components.plans import PlanLibrary
 from sources.drrn.drrn_agent import DRRN_Agent
-from sources.scienceworld import parse_observation, load_step_function
+from sources.scienceworld import parse_state, load_step_function
 from sources.utils import setup_logger
 
 logger = setup_logger()
@@ -26,7 +26,7 @@ def load_plan_library(plan_file: str):
     pl = PlanLibrary()
     pl.load_plans_from_file(plan_file)
     pl.load_plans_from_file("plans/plans_nl/plan_common.plan")
-    pl.load_plans_from_file("notebooks/plans_navigation.txt")
+    pl.load_plans_from_file("plans/plans_nl/plans_navigation.txt")
     return pl
 
 
@@ -48,10 +48,10 @@ def get_drrn_pretrained_info(path: str) -> pd.DataFrame:
 
 def get_plan_files(task: str) -> pd.DataFrame:
     plan_files = [{"plan_file": f"plans/plans_nl/plan_{task}_100.plan", "pct_plans": 100},
-                  {"plan_file": f"plans/plans_nl/plan_{task}_75.plan", "pct_plans": 75},
-                  {"plan_file": f"plans/plans_nl/plan_{task}_50.plan", "pct_plans": 50},
-                  {"plan_file": f"plans/plans_nl/plan_{task}_25.plan", "pct_plans": 25},
-                  {"plan_file": f"plans/plans_nl/plan_{task}_0.plan", "pct_plans": 0}
+                  #{"plan_file": f"plans/plans_nl/plan_{task}_75.plan", "pct_plans": 75},
+                  #{"plan_file": f"plans/plans_nl/plan_{task}_50.plan", "pct_plans": 50},
+                  #{"plan_file": f"plans/plans_nl/plan_{task}_25.plan", "pct_plans": 25},
+                  #{"plan_file": f"plans/plans_nl/plan_{task}_0.plan", "pct_plans": 0}
                   ]
     return pd.DataFrame(plan_files).sort_values("pct_plans")
 
@@ -105,15 +105,12 @@ def bdi_phase(plan_library: PlanLibrary, nli_model: NLIModel, env: ScienceWorldE
 
     # initial state
     observation, reward, isCompleted, info = env.step('look around')
-    current_state = parse_observation(observation=observation,
-                                      inventory=info['inv'],
-                                      look_around=info['look'],
-                                      task=main_goal,
-                                      valid_actions=info['valid'],
-                                      task_description=env.getTaskDescription())
+    current_state = parse_state(observation=observation,
+                                info=info,
+                                task=main_goal)
     bdi_agent = BDIAgent(plan_library=plan_library, nli_model=nli_model)
-    bdi_state = bdi_agent.act(current_state, step_function=step_function)
-    return bdi_state, bdi_agent
+    bdi_agent.perceive(state=current_state, step_function=step_function, goal=main_goal)
+    return bdi_agent.current_state, bdi_agent
 
 
 def parse_args() -> argparse.Namespace:
@@ -124,7 +121,8 @@ def parse_args() -> argparse.Namespace:
     # parser.add_argument('--nli_model', type=str, default='MoritzLaurer/MiniLM-L6-mnli')
     # parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
     # parser.add_argument('--nli_model', type=str, default='gchhablani/bert-base-cased-finetuned-mnli')
-    parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
+    #parser.add_argument('--nli_model', type=str, default='roberta-large-mnli')
+    parser.add_argument('--nli_model', type=str, default='alisawuffles/roberta-large-wanli')
     # parser.add_argument('--nli_model', type=str, default='ynie/albert-xxlarge-v2-snli_mnli_fever_anli_R1_R2_R3-nli')
     parser.add_argument('--eps', type=int)
     parser.add_argument('--pct_plans', type=int)
@@ -160,10 +158,11 @@ if __name__ == '__main__':
             last_state = bdi_state
             rl_score = 0
             if bdi_state.error:  # TODO: maybe I should incorporate this code into the BDI agent
+                break
                 # RL trained Policy Phase
-                rl_state, rl_actions = drrn_phase(env, drrn_model_file=row['drrn_model_file'])
-                last_state = rl_state
-                rl_score = max(rl_state.score - bdi_state.score, 0)  # score acquired exclusively from DRRN (RL)
+                #rl_state, rl_actions = drrn_phase(env, drrn_model_file=row['drrn_model_file'])
+                #last_state = rl_state
+                #rl_score = max(rl_state.score - bdi_state.score, 0)  # score acquired exclusively from DRRN (RL)
 
             plan_found = 1 if len(bdi_agent.event_trace) > 0 else 0
             data = {

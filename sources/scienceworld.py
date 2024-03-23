@@ -23,21 +23,53 @@ def load_step_function(env: ScienceWorldEnv, goal: str) -> Callable[[str], State
         """
         observation, reward, completed, info = env.step(action)
         error = True if observation in error_messages else False
-        updated_state = parse_observation(observation=observation,
-                                          task=goal,
-                                          info=info,
-                                          completed=completed,
-                                          error=error)
+        updated_state = parse_state(observation=observation,
+                                    task=goal,
+                                    info=info,
+                                    completed=completed,
+                                    error=error)
         return updated_state
 
     return step_function
 
+def parse_goal(task_description:str) -> str:
+    main_goal = task_description \
+        .replace(". First, focus on the thing. Then,", "") \
+        .replace(". First, focus on the substance. Then, take actions that will cause it to change its state of matter",
+                 "") \
+        .replace("move", "by moving") \
+        .replace("Your task is to", "") \
+        .replace(".", "").strip()
 
-def parse_observation(observation: str,
-                      task: str,
-                      info: dict,
-                      completed: bool = False,
-                      error: bool = False) -> State:
+    return main_goal
+def parse_beliefs(observation: str,
+                  look: str,
+                  inventory: str) -> list[str]:
+    if look.split("\n")[:3] == observation.split("\n")[:3]:
+        observation = ""
+
+    x = re.search(r"([\S\s]*?)(?:In it, you see:)([\S\s]*?)(?:You also see:)([\S\s]*)", look)
+    if x is None:
+        x = re.search(r"([\S\s]*?)(?:Here you see:)([\S\s]*?)(?:You also see:)([\S\s]*)", look)
+    groups = x.groups()
+
+    location = groups[0]
+    objects = groups[1]
+    doors = groups[2]
+
+    loc_split = [location.strip()]
+    obs_split = [obs.strip() for obs in objects.split('\n') if len(obs.strip()) > 0]
+    obs_split = [f"You see {obs}" for obs in obs_split]
+    doors_split = [door.strip() for door in doors.split('\n') if len(door.strip()) > 0]
+    inventory = inventory.replace('\n', ' ').replace('\t', '')
+    return loc_split + obs_split + doors_split + [inventory, observation]
+
+
+def parse_state(observation: str,
+                task: str,
+                info: dict,
+                completed: bool = False,
+                error: bool = False) -> State:
     """
     ScienceWorld environment specific function to convert environment information into a State object.
 
@@ -51,21 +83,6 @@ def parse_observation(observation: str,
     :param error: indicates if the agent executes an action that resulted in an error
     :return:
     """
-    look_around = info['look']
-    x = re.search(r"([\S\s]*?)(?:In it, you see:)([\S\s]*?)(?:You also see:)([\S\s]*)", look_around)
-    if x is None:
-        x = re.search(r"([\S\s]*?)(?:Here you see:)([\S\s]*?)(?:You also see:)([\S\s]*)", look_around)
-    groups = x.groups()
-
-    location = groups[0]
-    objects = groups[1]
-    doors = groups[2]
-
-    loc_split = [location.strip()]
-    obs_split = [obs.strip() for obs in objects.split('\n') if len(obs.strip()) > 0]
-    obs_split = [f"You see {obs}" for obs in obs_split]
-    doors_split = [door.strip() for door in doors.split('\n') if len(door.strip()) > 0]
-    inventory = info['inv'].replace('\n', ' ').replace('\t', '')
-    env_state_sentences = loc_split + obs_split + doors_split + [inventory, observation]
+    env_state_sentences = parse_beliefs(observation=observation, look=info['look'], inventory=info['inv'])
 
     return State(goal=task, beliefs=env_state_sentences, score=info['score'], completed=completed, error=error)

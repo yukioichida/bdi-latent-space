@@ -13,7 +13,7 @@ class NLIModel:
         :param hg_model_name: Hugging Face name of the pretrained NLI model
         """
         self.llm = AutoModelForSequenceClassification.from_pretrained(hg_model_name, torch_dtype=torch.float16).to(
-            device)
+            device).eval()
         self.model_name = hg_model_name
         self.tokenizer = AutoTokenizer.from_pretrained(hg_model_name)
         self.device = device

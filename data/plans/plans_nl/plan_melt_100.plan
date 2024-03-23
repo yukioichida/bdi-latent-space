@@ -66,9 +66,12 @@ IF your goal is to melt tin THEN
         heat tin on blast furnace,
         focus on substance in metal pot
 --
-IF your goal is to get tin CONSIDERING you are not in workshop THEN
+IF your goal is to get tin THEN
         move to workshop,
-        pick up metal pot
+        pick up metal pot,
+        pick up tin,
+        focus on tin,
+        move tin to metal pot
 --
 IF your goal is to heat tin on blast furnace CONSIDERING you have metal pot with tin in your inventory THEN
         move to foundry,

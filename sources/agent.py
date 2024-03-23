@@ -44,6 +44,8 @@ class BDIAgent:
         self.nli_model = nli_model
         self.event_queue = Deque[Event]()
         self.intention_structure = Deque[Intention]()
+        self.event_trace = []
+        self.action_trace = []
 
     def perceive(self,
                  goal: str,
@@ -62,30 +64,35 @@ class BDIAgent:
 
     def _update_beliefs(self, state):
         self.belief_base.belief_update(state)
+        self.current_state = state
         return state
 
     def reasoning_cycle(self, step_function: Callable[[str], State]):
         while True:
-            self._select_plan()
-            self._execute_intention(step_function=step_function)
-            if len(self.intention_structure) == 0:
+            has_candidate_plan = self._select_plan()
+            if len(self.intention_structure) > 0:
+                self._execute_intention(step_function=step_function)
+            else:
                 # all intentions were already executed
                 break
 
-    def _select_plan(self):
+    def _select_plan(self) -> bool:
         # SELECT PLAN
         if len(self.event_queue) > 0:
             event = self.event_queue.popleft()
             option = self.get_plan(event.content)
             # if there is a plan, include its body into the intention structure
             if option is not None:
+                self.event_trace.append(event)
                 for step in reversed(option.body):
                     int_type = IntentionType.SUB_GOAL if step in self.plan_library.plans.keys() else IntentionType.ACTION
                     intention = Intention(content=step, type=int_type)
                     self.intention_structure.appendleft(intention)
+                return True
             else:
-                # TODO: fallback policy
-                pass
+                print(f"No plans for goal: {event.content}")
+                # TODO: fallback rl
+                return False
 
     def _execute_intention(self, step_function: Callable[[str], State]):
         current_intention = self.intention_structure.popleft()
@@ -94,6 +101,7 @@ class BDIAgent:
             self.event_queue.appendleft(Event(EventType.GOAL_ADDITION, current_intention.content))
         elif current_intention.type == IntentionType.ACTION:
             # execute action and retrieve the updated state
+            self.action_trace.append(current_intention.content)
             updated_state = step_function(current_intention.content)  # TODO: include belief base update event
             self._update_beliefs(updated_state)
         else:
